@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_one_attached :photo
   has_many :maps
   has_many :points_of_interest
   has_many :explored_points_of_interest
