@@ -2,9 +2,21 @@
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 require "open-uri"
+require "json"
 
+puts "Destroying all annotations..."
+Annotation.destroy_all
+puts "Destroying all points..."
+Point.destroy_all
+puts "Destroying all segments..."
+Segment.destroy_all
+puts "Destroying all maps..."
+Map.destroy_all
+puts "Destroying all POIs..."
+PointOfInterest.destroy_all
 puts "Destroying all users..."
 User.destroy_all
+
 puts "Creating 20 users..."
 User.create!(username: "Max Mustermann", email: "max.mustermann@example.com", password: "password", home_address: "Alexanderplatz 5, 10178 Berlin", home_lat: 52.521918, home_lon: 13.413215)
 User.create!(username: "Sophie Müller", email: "sophie.mueller@example.com", password: "password", home_address: "Potsdamer Platz 10, 10785 Berlin", home_lat: 52.509648, home_lon: 13.375452)
@@ -27,19 +39,6 @@ User.create!(username: "Hanna Neumann", email: "hanna.neumann@example.com", pass
 User.create!(username: "Elias Schneider", email: "elias.schneider@example.com", password: "password", home_address: "Chausseestraße 20, 10115 Berlin", home_lat: 52.531997, home_lon: 13.383582)
 User.create!(username: "Maya Schwarz", email: "maya.schwarz@example.com", password: "password", home_address: "Karl-Marx-Straße 110, 12043 Berlin", home_lat: 52.478204, home_lon: 13.439032)
 
-puts "Attaching cat images to users!"
-resources = Cloudinary::Api.resources(prefix: 'cats', type: 'upload', max_results: 20)
-  if resources['resources'].empty?
-    puts "No images found in the folder."
-  else
-    User.all.each_with_index do |user, index|
-      user.photo.attach(io: URI.open("https://res.cloudinary.com/dnd9g94xw/image/upload/#{resources['resources'][index]['public_id']}"), filename: "#{resources['resources'][index]['public_id']}.jpg", content_type: "image/jpeg")
-    end
-end
-puts "Finished attaching cat images to users!"
-
-puts "Destroying all POIs..."
-PointOfInterest.destroy_all
 puts "Creating 40 POIs"
 PointOfInterest.create!(name: "Brandenburg Gate", category: "Historical Building", description: "Iconic neoclassical monument symbolizing Berlin's reunification.", lat: 52.516275, lon: 13.377704, user: User.all.sample)
 PointOfInterest.create!(name: "Reichstag Building", category: "Historical Building", description: "Germany's parliament building with a modern glass dome.", lat: 52.518623, lon: 13.376198, user: User.all.sample)
@@ -82,32 +81,24 @@ PointOfInterest.create!(name: "Villa Liebermann", category: "Historical Building
 PointOfInterest.create!(name: "Bebelplatz", category: "Historical Building", description: "Public square known for the Nazi book burning memorial.", lat: 52.517778, lon: 13.393056, user: User.all.sample)
 PointOfInterest.create!(name: "Berlin Philharmonie", category: "Historical Building", description: "World-renowned concert hall, known for its unique architecture.", lat: 52.509167, lon: 13.369444, user: User.all.sample)
 
-puts "Destroying all Maps..."
-Map.destroy_all
-puts "Creating 20 Maps..."
-  Map.create!(name: "Testmap1", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap2", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap3", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap4", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap5", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap6", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap7", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap8", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap9", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap10", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap11", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap12", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap13", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap14", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap15", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap16", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap17", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap18", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap19", description: "This is a test description for testing purposes.", user: User.all.sample)
-  Map.create!(name: "Testmap20", description: "This is a test description for testing purposes.", user: User.all.sample)
 
-puts "Destroying all annotations..."
-Annotation.destroy_all
+puts "Attaching cat images to users!"
+resources = Cloudinary::Api.resources(prefix: 'cats', type: 'upload', max_results: 20)
+  if resources['resources'].empty?
+    puts "No images found in the folder."
+  else
+    User.all.each_with_index do |user, index|
+      user.photo.attach(io: URI.open("https://res.cloudinary.com/dnd9g94xw/image/upload/#{resources['resources'][index]['public_id']}"), filename: "#{resources['resources'][index]['public_id']}.jpg", content_type: "image/jpeg")
+    end
+end
+puts "Finished attaching cat images to users!"
+
+
+puts "Creating a map per user..."
+User.all.each do |user|
+  Map.create!(name: "#{user.username}'s map", description: "This is my map. There are many like it, but this one is mine.", user: user)
+end
+
 puts "Creating 20 annotations..."
 
 Annotation.create!(lat: 52.510556, lon: 13.377222, name: "Sunday Picnic at Tiergarten", description: "Enjoyed a peaceful Sunday picnic by the lake.", map: Map.all.sample)
@@ -130,3 +121,37 @@ Annotation.create!(lat: 52.537855, lon: 13.424148, name: "Picnic at Mauerpark", 
 Annotation.create!(lat: 52.504541, lon: 13.419052, name: "Walk Along the East Side Gallery", description: "Admired the murals on the longest surviving piece of the Berlin Wall.", map: Map.all.sample)
 Annotation.create!(lat: 52.516875, lon: 13.389946, name: "Lunch at Gendarmenmarkt", description: "Savored traditional German food at a café on the square.", map: Map.all.sample)
 Annotation.create!(lat: 52.493582, lon: 13.418920, name: "Exploring Bergmannkiez", description: "Wandered through charming streets full of boutiques and cafes.", map: Map.all.sample)
+
+
+filepath = "storage/ExamplePoints35k.json"
+puts "Loading geopoints from #{filepath}"
+points = File.read(filepath)
+geopoints_hash = JSON.parse(points)
+puts "Creating an array of points..."
+geopoints_array = []
+geopoints_hash["points"].each do |record|
+  geopoints_array.append([record["lat"], record["lon"]])
+end
+puts "Added #{geopoints_array.count} points to the array."
+puts "Three samples to confirm contents below"
+p geopoints_array.sample(3)
+
+puts "Creating 20 segments..."
+Map.all.each do |map|
+  Segment.create!(map: map)
+end
+
+points = 30
+
+puts "Here's a segment slice to show you what it looks like."
+i = (0 .. (geopoints_array.length - 3)).to_a.sample
+p geopoints_array[i...(i + 3)]
+
+puts "Creating #{points} points per segment..."
+Segment.all.each do |segment|
+  i = (0 .. (geopoints_array.length - points)).to_a.sample
+  sample_range = geopoints_array[i...(i + points)]
+  sample_range.each do |point|
+    Point.create!(lat: point[0], lon: point[1], segment: segment)
+  end
+end
