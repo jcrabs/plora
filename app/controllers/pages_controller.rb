@@ -21,7 +21,7 @@ class PagesController < ApplicationController
 
     radiuses = ""
     trackpoints.count.times do
-      radiuses += "20;"
+      radiuses += "5;"
     end
     @radiuses = radiuses[0..-2]
 

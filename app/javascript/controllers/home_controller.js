@@ -12,7 +12,9 @@ export default class extends Controller {
     radiuses: String
   }
 
+
   connect() {
+    // debugger
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -26,6 +28,7 @@ export default class extends Controller {
     this.#addMarkersToMap()
     this.#getMatch(this.formattedDataValue, "walking")
   }
+
 
   #addHomeToMap() {
     if (this.homeValue.hide) return false
@@ -56,8 +59,11 @@ export default class extends Controller {
   // Make a Map Matching request
   async #getMatch(coordinates, profile) {
     // Create the query
+    const url = `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${this.radiusesValue}&access_token=${this.apiKeyValue}`
+    console.log(url);
+
     const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${this.radiusesValue}&access_token=${this.apiKeyValue}`,
+      url,
       { method: 'GET' }
     );
     const response = await query.json();
