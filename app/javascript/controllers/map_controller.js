@@ -5,7 +5,7 @@ import mapboxgl from 'mapbox-gl'
 export default class extends Controller {
   static values = {
     apiKey: String,
-    home: Array,
+    home: Object,
     points: Array
   }
 
@@ -22,14 +22,16 @@ export default class extends Controller {
   }
 
   #addHomeToMap() {
+    if (this.homeValue.hide) return false
+
     new mapboxgl.Marker()
-      .setLngLat([ this.homeValue[0].lon, this.homeValue[0].lat ])
+      .setLngLat([ this.homeValue.lon, this.homeValue.lat ])
       .addTo(this.map)
   }
 
   #fitMapToHome() {
     const bounds = new mapboxgl.LngLatBounds()
-    bounds.extend([ this.homeValue[0].lon, this.homeValue[0].lat ])
+    bounds.extend([ this.homeValue.lon, this.homeValue.lat ])
     this.map.fitBounds(bounds, { padding: 200, maxZoom: 12, duration: 0 })
   }
 }
