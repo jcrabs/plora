@@ -1,5 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl'
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
+
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -19,6 +21,9 @@ export default class extends Controller {
 
     this.#addHomeToMap()
     this.#fitMapToHome()
+    this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+              mapboxgl: mapboxgl }))
+
   }
 
   #addHomeToMap() {
