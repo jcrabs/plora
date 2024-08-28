@@ -18,13 +18,13 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10"
     })
-
     this.#addHomeToMap()
     this.#fitMapToHome()
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
               mapboxgl: mapboxgl }))
 
   }
+
 
   #addHomeToMap() {
     if (this.homeValue.hide) return false
