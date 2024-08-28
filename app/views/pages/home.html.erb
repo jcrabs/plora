@@ -1,7 +1,7 @@
 <div style="width: 100%; height: 100vh;"
   data-controller="home"
-  data-home-formatted-data-value="<%= @formatted_data %>"
-  data-home-radiuses-value="<%= @radiuses %>"
+  data-home-formatted-data-value="<%= @formatted_data.to_json %>"
+  data-home-radiuses-value="<%= @radiuses.to_json %>"
   data-home-unformatted-data-value="<%= @unformatted_data.to_json %>"
   data-home-home-value="<%= @home.to_json %>"
   data-home-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

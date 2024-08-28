@@ -7,14 +7,13 @@ export default class extends Controller {
     apiKey: String,
     home: Object,
     points: Array,
-    formattedData: String,
+    formattedData: Array,
     unformattedData: Array,
-    radiuses: String
+    radiuses: Array
   }
 
 
   connect() {
-    // debugger
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -26,7 +25,7 @@ export default class extends Controller {
     this.#fitMapToHome()
 
     this.#addMarkersToMap()
-    this.#getMatch(this.formattedDataValue, "walking")
+    this.#addRoute()
   }
 
 
@@ -57,13 +56,10 @@ export default class extends Controller {
   }
 
   // Make a Map Matching request
-  async #getMatch(coordinates, profile) {
+  async #getMatch(coordinates, profile, radiuses) {
     // Create the query
-    const url = `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${this.radiusesValue}&access_token=${this.apiKeyValue}`
-    console.log(url);
-
     const query = await fetch(
-      url,
+      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&access_token=${this.apiKeyValue}`,
       { method: 'GET' }
     );
     const response = await query.json();
@@ -76,12 +72,11 @@ export default class extends Controller {
     }
     // Get the coordinates from the response
     const coords = response.matchings[0].geometry;
-    // Code from the next step will go here
-    this.#addRoute(coords);
+    return coords
   }
 
   // Draw the Map Matching route as a new layer on the map
-  #addRoute(coords) {
+  #drawRoute(coords) {
     // If a route is already loaded, remove it
     if (this.map.getSource('route')) {
       this.map.removeLayer('route');
@@ -109,6 +104,29 @@ export default class extends Controller {
           'line-opacity': 0.8
         }
       });
+    }
+  }
+
+  async #addRoute() {
+    let coordPromises = [];
+    for (let i = 0; i < this.formattedDataValue.length; i++) {
+      coordPromises.push(this.#getMatch(this.formattedDataValue[i], "walking", this.radiusesValue[i]));
+    }
+
+    try {
+      const coords = await Promise.all(coordPromises)
+
+      let coordsArray = []
+      coords.forEach((part) => {
+        part.coordinates.forEach((pair) => {
+          coordsArray.push(pair)
+        })
+      })
+      const formattedCoordinates = { coordinates: coordsArray, type: "LineString" }
+
+      this.#drawRoute(formattedCoordinates)
+    } catch (error) {
+      console.error("An error occurred while processing coordinates:", error)
     }
   }
 }
