@@ -5,8 +5,11 @@ import mapboxgl from 'mapbox-gl'
 export default class extends Controller {
   static values = {
     apiKey: String,
+    home: Object,
     points: Array,
-    markers: Array
+    formattedData: String,
+    unformattedData: Array,
+    radiuses: String
   }
 
   connect() {
@@ -15,41 +18,46 @@ export default class extends Controller {
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10"
-      // style: "mapbox://styles/mapbox/satellite-v9"
     })
 
+    this.#addHomeToMap()
+    this.#fitMapToHome()
+
     this.#addMarkersToMap()
-    this.#fitMapToMarkers()
-    const data = this.#formatRawData()
-    this.#getMatch(data, "cycling")
+    this.#getMatch(this.formattedDataValue, "walking")
   }
 
+  #addHomeToMap() {
+    if (this.homeValue.hide) return false
+
+    new mapboxgl.Marker()
+      .setLngLat([ this.homeValue.lon, this.homeValue.lat ])
+      .addTo(this.map)
+  }
+
+  #fitMapToHome() {
+    const bounds = new mapboxgl.LngLatBounds()
+    bounds.extend([ this.homeValue.lon, this.homeValue.lat ])
+    this.map.fitBounds(bounds, { padding: 200, maxZoom: 12, duration: 0 })
+  }
+
+
+
+
+
   #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
+    this.unformattedDataValue.forEach((marker) => {
       new mapboxgl.Marker()
         .setLngLat([ marker.lon, marker.lat ])
         .addTo(this.map)
     })
   }
 
-  #fitMapToMarkers() {
-    const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => bounds.extend([ marker.lon, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
-  }
-
-  #formatRawData() {
-    let formattedData = ""
-    this.markersValue.forEach(marker => formattedData += `${marker.lon},${marker.lat};`)
-    const data = formattedData.slice(0, -1)
-    return data
-  }
-
   // Make a Map Matching request
   async #getMatch(coordinates, profile) {
     // Create the query
     const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&access_token=${this.apiKeyValue}`,
+      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${this.radiusesValue}&access_token=${this.apiKeyValue}`,
       { method: 'GET' }
     );
     const response = await query.json();

@@ -5,6 +5,8 @@ class MapsController < ApplicationController
   end
 
   def show
+    @map = Map.find(params[:id])
+    @markers = current_user.maps.first.segments.first.points
   end
 
   def new
@@ -21,5 +23,5 @@ class MapsController < ApplicationController
 
   def destroy
   end
-  
+
 end
