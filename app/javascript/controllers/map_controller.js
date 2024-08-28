@@ -33,6 +33,7 @@ export default class extends Controller {
     });
   }
 
+
   #addHomeToMap() {
     if (this.homeValue.hide) return false;
 
