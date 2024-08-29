@@ -2,9 +2,11 @@
 
 <% @maps.each do |map| %>
   <% if map.user == current_user %>
-    <%= link_to map_path(map) do %>
-      <%= map.name %>
-    <% end %>
+    <div>
+      <%= link_to map_path(map) do %>
+        <%= map.name %>
+      <% end %>
+     </div>
   <% end %>
 <% end %>
 
