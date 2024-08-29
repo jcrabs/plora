@@ -14,7 +14,7 @@ class PagesController < ApplicationController
 
     require 'nokogiri'
 
-    file = File.open('storage/testpath-j.gpx')
+    file = File.open('storage/testpath-lw.gpx')
     document = Nokogiri::XML(file)
 
     trackpoints = document.xpath('//xmlns:trkpt')
