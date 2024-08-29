@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :maps do
-    get "/points", to: "points#import", as: "import"
+    post "/segments", to: "segments#import", as: "import"
   end
 
 end

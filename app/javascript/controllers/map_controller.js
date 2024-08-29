@@ -6,8 +6,11 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 export default class extends Controller {
   static values = {
     apiKey: String,
+    home: Object,
     points: Array,
-    markers: Array
+    formattedData: Array,
+    unformattedData: Array,
+    radiuses: Array
   }
 
   connect() {
@@ -31,19 +34,8 @@ export default class extends Controller {
       geocoder._inputEl.value = '';
     });
 
+    this.#addRoute()
 
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
-    const data = this.#formatRawData()
-    this.#getMatch(data, "cycling")
-  }
-
-  #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([ marker.lon, marker.lat ])
-        .addTo(this.map)
-    })
   }
 
   #fitMapToMarkers() {
@@ -52,18 +44,12 @@ export default class extends Controller {
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 
-  #formatRawData() {
-    let formattedData = ""
-    this.markersValue.forEach(marker => formattedData += `${marker.lon},${marker.lat};`)
-    const data = formattedData.slice(0, -1)
-    return data
-  }
 
   // Make a Map Matching request
-  async #getMatch(coordinates, profile) {
+  async #getMatch(coordinates, profile, radiuses) {
     // Create the query
     const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&access_token=${this.apiKeyValue}`,
+      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&access_token=${this.apiKeyValue}`,
       { method: 'GET' }
     );
     const response = await query.json();
@@ -76,12 +62,11 @@ export default class extends Controller {
     }
     // Get the coordinates from the response
     const coords = response.matchings[0].geometry;
-    // Code from the next step will go here
-    this.#addRoute(coords);
+    return coords
   }
 
   // Draw the Map Matching route as a new layer on the map
-  #addRoute(coords) {
+  #drawRoute(coords) {
     // If a route is already loaded, remove it
     if (this.map.getSource('route')) {
       this.map.removeLayer('route');
@@ -108,7 +93,39 @@ export default class extends Controller {
           'line-width': 8,
           'line-opacity': 0.8
         }
-      })
+      });
     }
   }
+
+  async #addRoute() {
+    // collect the promises from the API calls
+    let coordPromises = [];
+    // make 1 API call per 50 piece data chunk
+    console.log(this.formattedDataValue);
+    for (let i = 0; i < this.formattedDataValue.length; i++) {
+      data = this.#getMatch(this.formattedDataValue[i], "walking", this.radiusesValue[i])
+      coordPromises.push(data);
+    }
+
+    try {
+      const coords = await Promise.all(coordPromises)
+
+      // collect all coordinates to be drawn
+      let coordsArray = []
+      coords.forEach((part) => {
+        part.coordinates.forEach((pair) => {
+          coordsArray.push(pair)
+        })
+      })
+      // format coordinates for the drawRoute function
+      const formattedCoordinates = { coordinates: coordsArray, type: "LineString" }
+
+      // draw a line between all coordinates
+      this.#drawRoute(formattedCoordinates)
+    } catch (error) {
+      console.error("An error occurred while processing coordinates:", error)
+    }
+  }
+
+
 }

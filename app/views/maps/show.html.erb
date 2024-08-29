@@ -1,9 +1,11 @@
 <div style="width: 100%; height: 90vh;"
   data-controller="map"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-map-markers-value="<%= @markers.to_json %>"></div>
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-formatted-data-value="<%= @formatted_data.to_json %>"
+  data-map-radiuses-value="<%= @radiuses.to_json %>"
+  data-map-unformatted-data-value="<%= @unformatted_data.to_json %>"></div>
 
-<<<<<<< HEAD
 <div>
   <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#createSegmentModal">
     Create new segment
@@ -17,7 +19,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <%= simple_form_for([@map, @segment, @point], url: import_path(@map)) do |f| %>
+          <%= simple_form_for([@map, @segment], url: map_import_path(@map)) do |f| %>
             <%= f.button :submit, 'Upload', class: 'btn btn-flat' %>
             <%= f.input :gpx, as: :file, input_html: { class: "form-control" }, label_html: { class: "form-label" } %>
           <% end %>
@@ -29,7 +31,3 @@
     </div>
   </div>
 </div>
-=======
-
-
->>>>>>> c6e3fc9f116fbdb0a92cf32701f720a6b3d5d5c0

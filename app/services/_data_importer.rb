@@ -2,8 +2,7 @@ require 'nokogiri'
 
 class DataImporter
 
-  def call
-    file = File.open('storage/testpath-lw.gpx')
+  def call(file)
     document = Nokogiri::XML(file)
 
     trackpoints = document.xpath('//xmlns:trkpt')
