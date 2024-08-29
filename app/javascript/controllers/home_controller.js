@@ -14,6 +14,7 @@ export default class extends Controller {
 
 
   connect() {
+    // display the map
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -21,6 +22,7 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     })
 
+    // add home icon and center map around it
     this.#addHomeToMap()
     this.#fitMapToHome()
 
@@ -108,7 +110,9 @@ export default class extends Controller {
   }
 
   async #addRoute() {
+    // collect the promises from the API calls
     let coordPromises = [];
+    // make 1 API call per 50 piece data chunk
     for (let i = 0; i < this.formattedDataValue.length; i++) {
       coordPromises.push(this.#getMatch(this.formattedDataValue[i], "walking", this.radiusesValue[i]));
     }
@@ -116,14 +120,17 @@ export default class extends Controller {
     try {
       const coords = await Promise.all(coordPromises)
 
+      // collect all coordinates to be drawn
       let coordsArray = []
       coords.forEach((part) => {
         part.coordinates.forEach((pair) => {
           coordsArray.push(pair)
         })
       })
+      // format coordinates for the drawRoute function
       const formattedCoordinates = { coordinates: coordsArray, type: "LineString" }
 
+      // draw a line between all coordinates
       this.#drawRoute(formattedCoordinates)
     } catch (error) {
       console.error("An error occurred while processing coordinates:", error)
