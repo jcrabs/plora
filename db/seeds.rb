@@ -123,7 +123,7 @@ Annotation.create!(lat: 52.516875, lon: 13.389946, name: "Lunch at Gendarmenmark
 Annotation.create!(lat: 52.493582, lon: 13.418920, name: "Exploring Bergmannkiez", description: "Wandered through charming streets full of boutiques and cafes.", map: Map.all.sample)
 
 
-filepath = "storage/ExamplePoints35k.json"
+filepath = "./ExamplePoints35k.json"
 puts "Loading geopoints from #{filepath}"
 points = File.read(filepath)
 geopoints_hash = JSON.parse(points)

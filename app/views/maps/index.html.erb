@@ -1,2 +1,9 @@
 <h2>My Maps</h2>
 
+<% @maps.each do |map| %>
+  <% if map.user == current_user %>
+    <%= link_to map_path(map) do %>
+      <%= map.name %>
+    <% end %>
+  <% end %>
+<% end %>
