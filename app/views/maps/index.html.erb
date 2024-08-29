@@ -5,13 +5,16 @@
     <div>
       <%= link_to map_path(map) do %>
         <%= map.name %>
+        <%= map.description %>
       <% end %>
-     </div>
+    </div>
   <% end %>
 <% end %>
 
 <%= link_to "Add a map", new_map_path, class: "button_primary" %>
 <%= link_to "Sort", "#", class: "button_primary" %>
+
+
 
 <div class="map_card_default">
   <div class="map_card_img" >
@@ -33,3 +36,4 @@
     <button class="link_button"><i class="fa-solid fa-pen-to-square"></i></button>
   </div>
 </div>
+
