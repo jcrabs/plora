@@ -19,6 +19,17 @@ export default class extends Controller {
       // style: "mapbox://styles/mapbox/satellite-v9"
     })
 
+    let geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+    });
+
+    this.map.addControl(geocoder);
+
+    geocoder.on('result', function(e) {
+      geocoder._inputEl.value = '';
+    });
+
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
     const data = this.#formatRawData()
@@ -95,38 +106,7 @@ export default class extends Controller {
           'line-width': 8,
           'line-opacity': 0.8
         }
-      });
+      })
     }
-
-    });
-
-    this.#addHomeToMap();
-    this.#fitMapToHome();
-
-    let geocoder = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl
-    });
-
-    this.map.addControl(geocoder);
-
-    geocoder.on('result', function(e) {
-      geocoder._inputEl.value = '';
-    });
-  }
-
-
-  #addHomeToMap() {
-    if (this.homeValue.hide) return false;
-
-    new mapboxgl.Marker()
-      .setLngLat([ this.homeValue.lon, this.homeValue.lat ])
-      .addTo(this.map);
-  }
-
-  #fitMapToHome() {
-    const bounds = new mapboxgl.LngLatBounds();
-    bounds.extend([ this.homeValue.lon, this.homeValue.lat ]);
-    this.map.fitBounds(bounds, { padding: 200, maxZoom: 12, duration: 0 });
   }
 }
