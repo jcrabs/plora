@@ -11,6 +11,29 @@
   <% end %>
 <% end %>
 
-<%= link_to "Add a map", new_map_path %>
+<%= link_to "Add a map", new_map_path, class: "button_primary" %>
+<%= link_to "Sort", "#", class: "button_primary" %>
 
+
+
+<div class="map_card_default">
+  <div class="map_card_img" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4856.
+                  615315289933!2d13.389565485644528!3d52.50977109312071!2m3!1f0!
+                  2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1724940541
+                  281!5m2!1sen!2sde" width="600" height="450" style="border:0;"
+                  allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" class="map_card_img">
+      </iframe>
+  </div>
+  <div class="map_card_separator">
+  </div>
+  <div class="map_card_text_box d-flex">
+    <div>
+      <h5>This is a map name</h4>
+      <p>This is a long map description, really long...</p>
+    </div>
+    <button class="link_button"><i class="fa-solid fa-pen-to-square"></i></button>
+  </div>
+</div>
 

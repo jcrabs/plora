@@ -1,0 +1,26 @@
+.map_card_default {
+  width: 360px;
+  height: 178px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.map_card_img {
+  width: 360px;
+  height: 109px;
+  background-color: #b3ffe6;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.map_card_separator {
+  width: 360px;
+  height: 1px;
+  background-color: $cta_teal_normal;
+}
+
+.map_card_text_box {
+  width: 360px;
+  height: 69px;
+  background-color: $bg_white_grey;
+  border-radius: 0px 0px 16px 16px;
+}

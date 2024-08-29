@@ -19,6 +19,7 @@ export default class extends Controller {
       // style: "mapbox://styles/mapbox/satellite-v9"
     })
 
+    // search bar
     let geocoder = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
@@ -29,6 +30,7 @@ export default class extends Controller {
     geocoder.on('result', function(e) {
       geocoder._inputEl.value = '';
     });
+
 
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
