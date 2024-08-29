@@ -12,9 +12,23 @@ class MapsController < ApplicationController
   end
 
   def new
+    @map = Map.new
   end
 
   def create
+    @map = Map.new(map_params)
+    @map.user = current_user
+    @map.save
+    redirect_to maps_path(@map)
+  end
+
+
+
+
+  private
+
+  def map_params
+    params.require(:map).permit(:name, :description)
   end
 
   def edit
