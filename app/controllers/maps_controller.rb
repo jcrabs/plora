@@ -17,9 +17,13 @@ class MapsController < ApplicationController
 
   def create
     @map = Map.new(map_params)
+    @map.user = current_user
     @map.save
     redirect_to maps_path(@map)
   end
+
+
+
 
   private
 
