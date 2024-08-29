@@ -5,10 +5,12 @@
     <div>
       <%= link_to map_path(map) do %>
         <%= map.name %>
+        <%= map.description %>
       <% end %>
-     </div>
+    </div>
   <% end %>
 <% end %>
 
 <%= link_to "Add a map", new_map_path %>
+
 

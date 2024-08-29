@@ -25,19 +25,28 @@ class MapsController < ApplicationController
 
 
 
+
+  def edit
+    @map = Map.find(params[:id])
+  end
+
+  def update
+    @map = Map.find(params[:id])
+    @map.update(map_params)
+    redirect_to maps_path(@map)
+  end
+
+  def destroy
+    @map = Map.find(params[:id])
+    @map.destroy
+    redirect_to maps_path, status: :see_other
+  end
+
+
   private
 
   def map_params
     params.require(:map).permit(:name, :description)
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
 end
