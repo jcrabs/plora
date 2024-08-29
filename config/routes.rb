@@ -14,5 +14,4 @@ Rails.application.routes.draw do
     get "/points", to: "points#import", as: "import"
   end
 
-
 end
