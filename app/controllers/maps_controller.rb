@@ -21,19 +21,22 @@ class MapsController < ApplicationController
     redirect_to maps_path(@map)
   end
 
-  private
-
-  def map_params
-    params.require(:map).permit(:name, :description)
+  def update
+    file = params["map"]["gpx"].tempfile
+    data = File.read(file)
+    raise
   end
 
   def edit
   end
 
-  def update
-  end
 
   def destroy
   end
 
+  private
+
+  def map_params
+    params.require(:map).permit(:name, :description)
+  end
 end

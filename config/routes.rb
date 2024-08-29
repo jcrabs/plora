@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :maps
+  resources :maps do
+    get "/points", to: "points#import", as: "import"
+  end
 
 
 end
