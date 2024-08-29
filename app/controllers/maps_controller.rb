@@ -8,7 +8,10 @@ class MapsController < ApplicationController
 
   def show
     @map = Map.find(params[:id])
-    @markers = current_user.maps.first.segments.first.points
+    @segment = Segment.new
+    # if @map.segments.present?
+    #   @markers = @map.segments.points
+    # end
   end
 
   def new
@@ -30,11 +33,14 @@ class MapsController < ApplicationController
     @map = Map.find(params[:id])
   end
 
+
+
   def update
     @map = Map.find(params[:id])
     @map.update(map_params)
     redirect_to maps_path(@map)
   end
+
 
   def destroy
     @map = Map.find(params[:id])
@@ -49,4 +55,9 @@ class MapsController < ApplicationController
     params.require(:map).permit(:name, :description)
   end
 
+  private
+
+  def map_params
+    params.require(:map).permit(:name, :description)
+  end
 end

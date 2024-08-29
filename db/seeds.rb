@@ -122,7 +122,9 @@ Annotation.create!(lat: 52.504541, lon: 13.419052, name: "Walk Along the East Si
 Annotation.create!(lat: 52.516875, lon: 13.389946, name: "Lunch at Gendarmenmarkt", description: "Savored traditional German food at a café on the square.", map: Map.all.sample)
 Annotation.create!(lat: 52.493582, lon: 13.418920, name: "Exploring Bergmannkiez", description: "Wandered through charming streets full of boutiques and cafes.", map: Map.all.sample)
 
+
 filepath = "json/ExamplePoints35k.json"
+
 puts "Loading geopoints from #{filepath}"
 file = File.join(__dir__, filepath)
 points = File.read(file)
@@ -139,9 +141,11 @@ p geopoints_array.sample(3)
 puts "Creating 20 segments..."
 Map.all.each do |map|
   Segment.create!(map: map)
+  Segment.create!(map: map)
+  Segment.create!(map: map)
 end
 
-points = 30
+points = 100
 
 puts "Here's a segment slice to show you what it looks like."
 i = (0 .. (geopoints_array.length - 3)).to_a.sample
