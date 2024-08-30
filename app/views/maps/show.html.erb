@@ -30,9 +30,3 @@
   </div>
 
 <div>
-  <div>
-  <% if user_signed_in? && current_user.id == @map.user_id %>
-    <%= link_to "Edit", edit_map_path(@map), class: "btn btn-flat-secondary" %>
-    <%= link_to "Delete", map_path(@map), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-flat-secondary-danger" %>
-  <% end %>
-</div>
