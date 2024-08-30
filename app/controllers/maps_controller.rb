@@ -8,11 +8,22 @@ class MapsController < ApplicationController
 
   def show
     @map = Map.find(params[:id])
+    # for the new segment creation form
     @segment = Segment.new
-
-    # if @map.segments.present?
-    #   @markers = @map.segments.points
-    # end
+    @segments = Segment.where(map: @map)
+    # prepare coordinates to be passed to the view
+    @segments_coordinates = {}
+    @segments.each do |segment|
+      points = []
+      segment.points.each do |pair|
+        point_coordinates = {
+          lat: pair.lat,
+          lon: pair.lon
+        }
+        points << point_coordinates
+      end
+      @segments_coordinates[segment.id] = points
+    end
   end
 
   def new
@@ -28,8 +39,6 @@ class MapsController < ApplicationController
 
 
 
-
-
   def edit
     @map = Map.find(params[:id])
   end
@@ -38,8 +47,11 @@ class MapsController < ApplicationController
 
   def update
     @map = Map.find(params[:id])
-    @map.update(map_params)
-    redirect_to maps_path(@map)
+    if @map.update(map_params)
+      redirect_to maps_path
+    else
+      render :edit
+    end
   end
 
 
@@ -56,9 +68,4 @@ class MapsController < ApplicationController
     params.require(:map).permit(:name, :description)
   end
 
-  private
-
-  def map_params
-    params.require(:map).permit(:name, :description)
-  end
 end
