@@ -1,12 +1,13 @@
 import { Controller } from "@hotwired/stimulus";
 import mapboxgl from 'mapbox-gl';
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    segmentsCoordinates: Object
+    segmentsCoordinates: Object,
+    showSearch: Boolean
   }
 
   connect() {
@@ -20,16 +21,18 @@ export default class extends Controller {
     })
 
     // search bar:
-    let geocoder = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl
-    });
+    if (this.showSearchValue) {
+      let geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+      });
 
-    this.map.addControl(geocoder);
+      this.map.addControl(geocoder);
 
-    geocoder.on('result', function(e) {
-      geocoder._inputEl.value = '';
-    });
+      geocoder.on('result', function(e) {
+        geocoder._inputEl.value = '';
+      });
+    }
 
     // draw lines for all segments, if segments exist (after map style has loaded):
     if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
