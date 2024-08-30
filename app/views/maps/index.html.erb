@@ -17,7 +17,9 @@
     <% @maps.each do |map| %>
       <% if map.user == current_user %>
         <div class="col-md-4 mb-4">
-          <%= render "shared/mapcard", map: map %>
+          <%= link_to map_path(map), class: "text-decoration-none" do %>
+            <%= render "shared/mapcard", map: map %>
+          <% end %>
         </div>
       <% end %>
     <% end %>
