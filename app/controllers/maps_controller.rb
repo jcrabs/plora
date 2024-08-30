@@ -47,8 +47,11 @@ class MapsController < ApplicationController
 
   def update
     @map = Map.find(params[:id])
-    @map.update(map_params)
-    redirect_to maps_path(@map)
+    if @map.update(map_params)
+      redirect_to maps_path
+    else
+      render :edit
+    end
   end
 
 

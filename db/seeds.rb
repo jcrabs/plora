@@ -163,6 +163,7 @@ end
 # This is going to take a while
 # so maybe comment it out if you don't want to view the entire database worth of points.
 #
+
 puts "Creating extra user with all points"
 User.create!(username: "Big Data", email: "bigdata@example.com", password: "password", home_address: "Rudi-Dutschke-Straße 26, 10969 Berlin", home_lat: 52.506892, home_lon: 13.391452)
 puts "Attaching cat image to #{User.last.username}"
