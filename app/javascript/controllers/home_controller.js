@@ -1,20 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl'
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    home: Object,
-    points: Array,
-    formattedData: Array,
-    unformattedData: Array,
-    radiuses: Array
+    home: Object
   }
 
-
   connect() {
-    // display the map
+    // display the map:
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -22,12 +18,22 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     })
 
-    // add home icon and center map around it
+    // add home icon and center map around it:
     this.#addHomeToMap()
     this.#fitMapToHome()
 
-    this.#addMarkersToMap()
-    this.#addRoute()
+    // search bar:
+    let geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+    });
+
+    this.map.addControl(geocoder);
+
+    geocoder.on('result', function(e) {
+      geocoder._inputEl.value = '';
+    });
+
   }
 
 
@@ -43,97 +49,5 @@ export default class extends Controller {
     const bounds = new mapboxgl.LngLatBounds()
     bounds.extend([ this.homeValue.lon, this.homeValue.lat ])
     this.map.fitBounds(bounds, { padding: 200, maxZoom: 12, duration: 0 })
-  }
-
-
-
-
-
-  #addMarkersToMap() {
-    this.unformattedDataValue.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([ marker.lon, marker.lat ])
-        .addTo(this.map)
-    })
-  }
-
-  // Make a Map Matching request
-  async #getMatch(coordinates, profile, radiuses) {
-    // Create the query
-    const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&access_token=${this.apiKeyValue}`,
-      { method: 'GET' }
-    );
-    const response = await query.json();
-    // Handle errors
-    if (response.code !== 'Ok') {
-      alert(
-        `${response.code} - ${response.message}.\n\nFor more information: https://docs.mapbox.com/api/navigation/map-matching/#map-matching-api-errors`
-      );
-      return;
-    }
-    // Get the coordinates from the response
-    const coords = response.matchings[0].geometry;
-    return coords
-  }
-
-  // Draw the Map Matching route as a new layer on the map
-  #drawRoute(coords) {
-    // If a route is already loaded, remove it
-    if (this.map.getSource('route')) {
-      this.map.removeLayer('route');
-      this.map.removeSource('route');
-    } else {
-      // Add a new layer to the map
-      this.map.addLayer({
-        id: 'route',
-        type: 'line',
-        source: {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            properties: {},
-            geometry: coords
-          }
-        },
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#03AA46',
-          'line-width': 8,
-          'line-opacity': 0.8
-        }
-      });
-    }
-  }
-
-  async #addRoute() {
-    // collect the promises from the API calls
-    let coordPromises = [];
-    // make 1 API call per 50 piece data chunk
-    for (let i = 0; i < this.formattedDataValue.length; i++) {
-      coordPromises.push(this.#getMatch(this.formattedDataValue[i], "walking", this.radiusesValue[i]));
-    }
-
-    try {
-      const coords = await Promise.all(coordPromises)
-
-      // collect all coordinates to be drawn
-      let coordsArray = []
-      coords.forEach((part) => {
-        part.coordinates.forEach((pair) => {
-          coordsArray.push(pair)
-        })
-      })
-      // format coordinates for the drawRoute function
-      const formattedCoordinates = { coordinates: coordsArray, type: "LineString" }
-
-      // draw a line between all coordinates
-      this.#drawRoute(formattedCoordinates)
-    } catch (error) {
-      console.error("An error occurred while processing coordinates:", error)
-    }
   }
 }
