@@ -1,0 +1,5895 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-08-29T12:11:56Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/258485623",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "lit": "no",
+        "name": "Fontäne im Fennpfuhl",
+        "tourism": "attraction",
+        "wheelchair": "yes",
+        "wikidata": "Q113688567"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4739939,
+          52.5282874
+        ]
+      },
+      "id": "node/258485623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/263686523",
+        "addr:floor": "0",
+        "amenity": "fountain",
+        "covered": "no",
+        "indoor": "no",
+        "level": "0",
+        "source": "survey",
+        "wikimedia_commons": "Category:Fontäne im Weißen See"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4627115,
+          52.5547152
+        ]
+      },
+      "id": "node/263686523"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/263687387",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4336744,
+          52.5271799
+        ]
+      },
+      "id": "node/263687387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/270171765",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "name": "Venezianischer Brunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3135229,
+          52.4896565
+        ]
+      },
+      "id": "node/270171765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/271254098",
+        "amenity": "fountain",
+        "name": "Gänselieselbrunnen",
+        "wikidata": "Q66100221"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.32864,
+          52.493138
+        ]
+      },
+      "id": "node/271254098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/277933699",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2106412,
+          52.4925177
+        ]
+      },
+      "id": "node/277933699"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/285431949",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2061621,
+          52.5386445
+        ]
+      },
+      "id": "node/285431949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/289115935",
+        "amenity": "fountain",
+        "name": "Märchenbrunnen",
+        "wikidata": "Q1957380"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4709769,
+          52.4673574
+        ]
+      },
+      "id": "node/289115935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/309556218",
+        "amenity": "fountain",
+        "artist_name": "Achim Kühn",
+        "fountain": "decorative",
+        "name": "Kleine Liebessäule",
+        "wikidata": "Q113533349",
+        "wikimedia_commons": "Category:Kleine Liebessäule"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.385463,
+          52.519966
+        ]
+      },
+      "id": "node/309556218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/309742998",
+        "amenity": "fountain",
+        "name": "Säule in der Brandung",
+        "wikidata": "Q54819883",
+        "wikipedia": "de:Säule in der Brandung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3072236,
+          52.5006888
+        ]
+      },
+      "id": "node/309742998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/309896096",
+        "addr:floor": "0",
+        "amenity": "fountain",
+        "covered": "no",
+        "indoor": "no",
+        "level": "0",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3135826,
+          52.5018882
+        ]
+      },
+      "id": "node/309896096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/313910732",
+        "amenity": "fountain",
+        "name": "St.-Georg-Brunnen",
+        "wikidata": "Q113459770"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.308026,
+          52.5032608
+        ]
+      },
+      "id": "node/313910732"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/319013763",
+        "amenity": "fountain",
+        "artist_name": "Reinhold Felderhoff",
+        "start_date": "1910",
+        "website": "https://de.m.wikipedia.org/wiki/Datei:BMWi_Brunnen_-001.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3757033,
+          52.5285861
+        ]
+      },
+      "id": "node/319013763"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/347422926",
+        "amenity": "fountain",
+        "image": "https://commons.wikimedia.org/wiki/File:Lichterfelde_Ludwig-Beck-Platz-003.jpg",
+        "name": "Wappenbrunnen",
+        "start_date": "1985",
+        "wikidata": "Q114065439",
+        "wikimedia_commons": "Category:Wappenbrunnen (Berlin-Lichterfelde)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3120359,
+          52.4427662
+        ]
+      },
+      "id": "node/347422926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/401552932",
+        "amenity": "fountain",
+        "name": "Kugelbrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3063551,
+          52.5077538
+        ]
+      },
+      "id": "node/401552932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/417057505",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4688605,
+          52.490576
+        ]
+      },
+      "id": "node/417057505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/426706912",
+        "amenity": "fountain",
+        "name": "Lebensalter (Südbrunnen)",
+        "wikidata": "Q992749"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3427058,
+          52.5013528
+        ]
+      },
+      "id": "node/426706912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/428114315",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3570751,
+          52.486527
+        ]
+      },
+      "id": "node/428114315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/440937810",
+        "amenity": "fountain",
+        "artist_name": "Gerhard Thieme",
+        "name": "Markthallenbrunnen",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/mit/09.shtml",
+        "wikidata": "Q28924229",
+        "wikimedia_commons": "Category:Markthallenbrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4082173,
+          52.5225224
+        ]
+      },
+      "id": "node/440937810"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/495237762",
+        "amenity": "fountain",
+        "name": "Siegfriedbrunnen",
+        "wikidata": "Q114679192"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3152098,
+          52.4731107
+        ]
+      },
+      "id": "node/495237762"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/495542662",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3221434,
+          52.5126146
+        ]
+      },
+      "id": "node/495542662"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/495549800",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:suburb": "Charlottenburg",
+        "amenity": "fountain",
+        "fountain": "decorative",
+        "lit": "no",
+        "name": "Brunnenstelen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2948232,
+          52.5132454
+        ]
+      },
+      "id": "node/495549800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/508079537",
+        "alt_name": "Stierbrunnen",
+        "amenity": "fountain",
+        "artist_name": "Hugo Lederer",
+        "fountain": "decorative",
+        "name": "Fruchtbarkeitsbrunnen",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/09.shtml",
+        "wikidata": "Q26257059",
+        "wikimedia_commons": "Category:Brunnen der Fruchtbarkeit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4371457,
+          52.5330323
+        ]
+      },
+      "id": "node/508079537"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/508085023",
+        "amenity": "fountain",
+        "name": "Bettinas Bank",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/21.shtml",
+        "wikidata": "Q107531004",
+        "wikimedia_commons": "Category:Bettinas Bank (Michael Klein)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4103759,
+          52.5516796
+        ]
+      },
+      "id": "node/508085023"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/508640820",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "decorative",
+        "height": "3",
+        "lit": "no",
+        "name": "Schinkelbrunnen",
+        "start_date": "1976",
+        "website": "https://bildhauerei-in-berlin.de/bildwerk/schalenbrunnen-9814/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2825244,
+          52.5896886
+        ]
+      },
+      "id": "node/508640820"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/510062608",
+        "amenity": "fountain",
+        "name": "Zwei Bären",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/17.shtml",
+        "wikidata": "Q111008190",
+        "wikimedia_commons": "Category:Spielende Bären (Stephan Horota, Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4201851,
+          52.5427167
+        ]
+      },
+      "id": "node/510062608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/519785742",
+        "amenity": "fountain",
+        "name": "Badewanne",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/16.shtml",
+        "wikidata": "Q109911834",
+        "wikimedia_commons": "Category:Paar in der Badewanne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4153513,
+          52.5318364
+        ]
+      },
+      "id": "node/519785742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/519808690",
+        "amenity": "fountain",
+        "image": "https://commons.wikimedia.org/wiki/File:Eins_von_drei_Brunnenbecken_(westliches)_an_der_Thomas-Mann-Stra%C3%9Fe_in_Berlin-Prenzlauer_Berg_03.jpg",
+        "name": "Drei Brunnenbecken",
+        "start_date": "1979",
+        "subject:wikidata": "Q122076549",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/10.shtml",
+        "wikimedia_commons": "Category:Three fountains at Thomas-Mann-Straße (Berlin-Prenzlauer Berg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4440654,
+          52.5424996
+        ]
+      },
+      "id": "node/519808690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/519808722",
+        "amenity": "fountain",
+        "image": "https://commons.wikimedia.org/wiki/File:Eins_von_drei_Brunnenbecken_(mittleres)_an_der_Thomas-Mann-Stra%C3%9Fe_in_Berlin-Prenzlauer_Berg_02.jpg",
+        "name": "Drei Brunnenbecken",
+        "start_date": "1979",
+        "subject:wikidata": "Q122076549",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/10.shtml",
+        "wikimedia_commons": "Category:Three fountains at Thomas-Mann-Straße (Berlin-Prenzlauer Berg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4443914,
+          52.5424446
+        ]
+      },
+      "id": "node/519808722"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/519808754",
+        "amenity": "fountain",
+        "image": "https://commons.wikimedia.org/wiki/File:Eins_von_drei_Brunnenbecken_(%C3%B6stliches)_an_der_Thomas-Mann-Stra%C3%9Fe_in_Berlin-Prenzlauer_Berg_01.jpg",
+        "name": "Drei Brunnenbecken",
+        "start_date": "1979",
+        "subject:wikidata": "Q122076549",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/10.shtml",
+        "wikimedia_commons": "Category:Three fountains at Thomas-Mann-Straße (Berlin-Prenzlauer Berg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4447286,
+          52.5423986
+        ]
+      },
+      "id": "node/519808754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/519814744",
+        "amenity": "fountain",
+        "artist_name": "Stephan Horota",
+        "name": "Kinder unterm Regenschirm",
+        "opening_hours": "24/7",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/pan/14.shtml",
+        "wikidata": "Q111007154",
+        "wikimedia_commons": "Category:Schirmkinder (Stephan Horota, Berlin-Prenzlauer Berg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4248699,
+          52.5393816
+        ]
+      },
+      "id": "node/519814744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/527648581",
+        "amenity": "fountain",
+        "artist_name": "Hubert Matthes, Fritz Kühn",
+        "description": "Vogeltränke mit Mosaik und Schildkröte",
+        "image": "File:Tröpfelbrunnen Schlosspark Niederschönhausen (1).jpg",
+        "name": "Vogelbrunnen",
+        "start_date": "1968",
+        "wikidata": "Q123822429",
+        "wikimedia_commons": "Category:Vogelbrunnen mit Blume und Schildkröte (Schlosspark Niederschönhausen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.406116,
+          52.5781498
+        ]
+      },
+      "id": "node/527648581"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/528672306",
+        "amenity": "fountain",
+        "name": "Froschkönig",
+        "wikidata": "Q111008209",
+        "wikimedia_commons": "Category:Froschkönig (Stephan Horota, Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4088688,
+          52.5317309
+        ]
+      },
+      "id": "node/528672306"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/530683722",
+        "amenity": "fountain",
+        "artist_name": "Knippschild & Simons"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3733192,
+          52.5302992
+        ]
+      },
+      "id": "node/530683722"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/558889580",
+        "amenity": "fountain",
+        "layer": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2954444,
+          52.5224966
+        ]
+      },
+      "id": "node/558889580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/558903414",
+        "amenity": "fountain",
+        "artist_name": "Hella Santarossa",
+        "artwork_type": "statue",
+        "image": "http://commons.wikimedia.org/wiki/File:Brunnen_in_Berlin-Charlottenburg,_Blauer_Obelisk_1.jpg",
+        "name": "Blauer Obelisk",
+        "tourism": "artwork",
+        "wheelchair": "limited",
+        "wikidata": "Q113622654",
+        "year": "1995"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2721555,
+          52.5093574
+        ]
+      },
+      "id": "node/558903414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559650532",
+        "alt_name": "Tanz der Jugend",
+        "amenity": "fountain",
+        "artist_name": "Wolfgang Weber",
+        "name": "Brunnen \"Tanz der Jugend \"",
+        "wikidata": "Q108556169",
+        "wikimedia_commons": "Category:Tanz der Jugend (Wolfgang Weber)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5541072,
+          52.5379715
+        ]
+      },
+      "id": "node/559650532"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559652550",
+        "amenity": "fountain",
+        "name": "Spielbrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.299414,
+          52.5045606
+        ]
+      },
+      "id": "node/559652550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559656927",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2633122,
+          52.4841088
+        ]
+      },
+      "id": "node/559656927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559662004",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2636246,
+          52.483953
+        ]
+      },
+      "id": "node/559662004"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559681914",
+        "amenity": "fountain",
+        "name": "Knabe mit Fisch",
+        "wikidata": "Q114373475"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2951412,
+          52.4793037
+        ]
+      },
+      "id": "node/559681914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/603110368",
+        "amenity": "fountain",
+        "height": "5",
+        "name": "Vier-Winde-Brunnen",
+        "wikidata": "Q114062497"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3432937,
+          52.4386208
+        ]
+      },
+      "id": "node/603110368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/614469375",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4682638,
+          52.426132
+        ]
+      },
+      "id": "node/614469375"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/623591356",
+        "amenity": "fountain",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2308915,
+          52.5227059
+        ]
+      },
+      "id": "node/623591356"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/623591362",
+        "amenity": "fountain",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2315698,
+          52.5226202
+        ]
+      },
+      "id": "node/623591362"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/623591370",
+        "amenity": "fountain",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2292111,
+          52.522922
+        ]
+      },
+      "id": "node/623591370"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/623591400",
+        "amenity": "fountain",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2290598,
+          52.5248357
+        ]
+      },
+      "id": "node/623591400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/626222286",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.383191,
+          52.4955018
+        ]
+      },
+      "id": "node/626222286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/634876948",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3062377,
+          52.496269
+        ]
+      },
+      "id": "node/634876948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/661053470",
+        "amenity": "fountain",
+        "architect": "Karl-Günther Möpert",
+        "name": "Quellstein",
+        "wikidata": "Q115308204",
+        "year_of_construction": "1983"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5122632,
+          52.5079764
+        ]
+      },
+      "id": "node/661053470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/661055608",
+        "amenity": "fountain",
+        "architect": "Dietrich Grüning",
+        "image": "https://commons.wikimedia.org/wiki/File:Spree_und_Havel,_Brunnen,_Berlin-Friedrichsfelde,_934-816-(118).jpg",
+        "name": "\"Spree und Havel\"-Brunnen",
+        "wikidata": "Q110142181",
+        "wikimedia_commons": "Category:Spree und Havel-Brunnen (Dietrich Grünig)",
+        "year_of_construction": "1980"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5198256,
+          52.4972286
+        ]
+      },
+      "id": "node/661055608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/664566378",
+        "alt_name": "Kanne mit Tasse",
+        "amenity": "fountain",
+        "artist:wikidata": "Q1440766",
+        "artist_name": "Heinrich Brummack",
+        "artwork_type": "sculpture",
+        "fountain": "decorative",
+        "name": "Nichtgeburtstagsbrunnen",
+        "operational_status": "non-operational",
+        "subject:wikidata": "Q92640",
+        "tourism": "artwork",
+        "wikidata": "Q114684307",
+        "wikimedia_commons": "File:Berlin-Kreuzberg Theodor-Wolff-Platz Nichtgeburtstagskanne.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3899479,
+          52.5015038
+        ]
+      },
+      "id": "node/664566378"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/676813585",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4014133,
+          52.5246925
+        ]
+      },
+      "id": "node/676813585"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/677049217",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4214706,
+          52.5063795
+        ]
+      },
+      "id": "node/677049217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/687364056",
+        "alt_name": "Wappenbrunnen",
+        "amenity": "fountain",
+        "image": "File:Gruendungsbrunnen Berlin2007.jpg",
+        "name": "Gründungsbrunnen",
+        "wikidata": "Q111008687",
+        "wikimedia_commons": "Category:Gründungsbrunnen (Berlin-Mitte)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4068227,
+          52.5166672
+        ]
+      },
+      "id": "node/687364056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/692167773",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3270377,
+          52.502036
+        ]
+      },
+      "id": "node/692167773"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/701840405",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "height": "2",
+        "name": "Brunnen Kranoldplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4378882,
+          52.4662835
+        ]
+      },
+      "id": "node/701840405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/746901089",
+        "amenity": "fountain",
+        "check_date": "2024-04-14",
+        "description": "Springbrunnen mit drei unterschiedlich hohen Säulen.",
+        "image": "File:Springbrunnen Eisackstraße Hauptstraße Berlin-Schöneberg.jpg",
+        "start_date": "1980",
+        "wikidata": "Q125504026",
+        "wikimedia_commons": "Category:Fountain Eisackstraße (Berlin-Schöneberg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3443022,
+          52.4776831
+        ]
+      },
+      "id": "node/746901089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/765960677",
+        "amenity": "fountain",
+        "description": "3 cylinder"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4411181,
+          52.5165871
+        ]
+      },
+      "id": "node/765960677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/768082168",
+        "amenity": "fountain",
+        "name": "Changing Invisibility"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4029158,
+          52.5201502
+        ]
+      },
+      "id": "node/768082168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/771332660",
+        "amenity": "fountain",
+        "artist_name": "Alexander Gonda",
+        "name": "Brunnenstele",
+        "start_date": "1966",
+        "wikidata": "Q110961716",
+        "wikimedia_commons": "Category:Brunnenstele (DIN-Platz)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3433986,
+          52.5047864
+        ]
+      },
+      "id": "node/771332660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/777255026",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "lit": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3960576,
+          52.5693565
+        ]
+      },
+      "id": "node/777255026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/791390973",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4181403,
+          52.5061997
+        ]
+      },
+      "id": "node/791390973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/861642882",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4399592,
+          52.4464076
+        ]
+      },
+      "id": "node/861642882"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/863982198",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "name": "Nilpferdbrunnen",
+        "wikidata": "Q114710344",
+        "wikimedia_commons": "Category:Nilpferdbrunnen (Nikolaus Bode)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4651036,
+          52.5076274
+        ]
+      },
+      "id": "node/863982198"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/864374510",
+        "amenity": "fountain",
+        "start_date": "1995",
+        "wikidata": "Q113969650",
+        "wikimedia_commons": "File:Gutspark Alt-Marienfelde.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3705658,
+          52.4111316
+        ]
+      },
+      "id": "node/864374510"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/890894419",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2775739,
+          52.4882659
+        ]
+      },
+      "id": "node/890894419"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/926945548",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3311225,
+          52.5291715
+        ]
+      },
+      "id": "node/926945548"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/928109888",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "indoor": "no",
+        "lit": "no",
+        "name": "Springbrunnen Schönbrunn",
+        "source": "survey",
+        "wikidata": "Q114408813",
+        "wikimedia_commons": "Category:Wasserglocke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4345667,
+          52.5276454
+        ]
+      },
+      "id": "node/928109888"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/937603941",
+        "addr:floor": "0",
+        "amenity": "fountain",
+        "covered": "no",
+        "drinking_water": "no",
+        "fountain": "decorative",
+        "indoor": "no",
+        "level": "0",
+        "lit": "yes",
+        "source": "survey",
+        "wikimedia_commons": "File:Brunnen in den Heckmann-Höfen.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3941114,
+          52.5258653
+        ]
+      },
+      "id": "node/937603941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/940815672",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2900041,
+          52.4661087
+        ]
+      },
+      "id": "node/940815672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/957442134",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.404532,
+          52.5240211
+        ]
+      },
+      "id": "node/957442134"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/959279545",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4066545,
+          52.5246374
+        ]
+      },
+      "id": "node/959279545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/961626600",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4012369,
+          52.5260559
+        ]
+      },
+      "id": "node/961626600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/961626620",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3894577,
+          52.5267696
+        ]
+      },
+      "id": "node/961626620"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/961626650",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3927913,
+          52.5271325
+        ]
+      },
+      "id": "node/961626650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/985383070",
+        "amenity": "fountain",
+        "artist_name": "Rolf Lieberknecht",
+        "name": "Brunnen-Stele",
+        "start_date": "1989",
+        "website": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/gebaeude-und-anlagen/brunnen/artikel.118272.php",
+        "wikidata": "Q110551156"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3270611,
+          52.4985004
+        ]
+      },
+      "id": "node/985383070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1001470743",
+        "amenity": "fountain",
+        "disused": "yes",
+        "note": "derzeit dauerhaft außer Betrieb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3703211,
+          52.48935
+        ]
+      },
+      "id": "node/1001470743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1024121798",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3927959,
+          52.5103124
+        ]
+      },
+      "id": "node/1024121798"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1024121799",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3928495,
+          52.5099203
+        ]
+      },
+      "id": "node/1024121799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1024121800",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3934718,
+          52.5103581
+        ]
+      },
+      "id": "node/1024121800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1032978556",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.486171,
+          52.5351751
+        ]
+      },
+      "id": "node/1032978556"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1032978570",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4956197,
+          52.5345679
+        ]
+      },
+      "id": "node/1032978570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118590895",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4798331,
+          52.5323518
+        ]
+      },
+      "id": "node/1118590895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1204948759",
+        "amenity": "fountain",
+        "description": "Kopie des Brunnen in Innsbruck vor Trautsonhaus",
+        "name": "Säulenbrunnen",
+        "source": "survey, HiRes Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3436189,
+          52.4791
+        ]
+      },
+      "id": "node/1204948759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1224843970",
+        "amenity": "fountain",
+        "wikidata": "Q111589983",
+        "wikimedia_commons": "Category:Brunnenschale mit Fontäne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3765352,
+          52.5502724
+        ]
+      },
+      "id": "node/1224843970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248011294",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4761757,
+          52.488315
+        ]
+      },
+      "id": "node/1248011294"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248011303",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4762629,
+          52.4884221
+        ]
+      },
+      "id": "node/1248011303"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248011312",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.476009,
+          52.4881201
+        ]
+      },
+      "id": "node/1248011312"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1248011421",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4760868,
+          52.4882214
+        ]
+      },
+      "id": "node/1248011421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1251739054",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3879173,
+          52.5177096
+        ]
+      },
+      "id": "node/1251739054"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1255190867",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4436496,
+          52.5156473
+        ]
+      },
+      "id": "node/1255190867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1255423785",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4858998,
+          52.6212625
+        ]
+      },
+      "id": "node/1255423785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1255759890",
+        "amenity": "fountain",
+        "artist_name": "Christa Biederbick",
+        "name": "Vogelbrunnen mit der Traube",
+        "start_date": "1985",
+        "website": "https://bildhauerei-in-berlin.de/bildwerk/brunnen-fuer-den-rosengarten-4629/",
+        "wikidata": "Q114729152"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.414293,
+          52.4323156
+        ]
+      },
+      "id": "node/1255759890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1255759978",
+        "amenity": "fountain",
+        "artist_name": "Christa Biederbick",
+        "mapillary": "150692750393143",
+        "name": "Großer Brunnen",
+        "start_date": "1985",
+        "website": "https://bildhauerei-in-berlin.de/bildwerk/brunnen-fuer-den-rosengarten-4629/",
+        "wikidata": "Q114729141"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4143076,
+          52.4320845
+        ]
+      },
+      "id": "node/1255759978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1255760029",
+        "amenity": "fountain",
+        "artist_name": "Christa Biederbick",
+        "name": "Vogelbrunnen mit der Muschel",
+        "start_date": "1985",
+        "website": "https://bildhauerei-in-berlin.de/bildwerk/brunnen-fuer-den-rosengarten-4629/",
+        "wikidata": "Q114729154"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4139306,
+          52.4321032
+        ]
+      },
+      "id": "node/1255760029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1255760121",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4206969,
+          52.4360063
+        ]
+      },
+      "id": "node/1255760121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1265477427",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "decorative",
+        "height": "0",
+        "image": "https://fennpfuhl.digital/park/statue/kugelbrunnen/",
+        "name": "Kugelbrunnen",
+        "wikidata": "Q113489272",
+        "wikimedia_commons": "Category:Kugelbrunnen (Jürgen Karnopp)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4715106,
+          52.5301591
+        ]
+      },
+      "id": "node/1265477427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1265477438",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Wasserspiele",
+        "tourism": "attraction",
+        "wikidata": "Q113708769"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4717754,
+          52.5293578
+        ]
+      },
+      "id": "node/1265477438"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1272183978",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4374553,
+          52.5151579
+        ]
+      },
+      "id": "node/1272183978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1279778624",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "decorative",
+        "height": "1.4",
+        "lit": "no",
+        "material": "stone",
+        "name": "Felsenbrunnen",
+        "start_date": "1978",
+        "wikidata": "Q113457305",
+        "wikimedia_commons": "File:Brunnen Gorkistr 1 (Tegel) Felsenbrunnen Hartmut Breuer 1978.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2840731,
+          52.5897177
+        ]
+      },
+      "id": "node/1279778624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530892",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4180099,
+          52.506025
+        ]
+      },
+      "id": "node/1283530892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530894",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4187036,
+          52.5057249
+        ]
+      },
+      "id": "node/1283530894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530901",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4179414,
+          52.5059334
+        ]
+      },
+      "id": "node/1283530901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530904",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4189061,
+          52.5059963
+        ]
+      },
+      "id": "node/1283530904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530907",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4177385,
+          52.5056615
+        ]
+      },
+      "id": "node/1283530907"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530909",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4184333,
+          52.5053627
+        ]
+      },
+      "id": "node/1283530909"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530910",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4176747,
+          52.505576
+        ]
+      },
+      "id": "node/1283530910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530913",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4178768,
+          52.5058467
+        ]
+      },
+      "id": "node/1283530913"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530914",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4187674,
+          52.5058104
+        ]
+      },
+      "id": "node/1283530914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530920",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4178055,
+          52.5057512
+        ]
+      },
+      "id": "node/1283530920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530922",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4186331,
+          52.5056305
+        ]
+      },
+      "id": "node/1283530922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530923",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4185735,
+          52.5055506
+        ]
+      },
+      "id": "node/1283530923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530928",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4180794,
+          52.5061182
+        ]
+      },
+      "id": "node/1283530928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530932",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.418841,
+          52.505909
+        ]
+      },
+      "id": "node/1283530932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283530938",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4185031,
+          52.5054562
+        ]
+      },
+      "id": "node/1283530938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1286834048",
+        "amenity": "fountain",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "lda:criteria": "Baudenkmal",
+        "name": "Kinderbrunnen",
+        "ref:lda": "09066382",
+        "start_date": "1960",
+        "wikidata": "Q56233322"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.349275,
+          52.4921351
+        ]
+      },
+      "id": "node/1286834048"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1308533254",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4664753,
+          52.5249296
+        ]
+      },
+      "id": "node/1308533254"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1338222751",
+        "amenity": "fountain",
+        "architect": "Hans-Detlef Hennig",
+        "image": "https://commons.wikimedia.org/wiki/File:Fontanebrunnen,_Berlin-Friedrichsfelde,_478-584.jpg",
+        "name": "Fontanebrunnen",
+        "start_date": "1982",
+        "wikidata": "Q114457213",
+        "wikimedia_commons": "Category:Fontanebrunnen (Hans-Detlev Hennig, Berlin-Friedrichsfelde)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5211463,
+          52.4979746
+        ]
+      },
+      "id": "node/1338222751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1342096460",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "image": "https://commons.wikimedia.org/wiki/File:Brunnen_in_Berlin-Mitte,_Rosengarten_2.jpg",
+        "material": "Granit",
+        "start_date": "1866",
+        "wikidata": "Q113954907",
+        "wikimedia_commons": "Category:Schalenbrunnen (Rosengarten, Großer Tiergarten)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3573064,
+          52.5135839
+        ]
+      },
+      "id": "node/1342096460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1370216920",
+        "amenity": "fountain",
+        "artist_name": "Adalbert Maria Klees",
+        "name": "Erdquell",
+        "wikidata": "Q116207460"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4699658,
+          52.5109451
+        ]
+      },
+      "id": "node/1370216920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1370293733",
+        "amenity": "fountain",
+        "description": "Plansche",
+        "name": "Gulliver"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4644804,
+          52.5105909
+        ]
+      },
+      "id": "node/1370293733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1386225236",
+        "amenity": "fountain",
+        "architect": "Christiane Wartenberg",
+        "artist:wikidata": "Q15432929",
+        "artist_name": "Christiane Wartenberg",
+        "image": "File:Brunnen Heinrich-Dathe-Platz (Frife) Märkischer Brunnen&Christiane Wartenberg&198011.jpg",
+        "name": "Märkischer Brunnen",
+        "start_date": "1980",
+        "wikidata": "Q113483515",
+        "wikimedia_commons": "Category:Märkischer Brunnen (Christiane Wartenberg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5226106,
+          52.4980057
+        ]
+      },
+      "id": "node/1386225236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1387446005",
+        "amenity": "fountain",
+        "artist:wikidata": "Q27825850",
+        "artist_name": "Nikolaus Bode",
+        "name": "Koggebrunnen",
+        "start_date": "1982",
+        "wikidata": "Q115311432",
+        "wikimedia_commons": "File:Gensinger Viertel Berlin-Frf 071-122.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5277342,
+          52.5114518
+        ]
+      },
+      "id": "node/1387446005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1389926132",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2456231,
+          52.5454614
+        ]
+      },
+      "id": "node/1389926132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1390658401",
+        "amenity": "fountain",
+        "architect": "Karl Wenke",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "lda:criteria": "Baudenkmal",
+        "name": "Fritz-Reuter-Brunnen",
+        "ref:lda": "09046186",
+        "start_date": "1914",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/neu/01.shtml",
+        "wikidata": "Q113679212"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4298862,
+          52.4892715
+        ]
+      },
+      "id": "node/1390658401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1408609515",
+        "amenity": "fountain",
+        "artist_name": "Hermann K. Hosaeus",
+        "artwork_type": "sculpture",
+        "drinking_water": "no",
+        "name": "Genoveva-Brunnen",
+        "start_date": "1928",
+        "tourism": "artwork",
+        "website": "http://w3.siemens.de/siemens-stadt/genovbr0.htm",
+        "wikidata": "Q114454793",
+        "wikimedia_commons": "Category:Genoveva-Brunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2618592,
+          52.5465289
+        ]
+      },
+      "id": "node/1408609515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1426226688",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.402322,
+          52.391939
+        ]
+      },
+      "id": "node/1426226688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1472505567",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3732798,
+          52.5046889
+        ]
+      },
+      "id": "node/1472505567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1474951243",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4643242,
+          52.5007519
+        ]
+      },
+      "id": "node/1474951243"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1476481250",
+        "amenity": "fountain",
+        "name": "Messing-Brunnenstele"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3259048,
+          52.500815
+        ]
+      },
+      "id": "node/1476481250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1484843095",
+        "amenity": "fountain",
+        "name": "Zierbrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2851599,
+          52.6303774
+        ]
+      },
+      "id": "node/1484843095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1492453830",
+        "amenity": "fountain",
+        "artist_name": "Manfred Ebeling",
+        "material": "concrete",
+        "name": "Kugelbrunnen",
+        "start_date": "1978",
+        "wikidata": "Q114670176",
+        "wikimedia_commons": "File:Dolgenseestraße Brunnen Berlin-Frf 085-136.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5065337,
+          52.493804
+        ]
+      },
+      "id": "node/1492453830"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1504525838",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4381047,
+          52.5148769
+        ]
+      },
+      "id": "node/1504525838"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1755118142",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3788242,
+          52.4809704
+        ]
+      },
+      "id": "node/1755118142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1764669256",
+        "amenity": "fountain",
+        "name": "Buttbrunnen",
+        "start_date": "1916",
+        "wikidata": "Q1018026",
+        "wikimedia_commons": "Category:Buttbrunnen (Museumsinsel)",
+        "wikipedia": "de:Buttbrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3978699,
+          52.5193499
+        ]
+      },
+      "id": "node/1764669256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1766031943",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4443361,
+          52.4978758
+        ]
+      },
+      "id": "node/1766031943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1768536483",
+        "amenity": "fountain",
+        "description": "Tuffstein-Brunnen mit der Skulptur Knabe mit Tintenfisch",
+        "name": "Tuffstein-Brunnen",
+        "wikidata": "Q110088009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.388734,
+          52.4606298
+        ]
+      },
+      "id": "node/1768536483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1782761803",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Bärenbrunnen",
+        "tourism": "artwork",
+        "wikidata": "Q114563439"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4147681,
+          52.4629164
+        ]
+      },
+      "id": "node/1782761803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1791520067",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4585784,
+          52.4728628
+        ]
+      },
+      "id": "node/1791520067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1801491874",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3724493,
+          52.4779182
+        ]
+      },
+      "id": "node/1801491874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1801491955",
+        "amenity": "fountain",
+        "artist:wikidata": "Q2058972",
+        "artist_name": "Paul Brandenburg",
+        "name": "Steinskulptur und Brunnen",
+        "note": "Die Steinskulptur ein paar Meter weiter auf der anderen Seite der Zufahrt ist ebenfalls von Paul Brandenburg und gehört zum Brunnen als Ensemble.",
+        "wikidata": "Q110969723"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3729414,
+          52.4787709
+        ]
+      },
+      "id": "node/1801491955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1811357359",
+        "amenity": "fountain",
+        "name": "Schalenbrunnen",
+        "start_date": "1995",
+        "wikidata": "Q113519479",
+        "wikimedia_commons": "File:Brunnen Monbijoupark Berlin2007.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3955066,
+          52.5239502
+        ]
+      },
+      "id": "node/1811357359"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1813864083",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3675445,
+          52.4565463
+        ]
+      },
+      "id": "node/1813864083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1830173244",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4580121,
+          52.4731396
+        ]
+      },
+      "id": "node/1830173244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1868475409",
+        "amenity": "fountain",
+        "artist_name": "Otto Westphal",
+        "disused": "yes",
+        "name": "Nickelmannbrunnen",
+        "note": "dauerhaft außer Betrieb",
+        "start_date": "1904",
+        "wikidata": "Q114037277"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3528788,
+          52.499738
+        ]
+      },
+      "id": "node/1868475409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1881346249",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3666028,
+          52.507201
+        ]
+      },
+      "id": "node/1881346249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1883155659",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3856279,
+          52.4316799
+        ]
+      },
+      "id": "node/1883155659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1883159495",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3852363,
+          52.4317486
+        ]
+      },
+      "id": "node/1883159495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1883880272",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3310866,
+          52.5001544
+        ]
+      },
+      "id": "node/1883880272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1949132315",
+        "amenity": "fountain",
+        "artist:wikidata": "Q110317694",
+        "artist_name": "Gerald Matzner",
+        "name": "Indischer Brunnen",
+        "wikidata": "Q25063973",
+        "wikimedia_commons": "Category:Indischer Brunnen (Berlin-Mitte)",
+        "wikipedia": "en:Indischer Brunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4175423,
+          52.5047539
+        ]
+      },
+      "id": "node/1949132315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1969213786",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3605737,
+          52.4881681
+        ]
+      },
+      "id": "node/1969213786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1978531560",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:postcode": "12489",
+        "addr:suburb": "Adlershof",
+        "amenity": "fountain",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "lda:criteria": "Baudenkmal",
+        "name": "Marktbrunnen",
+        "ref:lda": "09045219",
+        "start_date": "1912"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5474448,
+          52.4379525
+        ]
+      },
+      "id": "node/1978531560"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2014249790",
+        "amenity": "fountain",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2604667,
+          52.433313
+        ]
+      },
+      "id": "node/2014249790"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2060001660",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3959502,
+          52.5066942
+        ]
+      },
+      "id": "node/2060001660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2085682957",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4293918,
+          52.5402483
+        ]
+      },
+      "id": "node/2085682957"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2097526379",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3758008,
+          52.5575128
+        ]
+      },
+      "id": "node/2097526379"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2144331942",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4004776,
+          52.4967105
+        ]
+      },
+      "id": "node/2144331942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2273964797",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2931285,
+          52.4737956
+        ]
+      },
+      "id": "node/2273964797"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2295042180",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2778523,
+          52.4394597
+        ]
+      },
+      "id": "node/2295042180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2356648794",
+        "amenity": "fountain",
+        "name": "Brunnella",
+        "wikidata": "Q118164889"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3934264,
+          52.5420541
+        ]
+      },
+      "id": "node/2356648794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394280340",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.415801,
+          52.432137
+        ]
+      },
+      "id": "node/2394280340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2415465332",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3577316,
+          52.4975818
+        ]
+      },
+      "id": "node/2415465332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2443178930",
+        "amenity": "fountain",
+        "name": "Otter-Brunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2738719,
+          52.5351145
+        ]
+      },
+      "id": "node/2443178930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2458555390",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5235023,
+          52.5044028
+        ]
+      },
+      "id": "node/2458555390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2458555397",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5239114,
+          52.5044886
+        ]
+      },
+      "id": "node/2458555397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2526521305",
+        "amenity": "fountain",
+        "name": "Brunno",
+        "wikidata": "Q118173269",
+        "wikimedia_commons": "Category:Brunno (Brunnenstraße 64, Berlin-Gesundbrunnen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3947335,
+          52.540335
+        ]
+      },
+      "id": "node/2526521305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2590915432",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2745523,
+          52.4382287
+        ]
+      },
+      "id": "node/2590915432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2607087948",
+        "alt_name": "Bronzemöwen;Mövenbrunnen;Möwen-Brunnen",
+        "amenity": "fountain",
+        "image": "http://commons.wikimedia.org/wiki/File:M%C3%B6venbrunnen_Tierpark_Berlin_814-696-%28118%29.jpg",
+        "name": "Möwenbrunnen",
+        "wikidata": "Q113481559"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5327613,
+          52.4978521
+        ]
+      },
+      "id": "node/2607087948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2645612483",
+        "amenity": "fountain",
+        "name": "Springbrunnen",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4385367,
+          52.4714271
+        ]
+      },
+      "id": "node/2645612483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2645616327",
+        "amenity": "fountain",
+        "name": "Kaskaden"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4389772,
+          52.4714787
+        ]
+      },
+      "id": "node/2645616327"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2751681329",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1780885,
+          52.4384842
+        ]
+      },
+      "id": "node/2751681329"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2753451850",
+        "amenity": "fountain",
+        "artist_name": "Rolf Szymanski",
+        "name": "Fette Henne",
+        "source": "Dakota 20",
+        "start_date": "1984",
+        "tourism": "artwork",
+        "wheelchair": "yes",
+        "wikidata": "Q1409204"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4340648,
+          52.4283365
+        ]
+      },
+      "id": "node/2753451850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2967422528",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3515815,
+          52.4810489
+        ]
+      },
+      "id": "node/2967422528"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2978287590",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3786349,
+          52.480991
+        ]
+      },
+      "id": "node/2978287590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3005752115",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2954449,
+          52.5224986
+        ]
+      },
+      "id": "node/3005752115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3005752116",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2954374,
+          52.5224941
+        ]
+      },
+      "id": "node/3005752116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3050775766",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "name": "Kleiner Brunnen",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/tem_sch/06.shtml"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3546627,
+          52.4981994
+        ]
+      },
+      "id": "node/3050775766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3113263545",
+        "amenity": "fountain",
+        "artist_name": "Hans Willi Kettner",
+        "name": "Neptunbrunnen",
+        "start_date": "1982"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3355551,
+          52.5101744
+        ]
+      },
+      "id": "node/3113263545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3166520405",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3835722,
+          52.4658247
+        ]
+      },
+      "id": "node/3166520405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3168412244",
+        "amenity": "fountain",
+        "name": "Pfauenbrunnen",
+        "wikidata": "Q114246465",
+        "wikimedia_commons": "Category:Pfauenbrunnen (Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4189463,
+          52.5157069
+        ]
+      },
+      "id": "node/3168412244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3181885304",
+        "amenity": "fountain",
+        "artist:wikidata": "Q108732482",
+        "artist_name": "Willy Ernst Schade",
+        "artwork_type": "statue",
+        "fountain": "nozzle",
+        "image": "https://commons.wikimedia.org/wiki/File:Skulptur_Am_Weißen_See_(Weißs)_Zwei_Seelöwen&Willy_Ernst_Schade&1925.jpg",
+        "material": "stone",
+        "name": "Seelöwe",
+        "start_date": "1925",
+        "subject:wikidata": "Q117820495",
+        "tourism": "artwork",
+        "wikimedia_commons": "Category:Zwei Seelöwen (Willy Ernst Schade)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4612967,
+          52.5553914
+        ]
+      },
+      "id": "node/3181885304"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3266548786",
+        "amenity": "fountain",
+        "artist_name": "Achim Kühn",
+        "material": "steel",
+        "name": "Kleine Elefanten",
+        "start_date": "1995",
+        "wikidata": "Q110432433",
+        "wikimedia_commons": "Category:Kleine Elefanten (Achim Kühn)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.553499,
+          52.4352335
+        ]
+      },
+      "id": "node/3266548786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3278949581",
+        "amenity": "fountain",
+        "name": "Paech-Brunnen",
+        "wikidata": "Q56653847",
+        "wikimedia_commons": "Category:Paech Brot Brunnen Berlin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3460193,
+          52.5321778
+        ]
+      },
+      "id": "node/3278949581"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3370104173",
+        "amenity": "fountain",
+        "artist_name": "Nikolaus Friedrich",
+        "name": "Hofbrunnen",
+        "website": "http://www.luise-berlin.de/lexikon/chawi/h/hofbrunnen.htm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3270733,
+          52.5048643
+        ]
+      },
+      "id": "node/3370104173"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3428074882",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.257114,
+          52.4334457
+        ]
+      },
+      "id": "node/3428074882"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3480333911",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3586227,
+          52.4973979
+        ]
+      },
+      "id": "node/3480333911"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3505343602",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2577891,
+          52.4284448
+        ]
+      },
+      "id": "node/3505343602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3519069272",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.442422,
+          52.5113507
+        ]
+      },
+      "id": "node/3519069272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3596535684",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5842145,
+          52.5207431
+        ]
+      },
+      "id": "node/3596535684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3939815932",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3984935,
+          52.5410646
+        ]
+      },
+      "id": "node/3939815932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3939816067",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3987908,
+          52.5413203
+        ]
+      },
+      "id": "node/3939816067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4003220730",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4343627,
+          52.5249704
+        ]
+      },
+      "id": "node/4003220730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4114807636",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3823192,
+          52.4640611
+        ]
+      },
+      "id": "node/4114807636"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4114808273",
+        "amenity": "fountain",
+        "artist_name": "Gerhard Schultze-Seehof",
+        "wikidata": "Q114244348"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3861767,
+          52.4658587
+        ]
+      },
+      "id": "node/4114808273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4116213038",
+        "amenity": "fountain",
+        "disused": "yes",
+        "height": "1.2",
+        "note": "Brunnen mit Fischrelief; derzeit dauerhaft außer Betrieb",
+        "wikidata": "Q114051869",
+        "wikimedia_commons": "File:Alboinplatz 03.05.2013 15-42-38.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.370546,
+          52.4596997
+        ]
+      },
+      "id": "node/4116213038"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4228609162",
+        "amenity": "fountain",
+        "artist:wikidata": "Q653742",
+        "artist:wikipedia": "de:August Gaul",
+        "artist_name": "August Gaul",
+        "artwork_type": "sculpture",
+        "image": "https://commons.wikimedia.org/wiki/File:Brunnen_Colomierstr_3_%28Wanns%29_Fischotter%26August_Gaul%261897.jpg",
+        "name": "Fischotter mit Fisch",
+        "tourism": "artwork",
+        "year": "1902"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1652224,
+          52.4287677
+        ]
+      },
+      "id": "node/4228609162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4347027783",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3473079,
+          52.5425252
+        ]
+      },
+      "id": "node/4347027783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4347027784",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3474159,
+          52.541985
+        ]
+      },
+      "id": "node/4347027784"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4347033623",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3439775,
+          52.5420064
+        ]
+      },
+      "id": "node/4347033623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4347150525",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3435709,
+          52.5419756
+        ]
+      },
+      "id": "node/4347150525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4348958874",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3444136,
+          52.5420424
+        ]
+      },
+      "id": "node/4348958874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4351783012",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.346888,
+          52.5413622
+        ]
+      },
+      "id": "node/4351783012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4351783013",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3455248,
+          52.5427023
+        ]
+      },
+      "id": "node/4351783013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4353160811",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3734754,
+          52.5175442
+        ]
+      },
+      "id": "node/4353160811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4360435502",
+        "amenity": "fountain",
+        "wikidata": "Q113950593"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3527555,
+          52.5049537
+        ]
+      },
+      "id": "node/4360435502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4360435503",
+        "amenity": "fountain",
+        "wikidata": "Q113950593"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3526621,
+          52.5050009
+        ]
+      },
+      "id": "node/4360435503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4360435504",
+        "amenity": "fountain",
+        "wikidata": "Q113950593"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3525704,
+          52.5050427
+        ]
+      },
+      "id": "node/4360435504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4363579604",
+        "amenity": "fountain",
+        "name": "Biberbrunnen",
+        "website": "https://bildhauerei-in-berlin.de/bildwerk/biberbrunnen-5138/",
+        "wikidata": "Q114309510",
+        "wikimedia_commons": "File:2019 Biberbrunnen.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3869944,
+          52.547303
+        ]
+      },
+      "id": "node/4363579604"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4382417994",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3414234,
+          52.5065422
+        ]
+      },
+      "id": "node/4382417994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4382417995",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3424044,
+          52.5065964
+        ]
+      },
+      "id": "node/4382417995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4383627817",
+        "amenity": "fountain",
+        "layer": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3203125,
+          52.4578872
+        ]
+      },
+      "id": "node/4383627817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4485988892",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.439445,
+          52.4982566
+        ]
+      },
+      "id": "node/4485988892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4512088611",
+        "amenity": "fountain",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Mitte_Gro%C3%9Fe_Hamburger_Stra%C3%9Fe_St._Hedwig.JPG",
+        "name": "Brunnen der hl. Agatha",
+        "wikidata": "Q17353337",
+        "wikipedia": "de:Agathabrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3974885,
+          52.5259335
+        ]
+      },
+      "id": "node/4512088611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4563475832",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.39431,
+          52.5701351
+        ]
+      },
+      "id": "node/4563475832"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4563475833",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3935369,
+          52.570055
+        ]
+      },
+      "id": "node/4563475833"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4677782109",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4118629,
+          52.5316774
+        ]
+      },
+      "id": "node/4677782109"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4915982202",
+        "amenity": "fountain",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "image": "File:Lederer, Hugo 1928 Bären-Brunnen.jpg",
+        "lda:criteria": "Baudenkmal",
+        "name": "Bärenbrunnen",
+        "ref:lda": "09060128",
+        "wikidata": "Q15857000",
+        "wikimedia_commons": "Category:Bärenbrunnen (Berlin-Mitte)",
+        "wikipedia": "de:Bärenbrunnen (Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3981307,
+          52.5156082
+        ]
+      },
+      "id": "node/4915982202"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4918149341",
+        "amenity": "fountain",
+        "wikimedia_commons": "File:Gärten der Welt - Blumenbeet Eingangsbereich.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5765535,
+          52.5394086
+        ]
+      },
+      "id": "node/4918149341"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4955849701",
+        "amenity": "fountain",
+        "name": "Möwenbrunnen",
+        "source": "https://commons.wikimedia.org/wiki/File:Paul_Ohnesorge_-_M%C3%B6wenbrunnen.jpg",
+        "website": "http://www.luise-berlin.de/lexikon/frkr/m/moewenbrunnen.htm",
+        "wikidata": "Q116598261",
+        "wikimedia_commons": "Category:Möwenbrunnen (Paul Ohnesorge)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4048928,
+          52.5051088
+        ]
+      },
+      "id": "node/4955849701"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4966306072",
+        "alt_name": "Fontäne im Schloßpark Biesdorf",
+        "amenity": "fountain",
+        "name": "Fontäne",
+        "wikidata": "Q114857811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5590916,
+          52.5102735
+        ]
+      },
+      "id": "node/4966306072"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5054068410",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3049476,
+          52.4989134
+        ]
+      },
+      "id": "node/5054068410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5095713944",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3233386,
+          52.5077385
+        ]
+      },
+      "id": "node/5095713944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5159321994",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3235205,
+          52.4805468
+        ]
+      },
+      "id": "node/5159321994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5181187323",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4921155,
+          52.4648152
+        ]
+      },
+      "id": "node/5181187323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5574301773",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3822497,
+          52.522817
+        ]
+      },
+      "id": "node/5574301773"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5581097383",
+        "amenity": "fountain",
+        "artist_name": "Ernst Seger",
+        "name": "Storchenbrunnen",
+        "wikidata": "Q114238441",
+        "wikimedia_commons": "Category:Storchenbrunnen (Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3787887,
+          52.4782006
+        ]
+      },
+      "id": "node/5581097383"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5646270935",
+        "amenity": "fountain",
+        "name": "Lamabrunnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1251137,
+          52.4331782
+        ]
+      },
+      "id": "node/5646270935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5675869252",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3153854,
+          52.4979901
+        ]
+      },
+      "id": "node/5675869252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5675869253",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3156724,
+          52.4975214
+        ]
+      },
+      "id": "node/5675869253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5705761965",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3278034,
+          52.5023562
+        ]
+      },
+      "id": "node/5705761965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5788127714",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.120167,
+          52.4309308
+        ]
+      },
+      "id": "node/5788127714"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5829207512",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4958131,
+          52.5125109
+        ]
+      },
+      "id": "node/5829207512"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5895647284",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3525276,
+          52.5168598
+        ]
+      },
+      "id": "node/5895647284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5895650185",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3525819,
+          52.5168321
+        ]
+      },
+      "id": "node/5895650185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5895650186",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3526255,
+          52.5168647
+        ]
+      },
+      "id": "node/5895650186"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5895650187",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3525718,
+          52.5168912
+        ]
+      },
+      "id": "node/5895650187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5979242488",
+        "amenity": "fountain",
+        "name": "Eulenbrunnen",
+        "wikidata": "Q113652983"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4471618,
+          52.4371442
+        ]
+      },
+      "id": "node/5979242488"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6143046465",
+        "amenity": "fountain",
+        "level": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3739969,
+          52.5072021
+        ]
+      },
+      "id": "node/6143046465"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6239626225",
+        "amenity": "fountain",
+        "lit": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.411742,
+          52.531807
+        ]
+      },
+      "id": "node/6239626225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6255552966",
+        "amenity": "fountain",
+        "architect": "Karl Friedrich Schinkel",
+        "artist_name": "Christian Daniel Rauch",
+        "material": "sandstein",
+        "name": "Überlaufstein",
+        "start_date": "1830",
+        "wikidata": "Q116944197",
+        "wikimedia_commons": "File:Berlin, Mitte, Lustgarten, Abflusskanal des ehemaligen Springbrunnens.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3986288,
+          52.5180932
+        ]
+      },
+      "id": "node/6255552966"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6325805600",
+        "amenity": "fountain",
+        "lit": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.448705,
+          52.4655863
+        ]
+      },
+      "id": "node/6325805600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6438948857",
+        "amenity": "fountain",
+        "image": "https://commons.wikimedia.org/wiki/File:Lankwitz_Bernkastler_Platz_Brunnen-001.jpg",
+        "start_date": "1914",
+        "wikidata": "Q114058399",
+        "wikimedia_commons": "Category:Großer Springbrunnen Bernkastler Platz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3456256,
+          52.4402447
+        ]
+      },
+      "id": "node/6438948857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6651379285",
+        "alt_name": "Kugelbrunnen",
+        "amenity": "fountain",
+        "architect": "Hannes Warscycek;Horst Scholz",
+        "architect:wikidata": "Q121863291",
+        "artist_name": "Horst Scholz",
+        "drinking_water": "no",
+        "image": "https://commons.wikimedia.org/wiki/File:K%C3%B6pitzer_Stra%C3%9Fe_Berlin-Frf_054-105.JPG",
+        "name": "Kleiner Brunnen",
+        "website": "https://www.stadtentwicklung.berlin.de/bauen/brunnen/de/lic/07.shtml",
+        "wikidata": "Q113485277",
+        "wikimedia_commons": "Category:Kugelbrunnen (Alfred-Kowalke-Straße, Berlin-Friedrichsfelde)",
+        "year_of_construction": "1987"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5218709,
+          52.5080412
+        ]
+      },
+      "id": "node/6651379285"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6695381550",
+        "amenity": "fountain",
+        "pump": "manual"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3531228,
+          52.5464906
+        ]
+      },
+      "id": "node/6695381550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6726362985",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4899009,
+          52.6407058
+        ]
+      },
+      "id": "node/6726362985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6760617075",
+        "amenity": "fountain",
+        "name": "Nordbrunnen",
+        "wikidata": "Q114027130"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3432415,
+          52.502268
+        ]
+      },
+      "id": "node/6760617075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774817015",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34056,
+          52.496578
+        ]
+      },
+      "id": "node/6774817015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6875406319",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3876508,
+          52.531167
+        ]
+      },
+      "id": "node/6875406319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6875406320",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3877367,
+          52.5311067
+        ]
+      },
+      "id": "node/6875406320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6875406321",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3876871,
+          52.5310414
+        ]
+      },
+      "id": "node/6875406321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6880963973",
+        "amenity": "fountain",
+        "name": "Spinnerinnenbrunnen",
+        "wikidata": "Q32651542"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4112918,
+          52.551643
+        ]
+      },
+      "id": "node/6880963973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6971371002",
+        "amenity": "fountain",
+        "artist_name": "Holger Uhrig",
+        "name": "Wassertreppe",
+        "start_date": "1997",
+        "wikidata": "Q111550272",
+        "wikimedia_commons": "Category:Hansaviertel Wassertreppe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3454986,
+          52.5162339
+        ]
+      },
+      "id": "node/6971371002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7095364561",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "height": "1",
+        "lit": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4872197,
+          52.641377
+        ]
+      },
+      "id": "node/7095364561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7121752383",
+        "amenity": "fountain",
+        "height": "2.6",
+        "lit": "no",
+        "name": "Findlingsbrunnen",
+        "operator": "Berliner Wasserbetriebe",
+        "wikidata": "Q108560529",
+        "wikimedia_commons": "Category:Brunnen mit Findling (Karl-Holtz-Platz)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5690592,
+          52.5530798
+        ]
+      },
+      "id": "node/7121752383"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7228172458",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4578559,
+          52.4343102
+        ]
+      },
+      "id": "node/7228172458"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7292820124",
+        "amenity": "fountain",
+        "water": "pond"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3534928,
+          52.4852212
+        ]
+      },
+      "id": "node/7292820124"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7428410628",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4603415,
+          52.4372257
+        ]
+      },
+      "id": "node/7428410628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7445174900",
+        "amenity": "fountain",
+        "covered": "no",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2938914,
+          52.4222405
+        ]
+      },
+      "id": "node/7445174900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7445174901",
+        "amenity": "fountain",
+        "covered": "yes",
+        "drinking_water": "no",
+        "indoor": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2940688,
+          52.4220978
+        ]
+      },
+      "id": "node/7445174901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7449559373",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2632262,
+          52.455146
+        ]
+      },
+      "id": "node/7449559373"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7466594363",
+        "amenity": "fountain",
+        "artist_name": "Georg Roch",
+        "artwork_type": "statue",
+        "material": "bronze",
+        "name": "Krötenbüblein",
+        "start_date": "1927",
+        "tourism": "artwork",
+        "wikidata": "Q110026644",
+        "wikimedia_commons": "Category:Krötenbüblein (Georg Roch)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3376789,
+          52.507454
+        ]
+      },
+      "id": "node/7466594363"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7471272368",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2655764,
+          52.455569
+        ]
+      },
+      "id": "node/7471272368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7473604384",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2126693,
+          52.4242607
+        ]
+      },
+      "id": "node/7473604384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7476195253",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2529429,
+          52.4398132
+        ]
+      },
+      "id": "node/7476195253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7476198106",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2521129,
+          52.440971
+        ]
+      },
+      "id": "node/7476198106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7476256262",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2536744,
+          52.4405014
+        ]
+      },
+      "id": "node/7476256262"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7501715909",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3429367,
+          52.4578767
+        ]
+      },
+      "id": "node/7501715909"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7574799385",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4750801,
+          52.4794301
+        ]
+      },
+      "id": "node/7574799385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7638680514",
+        "amenity": "fountain",
+        "covered": "no",
+        "height": "1.3",
+        "indoor": "nein",
+        "level": "1",
+        "lit": "no",
+        "note": "Spielplatz , Karl Wenke, Trinkbrunnen mit Bär, 1949-50, Travertin, Gesamthöhe 1,30 m, ausser Betrieb, Literatur: Damus/Rogge 1979, S. 216, Begleitheft Ehmann 1988, S. 49."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3094601,
+          52.4551224
+        ]
+      },
+      "id": "node/7638680514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7721121085",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3464025,
+          52.5393405
+        ]
+      },
+      "id": "node/7721121085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7733972641",
+        "amenity": "fountain",
+        "artist_name": "Emanuel Scharfenberg",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Elementblock (Elementwürfel)",
+        "start_date": "1987",
+        "tourism": "artwork",
+        "wikidata": "Q116214970"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2841471,
+          52.492112
+        ]
+      },
+      "id": "node/7733972641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7765728142",
+        "amenity": "fountain",
+        "artist_name": "Ernst Löber, Leni Schamal",
+        "name": "Brunnen mit Holzskulpturen",
+        "start_date": "1985"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6001448,
+          52.4397836
+        ]
+      },
+      "id": "node/7765728142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7779103120",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3842538,
+          52.5208594
+        ]
+      },
+      "id": "node/7779103120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7828869885",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.290017,
+          52.5868061
+        ]
+      },
+      "id": "node/7828869885"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7853770163",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2632741,
+          52.4443002
+        ]
+      },
+      "id": "node/7853770163"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7859293263",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5755758,
+          52.5386102
+        ]
+      },
+      "id": "node/7859293263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7919963145",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "decorative"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4043668,
+          52.5081967
+        ]
+      },
+      "id": "node/7919963145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8017381822",
+        "amenity": "fountain",
+        "artist_name": "Hans Lehmann-Borges",
+        "name": "Märchenbrunnen",
+        "wikidata": "Q114567560"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4143419,
+          52.4614746
+        ]
+      },
+      "id": "node/8017381822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8151448554",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3887292,
+          52.5166073
+        ]
+      },
+      "id": "node/8151448554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8157823426",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3258031,
+          52.501646
+        ]
+      },
+      "id": "node/8157823426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8389845853",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3479338,
+          52.6019349
+        ]
+      },
+      "id": "node/8389845853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8698422342",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "lit": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2668724,
+          52.5110498
+        ]
+      },
+      "id": "node/8698422342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8765448140",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0976065,
+          52.4116201
+        ]
+      },
+      "id": "node/8765448140"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8806284638",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6051575,
+          52.5373998
+        ]
+      },
+      "id": "node/8806284638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8863133911",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "material": "stone",
+        "name": "Affengruppe",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3409744,
+          52.5402357
+        ]
+      },
+      "id": "node/8863133911"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8968908348",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "splash_pad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4151471,
+          52.5055446
+        ]
+      },
+      "id": "node/8968908348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8986445679",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "image": "File:Fountain Behmstr, Gesundbrunnencenter, Berlin, Germania Aug 06, 2021 06-14-03 PM.jpeg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3883799,
+          52.5501652
+        ]
+      },
+      "id": "node/8986445679"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517095",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3778161,
+          52.4811321
+        ]
+      },
+      "id": "node/8994517095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517096",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3778029,
+          52.4810096
+        ]
+      },
+      "id": "node/8994517096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517097",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3778981,
+          52.4811256
+        ]
+      },
+      "id": "node/8994517097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517098",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3779061,
+          52.4810966
+        ]
+      },
+      "id": "node/8994517098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517099",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3779074,
+          52.4810701
+        ]
+      },
+      "id": "node/8994517099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517100",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3779061,
+          52.4810411
+        ]
+      },
+      "id": "node/8994517100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8994517101",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3779008,
+          52.4810145
+        ]
+      },
+      "id": "node/8994517101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9029791819",
+        "amenity": "fountain",
+        "drinking_water": "unknown",
+        "fountain": "decorative",
+        "wikidata": "Q109913957",
+        "wikimedia_commons": "File:Fountain_Prater_Biergarten,_Berlin,_Germania_Aug_11,_2021_06-02-54_PM.jpeg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4098128,
+          52.54025
+        ]
+      },
+      "id": "node/9029791819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9045372091",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3649238,
+          52.5327287
+        ]
+      },
+      "id": "node/9045372091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9167929968",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4031196,
+          52.5093202
+        ]
+      },
+      "id": "node/9167929968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9341943296",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4269864,
+          52.5279181
+        ]
+      },
+      "id": "node/9341943296"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9560563980",
+        "amenity": "fountain",
+        "fountain": "decorative",
+        "image": "File:Springbrunnen Olivaer Platz Berlin Charlottenburg-Wilmersdorf 02.jpg",
+        "lit": "no",
+        "start_date": "2021",
+        "wikidata": "Q123466797",
+        "wikimedia_commons": "Category:Fountain at Olivaer_Platz (Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3132812,
+          52.4995231
+        ]
+      },
+      "id": "node/9560563980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9699816962",
+        "amenity": "fountain",
+        "lit": "no",
+        "name": "Seelöwen­brunnen",
+        "tourism": "artwork",
+        "wikidata": "Q116994454"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2965797,
+          52.5127342
+        ]
+      },
+      "id": "node/9699816962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9704615424",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3428454,
+          52.4570539
+        ]
+      },
+      "id": "node/9704615424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9797349036",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.164471,
+          52.433845
+        ]
+      },
+      "id": "node/9797349036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9872281055",
+        "amenity": "fountain",
+        "name": "Die Fontäne",
+        "wikidata": "Q113632695",
+        "wikimedia_commons": "Category:Fontäne (Pfaueninsel)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.126516,
+          52.4321286
+        ]
+      },
+      "id": "node/9872281055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9970514107",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "stone_block",
+        "name": "Tuffquellen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4507609,
+          52.5034953
+        ]
+      },
+      "id": "node/9970514107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9970514108",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "stone_block",
+        "name": "Tuffquellen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4512586,
+          52.5033833
+        ]
+      },
+      "id": "node/9970514108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9983262193",
+        "alt_name": "Berliner Stadtlandschaft",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Brunnen \"Berliner Stadtlandschaft\"",
+        "tourism": "artwork",
+        "wikidata": "Q108545173",
+        "wikimedia_commons": "Category:Berliner Stadtlandschaft (Ingeborg Flierl)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5589909,
+          52.5428811
+        ]
+      },
+      "id": "node/9983262193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9990250027",
+        "amenity": "fountain",
+        "name": "Postmeilensäule-Brunnen",
+        "wikidata": "Q108600586",
+        "wikimedia_commons": "Category:Postmeilensäule – Brunnen – Reliefs vier Jahreszeiten (Rudolf Böhm)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5955522,
+          52.5417999
+        ]
+      },
+      "id": "node/9990250027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10038850411",
+        "amenity": "fountain",
+        "artist:wikidata": "Q108732482",
+        "artist_name": "Willy Ernst Schade",
+        "artwork_type": "statue",
+        "fountain": "nozzle",
+        "image": "https://commons.wikimedia.org/wiki/File:Skulptur_Am_Weißen_See_(Weißs)_Zwei_Seelöwen&Willy_Ernst_Schade&1925.jpg",
+        "material": "stone",
+        "name": "Seelöwe",
+        "start_date": "1925",
+        "subject:wikidata": "Q117820495",
+        "tourism": "artwork",
+        "wikimedia_commons": "Category:Zwei Seelöwen (Willy Ernst Schade)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4612495,
+          52.555461
+        ]
+      },
+      "id": "node/10038850411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10068643472",
+        "amenity": "fountain",
+        "image": "File:Neorenaissancebrunnen Köllnischer Park Berlin 01.jpg",
+        "name": "Neorenaissancebrunnen",
+        "start_date": "1879",
+        "wikidata": "Q113577790",
+        "wikimedia_commons": "Category:Neorenaissancebrunnen (Köllnischer Park, Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.414779,
+          52.5132939
+        ]
+      },
+      "id": "node/10068643472"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10089333377",
+        "amenity": "fountain",
+        "fountain": "decorative"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3101375,
+          52.4941161
+        ]
+      },
+      "id": "node/10089333377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10300697366",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.394746,
+          52.5239258
+        ]
+      },
+      "id": "node/10300697366"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10692854817",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3436897,
+          52.4576585
+        ]
+      },
+      "id": "node/10692854817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10692854818",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3427346,
+          52.4561378
+        ]
+      },
+      "id": "node/10692854818"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10761456538",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "decorative",
+        "height": "0.5",
+        "name": "Quelle",
+        "operator": "Fachwerkhof Solmsstr. 30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3924905,
+          52.4897487
+        ]
+      },
+      "id": "node/10761456538"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10834342789",
+        "amenity": "fountain",
+        "artist_name": "Arthur Wellmann",
+        "drinking_water": "no",
+        "name": "Schneewittchenbrunnen",
+        "start_date": "1940",
+        "wikidata": "Q114050938"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3487905,
+          52.4698994
+        ]
+      },
+      "id": "node/10834342789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10839960134",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3930977,
+          52.523996
+        ]
+      },
+      "id": "node/10839960134"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865455142",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "website": "https://kultur-mitte.de/parkportraet-der-kleine-tiergarten/",
+        "wikimedia_commons": "File:20230503 xl 051159268 Wasserspiele im Gartendenkmal Kleiner Tiergarten, Hans Nimmann 01.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3442516,
+          52.5257763
+        ]
+      },
+      "id": "node/10865455142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10867256731",
+        "amenity": "fountain",
+        "artwork_type": "statue",
+        "name": "Knabenbrunnen",
+        "tourism": "artwork",
+        "wikidata": "Q118174190",
+        "wikimedia_commons": "Category:Knabenbrunnen (Klein-Glienicke)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0936459,
+          52.4140836
+        ]
+      },
+      "id": "node/10867256731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10867256733",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0938645,
+          52.4137441
+        ]
+      },
+      "id": "node/10867256733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10867256734",
+        "alt_name": "Milchmädchen",
+        "amenity": "fountain",
+        "artist_name": "Pawel Petrowitsch Sokolow",
+        "artwork_type": "statue",
+        "material": "bronze",
+        "name": "Laitière",
+        "tourism": "artwork",
+        "wikidata": "Q118144690",
+        "wikimedia_commons": "Category:La Laitière (Klein-Glienicke)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0945417,
+          52.4137204
+        ]
+      },
+      "id": "node/10867256734"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10876079890",
+        "amenity": "fountain",
+        "wikimedia_commons": "File:Casino Brunnen.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0926734,
+          52.414596
+        ]
+      },
+      "id": "node/10876079890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10904983799",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5842765,
+          52.5406105
+        ]
+      },
+      "id": "node/10904983799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10923576797",
+        "amenity": "fountain",
+        "drinking_water": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3423678,
+          52.4491934
+        ]
+      },
+      "id": "node/10923576797"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10929256074",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "mist",
+        "subject:wikidata": "Q124213700"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6243541,
+          52.4511193
+        ]
+      },
+      "id": "node/10929256074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11054324217",
+        "amenity": "fountain",
+        "fountain": "jet_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3711079,
+          52.5264748
+        ]
+      },
+      "id": "node/11054324217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11148418945",
+        "amenity": "fountain",
+        "fixme": "Oder ist das Trinkwasser?"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3388209,
+          52.5064338
+        ]
+      },
+      "id": "node/11148418945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11235993914",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.377809,
+          52.5128245
+        ]
+      },
+      "id": "node/11235993914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11235993915",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.377833,
+          52.5128087
+        ]
+      },
+      "id": "node/11235993915"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11235993916",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3777978,
+          52.5128087
+        ]
+      },
+      "id": "node/11235993916"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11241094287",
+        "amenity": "fountain",
+        "artist:wikidata": "Q1335504",
+        "artist_name": "Emerita Pansowová",
+        "check_date": "2023-10-05",
+        "height": "1.6",
+        "image": "https://commons.wikimedia.org/wiki/File:Tr%C3%B6pfelbrunnen_(Gedeckter_Tisch).JPG",
+        "material": "bronze",
+        "name": "Stillleben Gedeckter Tisch",
+        "start_date": "1982",
+        "wikidata": "Q108250920",
+        "wikimedia_commons": "Category:Stillleben Gedeckter Tisch (Emerita Pansowová)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.543405,
+          52.5252521
+        ]
+      },
+      "id": "node/11241094287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11244421545",
+        "amenity": "fountain",
+        "artist:wikidata": "Q122903150",
+        "artist_name": "Günther Ohlwein",
+        "image": "https://commons.wikimedia.org/wiki/File:Berlin_Spandau,_town_square-2.JPG",
+        "material": "granite, iron, bronze",
+        "name": "Rückgrat-Brunnen",
+        "start_date": "1982",
+        "wikidata": "Q114347206",
+        "wikimedia_commons": "Category:Rückgrat-Brunnen (Günther Ohlwein)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2040761,
+          52.5373631
+        ]
+      },
+      "id": "node/11244421545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11266932059",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "stone_block",
+        "name": "Tuffquellen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4505223,
+          52.5031263
+        ]
+      },
+      "id": "node/11266932059"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11266932060",
+        "amenity": "fountain",
+        "drinking_water": "no",
+        "fountain": "stone_block",
+        "name": "Tuffquellen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4510183,
+          52.5030119
+        ]
+      },
+      "id": "node/11266932060"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11552838811",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1811237,
+          44.4697714
+        ]
+      },
+      "id": "node/11552838811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11582391525",
+        "amenity": "fountain",
+        "name": "Springbrunnen und Plansche",
+        "tourism": "attraction",
+        "wikidata": "Q108107977"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5729767,
+          52.5428156
+        ]
+      },
+      "id": "node/11582391525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11583734965",
+        "alt_name": "Brunnen im Kinderbad Marzahn (Platsch)",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Brunnenskulptur",
+        "tourism": "artwork",
+        "wikidata": "Q108560838"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5624631,
+          52.5520046
+        ]
+      },
+      "id": "node/11583734965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11583749661",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Dreiecksbrunnen",
+        "tourism": "artwork",
+        "wikidata": "Q108600513"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6067129,
+          52.540606
+        ]
+      },
+      "id": "node/11583749661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11583782369",
+        "alt_name": "Plansche an der Hellersdorfer Promenade",
+        "amenity": "fountain",
+        "name": "Plansche",
+        "tourism": "attraction",
+        "wikidata": "Q108600452"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6068477,
+          52.5399555
+        ]
+      },
+      "id": "node/11583782369"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11618224585",
+        "amenity": "fountain",
+        "wikimedia_commons": "File:Brunnenanlage St. Markus.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1636414,
+          52.5492336
+        ]
+      },
+      "id": "node/11618224585"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11697773002",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Tröpfelbrunnen",
+        "tourism": "artwork",
+        "wikidata": "Q113462610"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4825869,
+          52.5240851
+        ]
+      },
+      "id": "node/11697773002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11701472466",
+        "amenity": "fountain",
+        "artwork_type": "sculpture",
+        "name": "Seelöwe auf einer Kugel",
+        "tourism": "artwork",
+        "wikidata": "Q117481352"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5287159,
+          52.5051885
+        ]
+      },
+      "id": "node/11701472466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11982396116",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4932507,
+          52.6397297
+        ]
+      },
+      "id": "node/11982396116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12039365545",
+        "access": "private",
+        "amenity": "fountain",
+        "drinking_water": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2755104,
+          52.5922627
+        ]
+      },
+      "id": "node/12039365545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12069555594",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5137539,
+          52.5217774
+        ]
+      },
+      "id": "node/12069555594"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12079849142",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5165822,
+          52.5209543
+        ]
+      },
+      "id": "node/12079849142"
+    }
+  ]
+}

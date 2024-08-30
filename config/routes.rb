@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :maps
+  resources :maps do
+    post "/segments", to: "segments#import", as: "import"
+  end
 
 end
