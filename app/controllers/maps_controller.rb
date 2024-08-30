@@ -28,8 +28,6 @@ class MapsController < ApplicationController
 
 
 
-
-
   def edit
     @map = Map.find(params[:id])
   end
@@ -56,9 +54,4 @@ class MapsController < ApplicationController
     params.require(:map).permit(:name, :description)
   end
 
-  private
-
-  def map_params
-    params.require(:map).permit(:name, :description)
-  end
 end
