@@ -7,11 +7,5 @@ class PagesController < ApplicationController
     else
       @home = { lat: 52.5200, lon: 13.4050, hide: true }
     end
-
-    collection = DataImporter.new.call
-    @unformatted_data = collection[:unformatted_data]
-    @formatted_data = collection[:formatted_data]
-    @radiuses = collection[:radiuses]
-
   end
 end

@@ -10,7 +10,8 @@ export default class extends Controller {
     points: Array,
     formattedData: Array,
     unformattedData: Array,
-    radiuses: Array
+    radiuses: Array,
+    coordinates: Array
   }
 
   connect() {
@@ -34,7 +35,7 @@ export default class extends Controller {
       geocoder._inputEl.value = '';
     });
 
-    this.#addRoute()
+    this.#drawRoute(this.coordinatesValue)
 
   }
 
