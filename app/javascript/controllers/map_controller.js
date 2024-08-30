@@ -10,12 +10,14 @@ export default class extends Controller {
     showSearch: Boolean
   }
 
+  static targets = ["container", "loading"]
+
   connect() {
     // display the map:
     mapboxgl.accessToken = this.apiKeyValue;
 
     this.map = new mapboxgl.Map({
-      container: this.element,
+      container: this.containerTarget,
       style: "mapbox://styles/mapbox/streets-v10"
       // style: "mapbox://styles/mapbox/satellite-v9"
     })
@@ -41,6 +43,10 @@ export default class extends Controller {
       })
     }
 
+  }
+
+  loading() {
+    this.loadingTarget.classList.remove("d-none")
   }
 
   #fitMapToCoordinates(coordinates) {
