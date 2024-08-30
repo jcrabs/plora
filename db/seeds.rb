@@ -89,8 +89,9 @@ resources = Cloudinary::Api.resources(prefix: 'cats', type: 'upload', max_result
   else
     User.all.each_with_index do |user, index|
       user.photo.attach(io: URI.open("https://res.cloudinary.com/dnd9g94xw/image/upload/#{resources['resources'][index]['public_id']}"), filename: "#{resources['resources'][index]['public_id']}.jpg", content_type: "image/jpeg")
-    end
-end
+  end
+  end
+
 puts "Finished attaching cat images to users!"
 
 
@@ -123,9 +124,9 @@ Annotation.create!(lat: 52.516875, lon: 13.389946, name: "Lunch at Gendarmenmark
 Annotation.create!(lat: 52.493582, lon: 13.418920, name: "Exploring Bergmannkiez", description: "Wandered through charming streets full of boutiques and cafes.", map: Map.all.sample)
 
 
-filepath = "json/ExamplePoints35k.json"
+filepath = "/json/ExamplePoints35k.json"
 
-puts "Loading geopoints from #{filepath}"
+puts "Loading geopoints from #{file}"
 file = File.join(__dir__, filepath)
 points = File.read(file)
 geopoints_hash = JSON.parse(points)
