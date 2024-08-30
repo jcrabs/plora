@@ -76,7 +76,7 @@ class DataImporter
     coord_futures = formatted_data.zip(radiuses).map do |formatted_data_part, radius_part|
       Concurrent::Promises.future { get_match(formatted_data_part, "walking", radius_part) }
     end
-    # collect the results as they are coming in
+    # collect the results once they have arrived
     begin
       coords = coord_futures.map { |future| future.value! }
       Rails.logger.info "Received #{coords.length} coordinate sets"
