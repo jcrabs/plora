@@ -1,0 +1,14 @@
+.text_map_name {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  color: $text_black_grey;
+  margin-bottom: 0px;
+}
+
+.text_map_description {
+  font-family: Arial;
+  font-size: 13px;
+  color: $text_black_grey;
+  font-feature-settings: 'liga' off, 'clig' off
+}

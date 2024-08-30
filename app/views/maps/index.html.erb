@@ -1,19 +1,25 @@
 <div class="container mt-4">
   <h2>My Maps</h2>
 
+  <div class="mt-4 spacing16">
+    <%= link_to new_map_path, class: "button_primary" do %>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.45494 6.46875H5.28446V10.2983C5.28446 10.6875 5.60463 11.014 6.00014 11.014C6.39565
+    11.014 6.71582 10.6875 6.71582 10.2983V6.46875H10.5453C10.9346 6.46875 11.261 6.14858 11.261
+    5.75307C11.261 5.35756 10.9346 5.03739 10.5453 5.03739H6.71582V1.20787C6.71582 0.818638 6.39565
+    0.492188 6.00014 0.492188C5.60463 0.492188 5.28446 0.818638 5.28446 1.20787V5.03739H1.45494C1.06571
+    5.03739 0.739258 5.35756 0.739258 5.75307C0.739258 6.14858 1.06571 6.46875 1.45494 6.46875Z" fill="#F3F3F3"/>
+    </svg> Add a map
+    <% end %>
+  </div>
+
   <div class="row">
     <% @maps.each do |map| %>
       <% if map.user == current_user %>
         <div class="col-md-4 mb-4">
-          <%= link_to map_path(map), class: "text-decoration-none" do %>
-            <%= render "shared/mapcard", map: map %>
-          <% end %>
+          <%= render "shared/mapcard", map: map %>
         </div>
       <% end %>
     <% end %>
-  </div>
-
-  <div class="text-center mt-4">
-    <%= link_to "Add a map", new_map_path, class: "btn btn-primary" %>
   </div>
 </div>

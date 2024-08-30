@@ -3,6 +3,7 @@
   height: 178px;
   border-radius: 16px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 .map_card_img {
@@ -13,14 +14,31 @@
 }
 
 .map_card_separator {
-  width: 360px;
+  flex-shrink: 360px;
   height: 1px;
   background-color: $cta_teal_normal;
 }
 
-.map_card_text_box {
+.map_card_bottom_box {
   width: 360px;
   height: 69px;
   background-color: $bg_white_grey;
   border-radius: 0px 0px 16px 16px;
 }
+
+.map_card_text_box {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex-shrink: 0;
+  margin: 16px;
+  }
+
+  .map-card-link {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
