@@ -17,7 +17,7 @@ PointOfInterest.destroy_all
 puts "Destroying all users..."
 User.destroy_all
 
-puts "Creating 20 users..."
+puts "Creating users..."
 User.create!(username: "Max Mustermann", email: "max.mustermann@example.com", password: "password", home_address: "Alexanderplatz 5, 10178 Berlin", home_lat: 52.521918, home_lon: 13.413215)
 User.create!(username: "Sophie Müller", email: "sophie.mueller@example.com", password: "password", home_address: "Potsdamer Platz 10, 10785 Berlin", home_lat: 52.509648, home_lon: 13.375452)
 User.create!(username: "Hans Schmidt", email: "hans.schmidt@example.com", password: "password", home_address: "Kurfürstendamm 1, 10719 Berlin", home_lat: 52.503412, home_lon: 13.332893)
@@ -38,8 +38,9 @@ User.create!(username: "Tom König", email: "tom.koenig@example.com", password: 
 User.create!(username: "Hanna Neumann", email: "hanna.neumann@example.com", password: "password", home_address: "Greifswalder Straße 217, 10405 Berlin", home_lat: 52.528707, home_lon: 13.433567)
 User.create!(username: "Elias Schneider", email: "elias.schneider@example.com", password: "password", home_address: "Chausseestraße 20, 10115 Berlin", home_lat: 52.531997, home_lon: 13.383582)
 User.create!(username: "Maya Schwarz", email: "maya.schwarz@example.com", password: "password", home_address: "Karl-Marx-Straße 110, 12043 Berlin", home_lat: 52.478204, home_lon: 13.439032)
+puts "Created #{User.count} users!"
 
-puts "Creating 40 POIs"
+puts "Creating POIs..."
 PointOfInterest.create!(name: "Brandenburg Gate", category: "Historical Building", description: "Iconic neoclassical monument symbolizing Berlin's reunification.", lat: 52.516275, lon: 13.377704, user: User.all.sample)
 PointOfInterest.create!(name: "Reichstag Building", category: "Historical Building", description: "Germany's parliament building with a modern glass dome.", lat: 52.518623, lon: 13.376198, user: User.all.sample)
 PointOfInterest.create!(name: "Berlin Cathedral", category: "Historical Building", description: "Impressive baroque cathedral on Museum Island.", lat: 52.519366, lon: 13.401027, user: User.all.sample)
@@ -80,7 +81,7 @@ PointOfInterest.create!(name: "Palace of Tears", category: "Historical Building"
 PointOfInterest.create!(name: "Villa Liebermann", category: "Historical Building", description: "Historic villa, now a museum dedicated to artist Max Liebermann.", lat: 52.445833, lon: 13.172222, user: User.all.sample)
 PointOfInterest.create!(name: "Bebelplatz", category: "Historical Building", description: "Public square known for the Nazi book burning memorial.", lat: 52.517778, lon: 13.393056, user: User.all.sample)
 PointOfInterest.create!(name: "Berlin Philharmonie", category: "Historical Building", description: "World-renowned concert hall, known for its unique architecture.", lat: 52.509167, lon: 13.369444, user: User.all.sample)
-
+puts "Created #{PointOfInterest.count} POIs!"
 
 puts "Attaching cat images to users!"
 resources = Cloudinary::Api.resources(prefix: 'cats', type: 'upload', max_results: 20)
@@ -91,17 +92,15 @@ resources = Cloudinary::Api.resources(prefix: 'cats', type: 'upload', max_result
       user.photo.attach(io: URI.open("https://res.cloudinary.com/dnd9g94xw/image/upload/#{resources['resources'][index]['public_id']}"), filename: "#{resources['resources'][index]['public_id']}.jpg", content_type: "image/jpeg")
   end
   end
-
 puts "Finished attaching cat images to users!"
 
 
-puts "Creating a map per user..."
+puts "Creating a map per user (#{User.count})..."
 User.all.each do |user|
   Map.create!(name: "#{user.username}'s map", description: "This is my map. There are many like it, but this one is mine.", user: user)
 end
 
-puts "Creating 20 annotations..."
-
+puts "Creating annotations..."
 Annotation.create!(lat: 52.510556, lon: 13.377222, name: "Sunday Picnic at Tiergarten", description: "Enjoyed a peaceful Sunday picnic by the lake.", map: Map.all.sample)
 Annotation.create!(lat: 52.523332, lon: 13.412873, name: "Morning Coffee at Hackescher Markt", description: "Had the best cappuccino while people-watching.", map: Map.all.sample)
 Annotation.create!(lat: 52.501364, lon: 13.457824, name: "Exploring Friedrichshain Street Art", description: "Discovered amazing murals and graffiti.", map: Map.all.sample)
@@ -122,7 +121,7 @@ Annotation.create!(lat: 52.537855, lon: 13.424148, name: "Picnic at Mauerpark", 
 Annotation.create!(lat: 52.504541, lon: 13.419052, name: "Walk Along the East Side Gallery", description: "Admired the murals on the longest surviving piece of the Berlin Wall.", map: Map.all.sample)
 Annotation.create!(lat: 52.516875, lon: 13.389946, name: "Lunch at Gendarmenmarkt", description: "Savored traditional German food at a café on the square.", map: Map.all.sample)
 Annotation.create!(lat: 52.493582, lon: 13.418920, name: "Exploring Bergmannkiez", description: "Wandered through charming streets full of boutiques and cafes.", map: Map.all.sample)
-
+puts "Created #{Annotation.count} annotations!"
 
 filepath = "/json/ExamplePoints35k.json"
 
@@ -160,3 +159,16 @@ Segment.all.each do |segment|
     Point.create!(lat: point[0], lon: point[1], segment: segment)
   end
 end
+
+# This is going to take a while
+# so maybe comment it out if you don't want to view the entire database worth of points.
+#
+# puts "Creating extra user with all points."
+# User.create!(username: "Big Data", email: "bigdata@example.com", password: "password", home_address: "Rudi-Dutschke-Straße 26, 10969 Berlin", home_lat: 52.506892, home_lon: 13.391452)
+# puts "Creating a map for user: #{User.last.username}, email: #{User.last.email}, password: 'password'"
+# Map.create!(name: "#{User.last.username}'s map", description: "This is my map. There are many like it, but this one is mine.", user: User.last)
+# puts "Creating a BIG segment for #{User.last.username}"
+# Segment.create!(map: Map.last)
+# geopoints_array.each do |lat, lon|
+#   Point.create!(lat: lat, lon: lon, segment: Segment.last)
+# end
