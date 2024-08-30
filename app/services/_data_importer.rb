@@ -1,8 +1,19 @@
 require 'nokogiri'
+require 'faraday'
+require 'concurrent'
 
 class DataImporter
 
   def call(file)
+
+    processed_data = format_raw_data(file)
+    return format_matched_coordinates(processed_data)
+
+  end
+
+  private
+
+  def format_raw_data(file)
     document = Nokogiri::XML(file)
 
     trackpoints = document.xpath('//xmlns:trkpt')
@@ -41,5 +52,48 @@ class DataImporter
     end
 
     return {unformatted_data: unformatted_data, formatted_data: formatted_data, radiuses: radiuses}
+  end
+
+  def get_match(coordinates, profile, radiuses)
+    Concurrent::Promise.execute do
+      connection = Faraday.new("https://api.mapbox.com") do |f|
+        f.adapter Faraday.default_adapter
+      end
+      # make the API call
+      response = connection.get("/matching/v5/mapbox/#{profile}/#{coordinates}") do |req|
+        req.params['geometries'] = 'geojson'
+        req.params['radiuses'] = radiuses
+        req.params['access_token'] = ENV['MAPBOX_API_KEY']
+      end
+      JSON.parse(response.body)
+    end
+  end
+
+  def format_matched_coordinates(data)
+    formatted_data = data[:formatted_data]
+    radiuses = data[:radiuses]
+    # collect the promises from the API calls; make 1 API call per 50 piece data chunk
+    coord_futures = formatted_data.zip(radiuses).map do |formatted_data_part, radius_part|
+      Concurrent::Promises.future { get_match(formatted_data_part, "walking", radius_part) }
+    end
+    # collect the results as they are coming in
+    begin
+      coords = coord_futures.map { |future| future.value! }
+      Rails.logger.info "Received #{coords.length} coordinate sets"
+      coords
+    rescue => error
+      Rails.logger.error "An error occurred: #{error.message}"
+      nil
+    end
+    # collect all coordinates in one array
+    coordinates = []
+    coords.each do |part|
+      part.value["matchings"][0]["geometry"]["coordinates"].each do |pair|
+        coordinates << pair
+      end
+    end
+    return coordinates
+    # # format coordinates for the draw_route method
+    # return { coordinates: coordinates, type: "LineString" }
   end
 end

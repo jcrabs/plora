@@ -9,6 +9,7 @@ class MapsController < ApplicationController
   def show
     @map = Map.find(params[:id])
     @segment = Segment.new
+
     # if @map.segments.present?
     #   @markers = @map.segments.points
     # end

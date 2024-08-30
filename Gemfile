@@ -77,3 +77,5 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "cloudinary"
+gem 'async-http-faraday'
+gem 'concurrent-ruby'
