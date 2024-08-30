@@ -123,7 +123,7 @@ Annotation.create!(lat: 52.516875, lon: 13.389946, name: "Lunch at Gendarmenmark
 Annotation.create!(lat: 52.493582, lon: 13.418920, name: "Exploring Bergmannkiez", description: "Wandered through charming streets full of boutiques and cafes.", map: Map.all.sample)
 puts "Created #{Annotation.count} annotations!"
 
-filepath = "/json/ExamplePoints35k.json"
+filepath = "/json/ExamplePoints35kclean.json"
 
 puts "Loading geopoints from #{file}"
 file = File.join(__dir__, filepath)
@@ -163,23 +163,21 @@ end
 # This is going to take a while
 # so maybe comment it out if you don't want to view the entire database worth of points.
 #
-# puts "Creating extra user with all points"
-# User.create!(username: "Big Data", email: "bigdata@example.com", password: "password", home_address: "Rudi-Dutschke-Straße 26, 10969 Berlin", home_lat: 52.506892, home_lon: 13.391452)
-# puts "Attaching cat image to #{User.last.username}"
-# resources = Cloudinary::Api.resources(prefix: 'bigdata', type: 'upload', max_results: 1)
-#   if resources['resources'].empty?
-#     puts "No images found in the folder."
-#   else
-#     puts "Attaching #{resources['resources'][0]['public_id']}.jpg"
-#     User.last do |user, index|
-#       user.photo.attach(io: URI.open("https://res.cloudinary.com/dnd9g94xw/image/upload/#{resources['resources'][index]['public_id']}"), filename: "#{resources['resources'][index]['public_id']}.jpg", content_type: "image/jpeg")
-#   end
-#   end
-# puts "User #{User.last} now has #{User.last.photo} attached!"
-# puts "Creating a map for user: #{User.last.username}, email: #{User.last.email}, password: 'password'"
-# Map.create!(name: "#{User.last.username}'s map", description: "This is the BIG map!", user: User.last)
-# puts "Creating a BIG segment for #{User.last.username}"
-# Segment.create!(map: Map.last)
-# geopoints_array.each do |lat, lon|
-#   Point.create!(lat: lat, lon: lon, segment: Segment.last)
-# end
+puts "Creating extra user with all points"
+User.create!(username: "Big Data", email: "bigdata@example.com", password: "password", home_address: "Rudi-Dutschke-Straße 26, 10969 Berlin", home_lat: 52.506892, home_lon: 13.391452)
+puts "Attaching cat image to #{User.last.username}"
+resources = Cloudinary::Api.resources(prefix: 'bigdata', type: 'upload', max_results: 1)
+  if resources['resources'].empty?
+    puts "No images found in the folder."
+  else
+    puts "Attaching #{resources['resources'][0]['public_id']}.jpg"
+    User.last.photo.attach(io: URI.open("https://res.cloudinary.com/dnd9g94xw/image/upload/#{resources['resources'][0]['public_id']}"), filename: "#{resources['resources'][0]['public_id']}.jpg", content_type: "image/jpeg")
+  end
+puts "User #{User.last.username} now has #{User.last.photo}.jpg attached!"
+puts "Creating a map for user: #{User.last.username}, email: #{User.last.email}, password: 'password'"
+Map.create!(name: "#{User.last.username}'s map", description: "This is the BIG map!", user: User.last)
+puts "Creating a BIG segment for #{User.last.username}"
+Segment.create!(map: Map.last)
+geopoints_array.each do |lat, lon|
+  Point.create!(lat: lat, lon: lon, segment: Segment.last)
+end
