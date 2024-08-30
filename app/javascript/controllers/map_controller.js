@@ -6,15 +6,11 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 export default class extends Controller {
   static values = {
     apiKey: String,
-    home: Object,
-    points: Array,
-    formattedData: Array,
-    unformattedData: Array,
-    radiuses: Array,
-    coordinates: Array
+    segmentsCoordinates: Object
   }
 
   connect() {
+    // map:
     mapboxgl.accessToken = this.apiKeyValue;
 
     this.map = new mapboxgl.Map({
@@ -23,7 +19,7 @@ export default class extends Controller {
       // style: "mapbox://styles/mapbox/satellite-v9"
     })
 
-    // search bar
+    // search bar:
     let geocoder = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
@@ -35,98 +31,70 @@ export default class extends Controller {
       geocoder._inputEl.value = '';
     });
 
-    this.#drawRoute(this.coordinatesValue)
+    // draw lines for all segments, if segments exist (after map style has loaded):
+    if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
+      this.map.on("styledata", () => {
+        this.#drawRoute(this.segmentsCoordinatesValue)
+      })
+    }
 
   }
 
-  #fitMapToMarkers() {
+  #fitMapToCoordinates(coordinates) {
     const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => bounds.extend([ marker.lon, marker.lat ]))
+    coordinates.forEach(pair => bounds.extend([ pair[0], pair[1] ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 
 
-  // Make a Map Matching request
-  async #getMatch(coordinates, profile, radiuses) {
-    // Create the query
-    const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&access_token=${this.apiKeyValue}`,
-      { method: 'GET' }
-    );
-    const response = await query.json();
-    // Handle errors
-    if (response.code !== 'Ok') {
-      alert(
-        `${response.code} - ${response.message}.\n\nFor more information: https://docs.mapbox.com/api/navigation/map-matching/#map-matching-api-errors`
-      );
-      return;
-    }
-    // Get the coordinates from the response
-    const coords = response.matchings[0].geometry;
-    return coords
-  }
-
-  // Draw the Map Matching route as a new layer on the map
+  // draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
-    // If a route is already loaded, remove it
-    if (this.map.getSource('route')) {
-      this.map.removeLayer('route');
-      this.map.removeSource('route');
-    } else {
-      // Add a new layer to the map
-      this.map.addLayer({
-        id: 'route',
-        type: 'line',
-        source: {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            properties: {},
-            geometry: coords
-          }
-        },
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#03AA46',
-          'line-width': 8,
-          'line-opacity': 0.8
-        }
-      });
-    }
-  }
-
-  async #addRoute() {
-    // collect the promises from the API calls
-    let coordPromises = [];
-    // make 1 API call per 50 piece data chunk
-    console.log(this.formattedDataValue);
-    for (let i = 0; i < this.formattedDataValue.length; i++) {
-      data = this.#getMatch(this.formattedDataValue[i], "walking", this.radiusesValue[i])
-      coordPromises.push(data);
-    }
-
-    try {
-      const coords = await Promise.all(coordPromises)
-
-      // collect all coordinates to be drawn
-      let coordsArray = []
-      coords.forEach((part) => {
-        part.coordinates.forEach((pair) => {
-          coordsArray.push(pair)
-        })
+    // collect all the coordinates in a single array to fit the map to them
+    const all_segments = []
+    // draw one line for each segment
+    Object.entries(coords).forEach((pair) => {
+      const id = pair[0]
+      const segment = pair[1]
+      // collect a segment's coordinate pairs
+      const all_coords = []
+      segment.forEach((pair) => {
+        // collect a segment's coordinate pairs
+        all_coords.push([pair.lon, pair.lat])
+        // collect all the coordinates in a single array to fit the map to them
+        all_segments.push([pair.lon, pair.lat])
       })
-      // format coordinates for the drawRoute function
-      const formattedCoordinates = { coordinates: coordsArray, type: "LineString" }
+      // format for the addLayer function
+      const formattedCoordinates = { coordinates: all_coords, type: "LineString" }
 
-      // draw a line between all coordinates
-      this.#drawRoute(formattedCoordinates)
-    } catch (error) {
-      console.error("An error occurred while processing coordinates:", error)
-    }
+      // if a route is already loaded, don't draw it again
+      if (!this.map.getSource(id)) {
+        // add a new layer to the map
+        this.map.addLayer({
+          id: id,
+          type: 'line',
+          source: {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              properties: {},
+              geometry: formattedCoordinates
+            }
+          },
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          paint: {
+            'line-color': '#03AA46',
+            'line-width': 8,
+            'line-opacity': 0.8
+          }
+        })
+      }
+    })
+
+    // fit the map to the coordinates
+    this.#fitMapToCoordinates(all_segments)
   }
-
 
 }
