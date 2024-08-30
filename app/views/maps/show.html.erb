@@ -2,7 +2,8 @@
 <div style="width: 100%; height: 90vh;"
   data-controller="map"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-map-segments-coordinates-value="<%= @segments_coordinates.to_json %>"></div>
+  data-map-segments-coordinates-value="<%= @segments_coordinates.to_json %>"
+  data-map-show-search-value="true"></div>
 
 <div>
   <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#createSegmentModal">

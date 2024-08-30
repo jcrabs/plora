@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl'
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -20,6 +21,18 @@ export default class extends Controller {
     // add home icon and center map around it:
     this.#addHomeToMap()
     this.#fitMapToHome()
+
+    // search bar:
+    let geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+    });
+
+    this.map.addControl(geocoder);
+
+    geocoder.on('result', function(e) {
+      geocoder._inputEl.value = '';
+    });
 
   }
 
