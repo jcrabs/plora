@@ -24,3 +24,37 @@
   background-color: $bg_white_grey;
   border-radius: 0px 0px 16px 16px;
 }
+
+.map_description {
+	overflow: auto;
+
+}
+
+@media (max-width: 1230px) {
+  .col-custom {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .col-custom {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+.map_card_img {
+  width: 360px;
+  height: 109px;
+  background-color: #b3ffe6;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+}
+
+.map_card_map {
+  width: 100%;
+  height: 100%;
+  border: none; 
+}
