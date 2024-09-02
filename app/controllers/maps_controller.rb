@@ -1,10 +1,8 @@
 class MapsController < ApplicationController
 
-
   def index
     @maps = Map.all
   end
-
 
   def show
     @map = Map.find(params[:id])
@@ -37,13 +35,9 @@ class MapsController < ApplicationController
     redirect_to maps_path(@map)
   end
 
-
-
   def edit
     @map = Map.find(params[:id])
   end
-
-
 
   def update
     @map = Map.find(params[:id])
@@ -54,13 +48,11 @@ class MapsController < ApplicationController
     end
   end
 
-
   def destroy
     @map = Map.find(params[:id])
     @map.destroy
     redirect_to maps_path, status: :see_other
   end
-
 
   private
 

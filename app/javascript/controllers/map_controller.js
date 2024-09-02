@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 import mapboxgl from 'mapbox-gl';
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
+import MapboxDraw from "@mapbox/mapbox-gl-draw";
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -22,26 +23,33 @@ export default class extends Controller {
       // style: "mapbox://styles/mapbox/satellite-v9"
     })
 
-    // search bar:
-    if (this.showSearchValue) {
-      let geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
-      });
+    // drawing tool:
+    const Draw = new MapboxDraw();
+    this.map.addControl(Draw, 'top-left');
+    map.on('load', () => {
 
-      this.map.addControl(geocoder);
+      // search bar:
+      if (this.showSearchValue) {
+        let geocoder = new MapboxGeocoder({
+          accessToken: mapboxgl.accessToken,
+          mapboxgl: mapboxgl
+        });
 
-      geocoder.on('result', function(e) {
-        geocoder._inputEl.value = '';
-      });
-    }
+        this.map.addControl(geocoder);
 
-    // draw lines for all segments, if segments exist (after map style has loaded):
-    if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
-      this.map.on("styledata", () => {
-        this.#drawRoute(this.segmentsCoordinatesValue)
-      })
-    }
+        geocoder.on('result', function(e) {
+          geocoder._inputEl.value = '';
+        });
+      }
+
+      // draw lines for all segments, if segments exist (after map style has loaded):
+      if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
+        this.map.on("styledata", () => {
+          this.#drawRoute(this.segmentsCoordinatesValue)
+        })
+      }
+
+    });
 
   }
 
