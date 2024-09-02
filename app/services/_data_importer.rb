@@ -93,7 +93,5 @@ class DataImporter
       end
     end
     return coordinates
-    # # format coordinates for the draw_route method
-    # return { coordinates: coordinates, type: "LineString" }
   end
 end
