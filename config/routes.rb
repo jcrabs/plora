@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :maps do
     post "/segments", to: "segments#import", as: "import"
+
+    resources :annotations, only: [:create, :update, :destroy, :index]
+
   end
 
 end
