@@ -1,9 +1,13 @@
-import { Application } from "@hotwired/stimulus"
+import { Application } from "@hotwired/stimulus";
+import MapController from "./map_controller";
 
-const application = Application.start()
+const application = Application.start();
 
 // Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
+application.debug = false;
+window.Stimulus = application;
 
-export { application }
+// Register the "map" controller
+application.register("map", MapController);  
+
+export { application };
