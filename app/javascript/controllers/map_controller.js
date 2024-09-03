@@ -30,22 +30,33 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     });
 
-    // Drawing tool
-    this.draw = new MapboxDraw();
-    this.map.addControl(this.draw, 'top-left');
+    // search bar:
+    if (this.showSearchValue) {
+      let geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+      });
+
+      this.map.addControl(geocoder);
+
+      geocoder.on('result', function(e) {
+        geocoder._inputEl.value = '';
+      });
+    }
+
+    // drawing tool:
+    this.draw = new MapboxDraw({
+      displayControlsDefault: false,
+      controls: {
+        line_string: true,
+        trash: true
+      }})
+    this.map.addControl(this.draw, 'top-left')
 
     this.map.on('load', () => {
-      // Search bar
-      if (this.showSearchValue) {
-        let geocoder = new MapboxGeocoder({
-          accessToken: mapboxgl.accessToken,
-          mapboxgl: mapboxgl
-        });
-        this.map.addControl(geocoder);
-
-        geocoder.on('result', function(e) {
-          geocoder._inputEl.value = '';
-        });
+      // draw lines for all segments, if segments exist (after map style has loaded):
+      if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
+        this.#drawRoute(this.segmentsCoordinatesValue)
       }
 
       // Load saved annotations from server
@@ -117,14 +128,19 @@ export default class extends Controller {
       headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
       body: segmentsCoordinatesJSON
     })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        location.reload();
-      } else {
-        alert("An error has occurred while saving your data.");
-      }
-    });
+      // reload page if successfully saved:
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          location.reload();
+        } else if (data.errors != []) {
+          data.errors.forEach ((error) => {
+            alert(error)
+          })
+        } else {
+          alert("An error has occurred while saving your data.")
+        }
+      })
   }
 
   #saveMarker(lngLat, description) {
