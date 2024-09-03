@@ -13,7 +13,7 @@ export default class extends Controller {
     importDrawUrl: String
   }
 
-  static targets = ["container", "save", "loading"]
+  static targets = ["container", "saveMatched", "saveFreeform", "loading"]
 
   connect() {
     // Initialize Mapbox
@@ -101,9 +101,17 @@ export default class extends Controller {
     }
   }
 
-  save(event) {
-    event.preventDefault();
+  saveMatched(event) {
+    event.preventDefault()
+    this.#saveData("matched")
+  }
 
+  saveFreeform(event) {
+    event.preventDefault()
+    this.#saveData("freeform")
+  }
+
+  #saveData(mode) {
     // Grab coordinates from the segments that we drew and format them
     const segmentsCoordinates = [];
     const segments = this.draw.getAll().features;
@@ -114,15 +122,15 @@ export default class extends Controller {
           lon: pair[0],
           lat: pair[1]
         };
-        points.push(pointCoordinates);
+        points.push(pointCoordinates)
       });
-      segmentsCoordinates.push(points);
+      segmentsCoordinates.push(points)
     }
-    const segmentsCoordinatesForJSON = {"coordinates": segmentsCoordinates};
-    const segmentsCoordinatesJSON = JSON.stringify(segmentsCoordinatesForJSON);
+    const segmentsCoordinatesForJSON = {"coordinates": segmentsCoordinates, "mode": mode}
+    const segmentsCoordinatesJSON = JSON.stringify(segmentsCoordinatesForJSON)
 
     // Send the coordinates to the backend
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     fetch(this.importDrawUrlValue, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },

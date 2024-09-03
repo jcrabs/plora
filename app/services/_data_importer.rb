@@ -17,9 +17,15 @@ class DataImporter
     end
 
     processed_data = []
-    extracted_segments.each do |segment|
-      formatted_data = format_extracted_data(segment)
-      processed_data << format_matched_coordinates(formatted_data)
+    if options[:mode] == "freeform" # don't match the coordinates
+      extracted_segments.each do |segment|
+        processed_data << segment
+      end
+    else # match the coordinates
+      extracted_segments.each do |segment|
+        formatted_data = format_extracted_data(segment)
+        processed_data << format_matched_coordinates(formatted_data)
+      end
     end
 
     return processed_data
