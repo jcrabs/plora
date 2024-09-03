@@ -24,15 +24,16 @@
                     placeholder: 'Enter description (max 30 characters)',
                     maxlength: 30 %>
         </div>
-
-        <div class="form-group text-center mt-3">
-          <%= f.submit 'Save', class: 'btn btn-primary w-50' %>
+        <div class='d-flex;'>
+          <div class="form-group text-center mt-3">
+            <%= f.submit 'Save', style: 'height: 32px; border: 0px; padding-top: 0px; padding-bottom: 0px', class: 'button_primary' %>
+          </div>
+          <div class="text-center mt-3">
+            <%= link_to "Delete Map", map_path(@map), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button_destroy" %>
+          </div>
         </div>
       <% end %>
 
-      <div class="text-center mt-3">
-        <%= link_to "Delete Map", map_path(@map), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-sm btn-warning" %>
-      </div>
     </div>
   </div>
 </div>

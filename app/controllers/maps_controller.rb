@@ -1,17 +1,18 @@
 class MapsController < ApplicationController
 
-
   def index
     @maps = Map.all
   end
 
-
   def show
+    # display map:
     @map = Map.find(params[:id])
-    # for the new segment creation form
+    # for the new segment creation form:
     @segment = Segment.new
+
+    # display existing segments on the map:
     @segments = Segment.where(map: @map)
-    # prepare coordinates to be passed to the view
+    ## prepare coordinates to be passed to the view
     @segments_coordinates = {}
     @segments.each do |segment|
       points = []
@@ -37,13 +38,9 @@ class MapsController < ApplicationController
     redirect_to maps_path(@map)
   end
 
-
-
   def edit
     @map = Map.find(params[:id])
   end
-
-
 
   def update
     @map = Map.find(params[:id])
@@ -54,13 +51,11 @@ class MapsController < ApplicationController
     end
   end
 
-
   def destroy
     @map = Map.find(params[:id])
     @map.destroy
     redirect_to maps_path, status: :see_other
   end
-
 
   private
 
