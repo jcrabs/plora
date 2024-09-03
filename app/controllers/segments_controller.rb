@@ -3,7 +3,7 @@ class SegmentsController < ApplicationController
     @segment = Segment.new
   end
 
-  def import
+  def import_track
     @map = Map.find(params[:map_id])
     # import coordinates from gpx file and save them in the database
     segments = DataImporter.new.call(params["segment"]["gpx"].tempfile, format: :gpx)
@@ -20,7 +20,7 @@ class SegmentsController < ApplicationController
   def import_drawing
     @map = Map.find(params[:map_id])
     # import coordinates from drawn routes and save them in the database
-    segments = DataImporter.new.call(params, format: :json)
+    segments = DataImporter.new.call(params, format: :json, mode: params["mode"])
     saveok = []
     errors = []
     segments.each do |coordinates|
