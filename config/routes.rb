@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :maps do
     post "/segments", to: "segments#import", as: "import"
+    post "/segments/drawing", to: "segments#import_drawing", as: "import_drawing"
   end
 
 end

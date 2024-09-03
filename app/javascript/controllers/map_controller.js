@@ -8,10 +8,11 @@ export default class extends Controller {
   static values = {
     apiKey: String,
     segmentsCoordinates: Object,
-    showSearch: Boolean
+    showSearch: Boolean,
+    importDrawUrl: String
   }
 
-  static targets = ["container", "loading"]
+  static targets = ["container", "save", "loading"]
 
   connect() {
     // display the map:
@@ -24,9 +25,9 @@ export default class extends Controller {
     })
 
     // drawing tool:
-    const Draw = new MapboxDraw();
-    this.map.addControl(Draw, 'top-left');
-    map.on('load', () => {
+    this.draw = new MapboxDraw();
+    this.map.addControl(this.draw, 'top-left');
+    this.map.on('load', () => {
 
       // search bar:
       if (this.showSearchValue) {
@@ -53,6 +54,44 @@ export default class extends Controller {
 
   }
 
+  save(event) {
+    event.preventDefault()
+
+    // grab coordinates from the segments that we drew and format them:
+    const segmentsCoordinates = []
+    const segments = this.draw.getAll().features
+    for (let i = 0; i < segments.length; i++) {
+      const points = []
+      segments[i].geometry.coordinates.forEach((pair) => {
+        const pointCoordinates = {
+          lon: pair[0],
+          lat: pair[1]
+        }
+        points.push(pointCoordinates)
+      })
+      segmentsCoordinates.push(points)
+    }
+    const segmentsCoordinatesForJSON = {"coordinates": segmentsCoordinates}
+    const segmentsCoordinatesJSON = JSON.stringify(segmentsCoordinatesForJSON)
+
+    // send the coordinates to the backend:
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    fetch(this.importDrawUrlValue, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+      body: segmentsCoordinatesJSON
+    })
+      // reload page if successfully saved:
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          location.reload();
+        } else {
+          alert("An error has occurred while saving your data.")
+        }
+      })
+  }
+
   loading() {
     this.loadingTarget.classList.remove("d-none")
   }
@@ -62,7 +101,6 @@ export default class extends Controller {
     coordinates.forEach(pair => bounds.extend([ pair[0], pair[1] ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
-
 
   // draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
