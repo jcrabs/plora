@@ -3,7 +3,6 @@ import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 
-
 // Connects to data-controller="map"
 export default class extends Controller {
   static values = {
@@ -26,23 +25,28 @@ export default class extends Controller {
     this.mapIdValue = parseInt(mapId, 10);
     console.log('Converted Map ID:', this.mapIdValue);
 
-
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
       style: "mapbox://styles/mapbox/streets-v10"
     });
 
-    // drawing tool:
+    // Drawing tool
     this.draw = new MapboxDraw();
     this.map.addControl(this.draw, 'top-left');
-    this.map.on('load', () => {
 
-      // search bar:
+    this.map.on('load', () => {
+      // Search bar
       if (this.showSearchValue) {
         let geocoder = new MapboxGeocoder({
           accessToken: mapboxgl.accessToken,
           mapboxgl: mapboxgl
         });
+        this.map.addControl(geocoder);
+
+        geocoder.on('result', function(e) {
+          geocoder._inputEl.value = '';
+        });
+      }
 
       // Load saved annotations from server
       this.#loadAnnotations();
@@ -57,84 +61,70 @@ export default class extends Controller {
         const lngLat = this.map.unproject([touch.clientX, touch.clientY]);
         this.#addMarkerAndSave(lngLat);
       });
-    }
 
-    #loadAnnotations() {
-      fetch(`/maps/${this.mapIdValue}/annotations`)
-        .then(response => {
-          return response.json();
-        })
-        .then(data => {
-          data.forEach(annotation => {
-            this.addMarker([annotation.lon, annotation.lat], annotation.description);
-          });
-        })
-        .catch(error => console.error('Error fetching annotations:', error));
-      }
-
-    #addMarkerAndSave(lngLat) {
-      const description = prompt("Enter a description:");
-      if (description) {
-        const testLngLat = { lat: 40.7128, lng: -74.0060 };
-        console.log('Map ID:', this.mapIdValue);
-        this.addMarker(lngLat, description);
-        this.#saveMarker(lngLat, description);
-      }
-
-        this.map.addControl(geocoder);
-
-        geocoder.on('result', function(e) {
-          geocoder._inputEl.value = '';
+      // Draw lines for all segments, if segments exist (after map style has loaded)
+      if (JSON.stringify(this.segmentsCoordinatesValue) !== '{}') {
+        this.map.on("styledata", () => {
+          this.#drawRoute(this.segmentsCoordinatesValue);
         });
       }
-
-      // draw lines for all segments, if segments exist (after map style has loaded):
-      if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
-        this.map.on("styledata", () => {
-          this.#drawRoute(this.segmentsCoordinatesValue)
-        })
-      }
-
     });
+  }
 
+  #loadAnnotations() {
+    fetch(`/maps/${this.mapIdValue}/annotations`)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(annotation => {
+          this.addMarker([annotation.lon, annotation.lat], annotation.description);
+        });
+      });
+  }
+
+  #addMarkerAndSave(lngLat) {
+    const description = prompt("Enter a description:");
+    if (description) {
+      console.log('Map ID:', this.mapIdValue);
+      this.addMarker(lngLat, description);
+      this.#saveMarker(lngLat, description);
+    }
   }
 
   save(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    // grab coordinates from the segments that we drew and format them:
-    const segmentsCoordinates = []
-    const segments = this.draw.getAll().features
+    // Grab coordinates from the segments that we drew and format them
+    const segmentsCoordinates = [];
+    const segments = this.draw.getAll().features;
     for (let i = 0; i < segments.length; i++) {
-      const points = []
+      const points = [];
       segments[i].geometry.coordinates.forEach((pair) => {
         const pointCoordinates = {
           lon: pair[0],
           lat: pair[1]
-        }
-        points.push(pointCoordinates)
-      })
-      segmentsCoordinates.push(points)
+        };
+        points.push(pointCoordinates);
+      });
+      segmentsCoordinates.push(points);
     }
-    const segmentsCoordinatesForJSON = {"coordinates": segmentsCoordinates}
-    const segmentsCoordinatesJSON = JSON.stringify(segmentsCoordinatesForJSON)
+    const segmentsCoordinatesForJSON = {"coordinates": segmentsCoordinates};
+    const segmentsCoordinatesJSON = JSON.stringify(segmentsCoordinatesForJSON);
 
-    // send the coordinates to the backend:
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    // Send the coordinates to the backend
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     fetch(this.importDrawUrlValue, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
       body: segmentsCoordinatesJSON
     })
-      // reload page if successfully saved:
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          location.reload();
-        } else {
-          alert("An error has occurred while saving your data.")
-        }
-      })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        location.reload();
+      } else {
+        alert("An error has occurred while saving your data.");
+      }
+    });
   }
 
   #saveMarker(lngLat, description) {
@@ -145,7 +135,7 @@ export default class extends Controller {
         name: 'New Marker',
         description: description
       }
-    }
+    };
     fetch(`/maps/${this.mapIdValue}/annotations`, {
       method: 'POST',
       headers: {
@@ -154,14 +144,9 @@ export default class extends Controller {
       },
       body: JSON.stringify(data)
     })
-    .then(response => {
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
       console.log('Marker saved successfully:', data);
-    })
-    .catch(error => {
-      console.error('Check Error:', error);
     });
   }
 
@@ -187,7 +172,7 @@ export default class extends Controller {
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
   }
 
-  // draw the Map Matching routes as new layers on the map
+  // Draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
     const all_segments = [];
     Object.entries(coords).forEach(([id, segment]) => {
