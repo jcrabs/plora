@@ -2,13 +2,13 @@
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "plora-symbol.svg", alt: "Plora Symbol" %>
-      <span style="font-size: 1.5rem; font-weight: bold">Plora</span>
     <% end %>
 
     <button style="border: 0px; background-color: #FFF9EE;" data-bs-toggle="collapse"
     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">
-      <span><div>
+      <div>
+              <% if user_signed_in?%>
               <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown",
               data:{bs_toggle: "dropdown"}, aria_haspopup: "true", aria_expanded: "false" if current_user.photo.attached?%>
                 <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,8 +19,8 @@
                   1.8418 0.30957 2.08789 0.50293 2.28125L7.19141 9.11914C7.42871 9.36523 7.69238 9.48828 8 9.48828Z"
                   fill="#00ACE6"/>
                 </svg>
-            </div>
-      </span>
+                <% end %>
+      </div>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
