@@ -81,7 +81,14 @@ export default class extends Controller {
       this.map.getCanvas().addEventListener('touchstart', (e) => {
         touchTimer = setTimeout(() => {
           const touch = e.touches[0];
-          const lngLat = this.map.unproject([touch.clientX, touch.clientY]);
+
+          // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+          const rect = this.map.getCanvas().getBoundingClientRect();
+          const x = touch.clientX - rect.left;
+          const y = touch.clientY - rect.top;
+
+          const lngLat = this.map.unproject([x, y]);
+
           this.#addMarkerAndSave(lngLat);
         }, 500); // 500 ms for long press
       });
