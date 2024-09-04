@@ -1,7 +1,22 @@
 class MapsController < ApplicationController
 
   def index
-    @maps = Map.all
+    @maps = current_user.maps
+    @segments_coordinates = {}
+    @maps.each do |map|
+      @segments_coordinates[map.id] = {}
+      map.segments.each do |segment|
+        points = []
+        segment.points.each do |pair|
+          point_coordinates = {
+            lat: pair.lat,
+            lon: pair.lon
+          }
+          points << point_coordinates
+        end
+        @segments_coordinates[map.id][segment.id] = points
+      end
+    end
   end
 
   def show

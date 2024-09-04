@@ -12,6 +12,7 @@ export default class extends Controller {
     createUrl: String,
     destroyUrl: String,
     showSearch: Boolean,
+    showDrawTool: Boolean,
     mapId: Number,
     importDrawUrl: String
   }
@@ -47,16 +48,19 @@ export default class extends Controller {
     }
 
     // drawing tool:
-    this.draw = new MapboxDraw({
-      displayControlsDefault: false,
-      controls: {
-        line_string: true,
-        trash: true
-      }})
-    this.map.addControl(this.draw, 'top-left')
+    if (this.showDrawToolValue) {
+      this.draw = new MapboxDraw({
+        displayControlsDefault: false,
+        controls: {
+          line_string: true,
+          trash: true
+        }})
+      this.map.addControl(this.draw, 'top-left')
+    }
 
+    // after map has loaded:
     this.map.on('load', () => {
-      // draw lines for all segments, if segments exist (after map style has loaded):
+      // draw lines for all segments, if segments exist:
       if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
         this.#drawRoute(this.segmentsCoordinatesValue)
       }
@@ -82,13 +86,6 @@ export default class extends Controller {
       this.map.getCanvas().addEventListener('touchend', () => {
         clearTimeout(touchTimer);
       });
-
-      // Draw lines for all segments, if segments exist (after map style has loaded)
-      if (JSON.stringify(this.segmentsCoordinatesValue) !== '{}') {
-        this.map.on("styledata", () => {
-          this.#drawRoute(this.segmentsCoordinatesValue);
-        });
-      }
     });
     // Add the locations as buttons on the map
     this.poisValue.forEach((location) => {
@@ -360,7 +357,7 @@ export default class extends Controller {
   #fitMapToCoordinates(coordinates) {
     const bounds = new mapboxgl.LngLatBounds();
     coordinates.forEach(pair => bounds.extend([pair[0], pair[1]]));
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+    this.map.fitBounds(bounds, { padding: 40, maxZoom: 14, duration: 0 });
   }
 
   // Draw the Map Matching routes as new layers on the map
