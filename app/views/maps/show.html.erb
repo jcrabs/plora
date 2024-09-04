@@ -4,9 +4,19 @@
      data-map-show-search-value="true"
      data-map-show-draw-tool-value="true"
      data-map-import-draw-url-value="<%= map_import_drawing_path(@map) %>"
-     data-map-id-value="<%= @map.id %>">
+     data-map-id-value="<%= @map.id %>"
+     data-map-destroy-url-value="<%= explored_point_of_interests_path %>"
+     data-map-create-url-value="<%= explored_point_of_interests_path %>"
+     data-map-pois-value="<%= @pois.to_json %>">
   <div id="map-container" style="width: 100%; height: 85vh;" data-map-target="container">
   </div>
+     <div id="markerOptionsModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <button id="editMarkerBtn">Edit Marker</button>
+        <button id="deleteMarkerBtn">Delete Marker</button>
+        <button id="cancelModalBtn">Cancel</button>
+      </div>
+    </div>
   <div>
     <button type="button" class="btn btn-flat" data-map-target="saveMatched" data-action="click->map#saveMatched">
       Save data (matched)

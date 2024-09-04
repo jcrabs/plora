@@ -1,0 +1,28 @@
+.custom-card {
+  font-family: Arial, sans-serif;
+}
+
+.custom-card h5 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.custom-card p {
+  margin: 5px 0 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.custom-card button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-card button:hover {
+  background-color: #0056b3;
+}

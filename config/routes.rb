@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     resources :annotations, only: [:create, :update, :destroy, :index]
   end
 
+  resources :explored_point_of_interests, only: [:create, :destroy]
+
 end

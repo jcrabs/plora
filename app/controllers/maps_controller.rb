@@ -20,6 +20,14 @@ class MapsController < ApplicationController
   end
 
   def show
+    @expois = ExploredPointOfInterest.where(user: current_user)
+    @pois = PointOfInterest.all
+    @pois = @pois.map do |poi|
+      poi_hash = poi.attributes
+      poi_hash["explored"] = @expois.where(point_of_interest:poi).exists?
+      poi_hash
+    end
+    
     # display map:
     @map = Map.find(params[:id])
     # for the new segment creation form:
