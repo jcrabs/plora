@@ -31,7 +31,9 @@ export default class extends Controller {
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
       style: "mapbox://styles/mapbox/streets-v10"
-    });
+    })
+    // Add a scale control to the map
+    this.map.addControl(new mapboxgl.ScaleControl())
 
     // search bar:
     if (this.showSearchValue) {
