@@ -17,7 +17,7 @@ export default class extends Controller {
     importDrawUrl: String
   }
 
-  static targets = ["container", "saveMatched", "saveFreeform", "loading"]
+  static targets = ["container", "saveMatched", "saveFreeform", "loading", "styleSelect"]
 
   connect() {
     // Initialize Mapbox
@@ -31,10 +31,12 @@ export default class extends Controller {
     this.markers = []
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
-      style: "mapbox://styles/mapbox/streets-v10"
-    })
+      style: this.styleSelectTarget.value
+    });
+
     // Add a scale control to the map
     this.map.addControl(new mapboxgl.ScaleControl())
+
 
     // search bar:
     if (this.showSearchValue) {
@@ -98,7 +100,7 @@ export default class extends Controller {
       .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
       .addTo(this.map);
       const el = document.createElement("div")
-      location.explored ? el.className = "marker_explored" : el.className = "marker"
+      location.explored ? el.className = `marker_${location.category.toLowerCase()}_explored` : el.className = `marker_${location.category.toLowerCase()}`
       const marker = new mapboxgl.Marker(el)
       .setLngLat([ location.lon, location.lat ])
       .setPopup(popup)
@@ -127,6 +129,10 @@ export default class extends Controller {
       this.addMarker(lngLat, description);
       this.#saveMarker(lngLat, description);
     }
+  }
+
+  changeStyle() {
+    this.map.setStyle(this.styleSelectTarget.value)
   }
 
   // Function to create a custom popup card
@@ -196,7 +202,7 @@ export default class extends Controller {
         })
       }
       const status = location.explored
-      this.updateMarkerIcon(marker.find(element => element.id === location.id), status)
+      this.updateMarkerIcon(marker.find(element => element.id === location.id), status, location.category)
     });
 
     card.appendChild(button);
@@ -205,7 +211,7 @@ export default class extends Controller {
     }
 
   // Function to update the marker icon
-  updateMarkerIcon(marker, status) {
+  updateMarkerIcon(marker, status, category) {
     // Get the marker's position and popup
     const lngLat = marker.getLngLat();
     const popup = marker.getPopup();
@@ -215,9 +221,9 @@ export default class extends Controller {
     // Create a new marker with the explored class
     const el = document.createElement("div")
     if (status) {
-      el.className = "marker_explored"
+      el.className = `marker_${category.toLowerCase()}_explored`
     } else {
-      el.className = "marker"
+      el.className = `marker_${category.toLowerCase()}`
     }
 
     const newMarker = new mapboxgl.Marker(el)
@@ -404,10 +410,10 @@ addMarker(lngLat, description) {
             'line-cap': 'round'
           },
           paint: {
-            'circle-color': '#00afb9',
-            'circle-opacity': 0.8,
-            'circle-radius': 4,
-            'line-color': '#a7c957',
+            // 'circle-color': '#00afb9',
+            // 'circle-opacity': 0.8,
+            // 'circle-radius': 4,
+            'line-color': '#87A8B3',
             'line-width': 4,
             'line-opacity': 0.8
           }
