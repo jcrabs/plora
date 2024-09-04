@@ -39,8 +39,9 @@ export default class extends Controller {
 
   #addHomeToMap() {
     if (this.homeValue.hide) return false
-
-    new mapboxgl.Marker()
+    const el = document.createElement("div")
+    el.className = "marker_home"
+    new mapboxgl.Marker(el)
       .setLngLat([ this.homeValue.lon, this.homeValue.lat ])
       .addTo(this.map)
   }
