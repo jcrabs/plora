@@ -1,0 +1,36 @@
+.tool-bar {
+  display: flex;
+  width: fill;
+  height: fit-content;
+  padding-right: 24 px;
+  padding-left: 24px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: $bg_white_yellow_normal;
+  position: fixed;
+  bottom:0%;
+  width:100%;
+  border-top: 1px solid $bg_white_yellow_dark;
+}
+
+.tab-item {
+  display: flex;
+  width: 100px;
+  height: fit-content;
+  padding-top: 6px;
+  padding-bottom: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+
+  text-align: center;
+  font-family: $headers-font;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  line-break: auto;
+  color: $cta_teal_normal;
+}

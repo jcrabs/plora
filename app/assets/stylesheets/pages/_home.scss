@@ -2,3 +2,8 @@
 body {
   background-color: $bg_white_yellow_normal;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+  font-weight: 550;
+}
