@@ -1,0 +1,19 @@
+.marker {
+  background-image: url("fountain.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.marker_explored {
+  background-image: url("fountain.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: solid green;
+  border-radius: 50%;
+  cursor: pointer;
+}

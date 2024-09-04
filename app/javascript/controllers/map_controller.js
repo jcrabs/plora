@@ -8,6 +8,9 @@ export default class extends Controller {
   static values = {
     apiKey: String,
     segmentsCoordinates: Object,
+    pois: Array,
+    createUrl: String,
+    destroyUrl: String
     showSearch: Boolean,
     mapId: Number,
     importDrawUrl: String
@@ -24,7 +27,7 @@ export default class extends Controller {
     // Manually set the mapIdValue using this direct attribute value
     this.mapIdValue = parseInt(mapId, 10);
     console.log('Converted Map ID:', this.mapIdValue);
-
+    this.markers = []
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
       style: "mapbox://styles/mapbox/streets-v10"
@@ -101,6 +104,122 @@ export default class extends Controller {
       this.#saveMarker(lngLat, description);
     }
   }
+
+  const url = this.createUrlValue
+  const url_del = this.destroyUrlValue
+  const marker = this.markers
+  const map = this.map
+
+  // Function to create a custom popup card
+  function createCard(location) {
+    const card = document.createElement('div');
+    card.className = 'custom-card';
+    card.style.width = '200px';
+    card.style.padding = '10px';
+    card.style.backgroundColor = 'white';
+    card.style.borderRadius = '8px';
+    card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+
+    const title = document.createElement('h5');
+    title.textContent = location.name;
+    card.appendChild(title);
+
+    const category = document.createElement('p');
+    category.textContent = location.category;
+    card.appendChild(category);
+
+    const description = document.createElement('p');
+    description.textContent = location.description;
+    card.appendChild(description);
+
+    // Create the button
+    const button = document.createElement('button');
+    button.textContent = location.explored ? "Explored" : "Explore"
+    button.style.marginTop = '10px';
+    button.style.padding = '8px 12px';
+    button.style.backgroundColor = location.explored ? '#F4A800' : '#007bff';
+    button.style.color = 'white';
+    button.style.border = 'none';
+    button.style.borderRadius = '4px';
+    button.style.cursor = 'pointer';
+
+    // Button click event
+    button.addEventListener('click', () => {
+      const poiId = { "id": location.id }
+      const poiIdJSON = JSON.stringify(poiId)
+      console.log(location.id);
+      console.log(`location explored status: ${location.explored}`);
+      if (location.explored) {
+        button.style.backgroundColor = '#007bff'
+        button.textContent = "Explore"
+        location.explored = false
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        console.log(url_del + `/${location.id}`);
+        fetch(url_del + `/${location.id}`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+          body: poiIdJSON
+        })
+      } else {
+        button.style.backgroundColor = '#F4A800'
+        button.textContent = "Explored"
+        location.explored = true
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+          body: poiIdJSON
+        })
+      }
+      const status = location.explored
+      updateMarkerIcon(marker.find(element => element.id === location.id), status)
+    });
+
+    card.appendChild(button);
+
+    return card;
+    }
+
+
+    // Add the locations as buttons on the map
+    this.poisValue.forEach((location) => {
+      const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
+        location.name? location.name:"Nameless Fountain")
+      .setLngLat([location.lon, location.lat])
+      .setDOMContent(createCard(location)) // Attach the custom card to the popup
+      .addTo(this.map);
+      const el = document.createElement("div")
+      location.explored ? el.className = "marker_explored" : el.className = "marker"
+      const marker = new mapboxgl.Marker(el)
+      .setLngLat([ location.lon, location.lat ])
+      .setPopup(popup)
+      .addTo(map)
+      marker.id = location.id
+      this.markers.push(marker)
+      });
+
+    // Function to update the marker icon
+    function updateMarkerIcon(marker, status) {
+      // Get the marker's position and popup
+      const lngLat = marker.getLngLat();
+      const popup = marker.getPopup();
+      // Remove the old marker
+      marker.remove();
+      console.log("marker removed");
+      // Create a new marker with the explored class
+      const el = document.createElement("div")
+      if (status) {
+        el.className = "marker_explored"
+      } else {
+        el.className = "marker"
+      }
+
+      const newMarker = new mapboxgl.Marker(el)
+      .setLngLat(lngLat)
+      .setPopup(popup)
+      .addTo(map);
+      return newMarker;
+    }
 
   saveMatched(event) {
     event.preventDefault()
@@ -225,8 +344,11 @@ export default class extends Controller {
             'line-cap': 'round'
           },
           paint: {
-            'line-color': '#03AA46',
-            'line-width': 8,
+            'circle-color': '#00afb9',
+            'circle-opacity': 0.8,
+            'circle-radius': 4,
+            'line-color': '#a7c957',
+            'line-width': 4,
             'line-opacity': 0.8
           }
         });

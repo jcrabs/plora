@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-02T17:34:41Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/258604531",
+        "access": "yes",
+        "amenity": "toilets",
+        "changing_table": "no",
+        "fee": "no",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "lda:criteria": "Baudenkmal",
+        "male": "yes",
+        "name": "Historische Toilette (Café Achteck)",
+        "ref:lda": "09066614",
+        "toilets:disposal": "flush",
+        "toilets:position": "urinal",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no",
+        "wikidata": "Q61768746"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3633629,
+          52.4811845
+        ]
+      },
+      "id": "node/258604531"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/353202022",
+        "access": "yes",
+        "amenity": "toilets",
+        "changing_table": "no",
+        "charge": "0,50 Eur",
+        "contact:phone": "+49 800 092 55 24",
+        "fee": "yes",
+        "name": "Historische Toilette (Café Achteck)",
+        "opening_hours": "24/7",
+        "unisex": "yes",
+        "website": "https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/oeffentliche-toiletten/",
+        "wheelchair": "no",
+        "wikidata": "Q113604335",
+        "wikimedia_commons": "Category:Café Achteck, Chamissoplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3909712,
+          52.488515
+        ]
+      },
+      "id": "node/353202022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/377675091",
+        "access": "yes",
+        "amenity": "toilets",
+        "changing_table": "no",
+        "check_date": "2024-06-10",
+        "contact:phone": "+49 800 092 55 24",
+        "description": "Historische Toilette (Café Achteck)",
+        "fee": "no",
+        "historic": "yes",
+        "mapillary": "2884126671906417",
+        "name": "Berliner Toilette",
+        "opening_hours": "24/7",
+        "unisex": "yes",
+        "website": "https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/oeffentliche-toiletten/",
+        "wheelchair": "no",
+        "wikidata": "Q113604318",
+        "wikimedia_commons": "Category:Bedürfnisanstalt (Café Achteck Senefelderplatz Berlin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4129034,
+          52.5324627
+        ]
+      },
+      "id": "node/377675091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1030895309",
+        "access": "yes",
+        "addr:floor": "0",
+        "amenity": "toilets",
+        "check_date": "2024-08-16",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "lda:criteria": "Baudenkmal",
+        "level": "0",
+        "male": "yes",
+        "name": "Historische Toilette (Café Achteck)",
+        "opening_hours": "\"Geschlossen von Januar bis März und bei Dauerfrost\"",
+        "ref:lda": "09075197",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no",
+        "wikidata": "Q61768592"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3868943,
+          52.4387075
+        ]
+      },
+      "id": "node/1030895309"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3860571062",
+        "amenity": "toilets",
+        "changing_table": "no",
+        "fee": "no",
+        "name": "Historische Toilette (Café Achteck)",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no",
+        "wikidata": "Q32661214",
+        "wikimedia_commons": "Category:Café Achteck, Stephanplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3469324,
+          52.5334342
+        ]
+      },
+      "id": "node/3860571062"
+    }
+  ]
+}

@@ -40,48 +40,16 @@ User.create!(username: "Elias Schneider", email: "elias.schneider@example.com", 
 User.create!(username: "Maya Schwarz", email: "maya.schwarz@example.com", password: "password", home_address: "Karl-Marx-Straße 110, 12043 Berlin", home_lat: 52.478204, home_lon: 13.439032)
 puts "Created #{User.count} users!"
 
-puts "Creating POIs..."
-PointOfInterest.create!(name: "Brandenburg Gate", category: "Historical Building", description: "Iconic neoclassical monument symbolizing Berlin's reunification.", lat: 52.516275, lon: 13.377704, user: User.all.sample)
-PointOfInterest.create!(name: "Reichstag Building", category: "Historical Building", description: "Germany's parliament building with a modern glass dome.", lat: 52.518623, lon: 13.376198, user: User.all.sample)
-PointOfInterest.create!(name: "Berlin Cathedral", category: "Historical Building", description: "Impressive baroque cathedral on Museum Island.", lat: 52.519366, lon: 13.401027, user: User.all.sample)
-PointOfInterest.create!(name: "Charlottenburg Palace", category: "Historical Building", description: "Former royal palace with lavish gardens.", lat: 52.520221, lon: 13.295707, user: User.all.sample)
-PointOfInterest.create!(name: "Potsdamer Platz", category: "Historical Building", description: "Historic square now a major urban center.", lat: 52.509648, lon: 13.375452, user: User.all.sample)
-PointOfInterest.create!(name: "Gendarmenmarkt", category: "Historical Building", description: "One of Berlin's most beautiful squares, home to the Konzerthaus.", lat: 52.513864, lon: 13.392617, user: User.all.sample)
-PointOfInterest.create!(name: "Kaiser Wilhelm Memorial Church", category: "Historical Building", description: "War-damaged church symbolizing Berlin's resilience.", lat: 52.507404, lon: 13.334915, user: User.all.sample)
-PointOfInterest.create!(name: "Sanssouci Palace", category: "Historical Building", description: "Frederick the Great's summer palace in nearby Potsdam.", lat: 52.401678, lon: 13.038563, user: User.all.sample)
-PointOfInterest.create!(name: "Berliner Dom", category: "Historical Building", description: "Stunning baroque cathedral with a rich history.", lat: 52.519444, lon: 13.401417, user: User.all.sample)
-PointOfInterest.create!(name: "Checkpoint Charlie", category: "Historical Building", description: "Famous Cold War border crossing point.", lat: 52.507443, lon: 13.390391, user: User.all.sample)
-PointOfInterest.create!(name: "Red City Hall", category: "Historical Building", description: "Berlin's city hall with a distinctive red brick facade.", lat: 52.518611, lon: 13.408333, user: User.all.sample)
-PointOfInterest.create!(name: "Victory Column", category: "Historical Building", description: "Monument commemorating Prussian victories, offering great views.", lat: 52.514444, lon: 13.350278, user: User.all.sample)
-PointOfInterest.create!(name: "Pergamon Museum", category: "Historical Building", description: "Home to ancient artifacts including the Pergamon Altar.", lat: 52.521114, lon: 13.396614, user: User.all.sample)
-PointOfInterest.create!(name: "Humboldt University", category: "Historical Building", description: "One of Berlin's oldest universities, established in 1810.", lat: 52.518611, lon: 13.393611, user: User.all.sample)
-PointOfInterest.create!(name: "Neue Wache", category: "Historical Building", description: "Memorial to the victims of war and tyranny.", lat: 52.5175, lon: 13.395278, user: User.all.sample)
-PointOfInterest.create!(name: "Bellevue Palace", category: "Historical Building", description: "Official residence of the President of Germany.", lat: 52.516389, lon: 13.348889, user: User.all.sample)
-PointOfInterest.create!(name: "Berlin State Opera", category: "Historical Building", description: "Historic opera house on Unter den Linden boulevard.", lat: 52.517083, lon: 13.393611, user: User.all.sample)
-PointOfInterest.create!(name: "Old Museum", category: "Historical Building", description: "One of Berlin's oldest museums, housing classical antiquities.", lat: 52.520833, lon: 13.398611, user: User.all.sample)
-PointOfInterest.create!(name: "Grunewald Tower", category: "Historical Building", description: "Historic lookout tower with panoramic views over Berlin.", lat: 52.454444, lon: 13.205278, user: User.all.sample)
-PointOfInterest.create!(name: "Olympic Stadium", category: "Historical Building", description: "Venue for the 1936 Olympics, now a major sports arena.", lat: 52.514444, lon: 13.239444, user: User.all.sample)
-PointOfInterest.create!(name: "Schloss Köpenick", category: "Historical Building", description: "Baroque palace located on an island in the Dahme River.", lat: 52.444444, lon: 13.580556, user: User.all.sample)
-PointOfInterest.create!(name: "Bode Museum", category: "Historical Building", description: "Museum on Museum Island, known for sculptures and Byzantine art.", lat: 52.522778, lon: 13.396944, user: User.all.sample)
-PointOfInterest.create!(name: "Nikolaikirche", category: "Historical Building", description: "Berlin's oldest church, dating back to the 13th century.", lat: 52.516944, lon: 13.408333, user: User.all.sample)
-PointOfInterest.create!(name: "Altes Stadthaus", category: "Historical Building", description: "Historic city hall, now used for administrative purposes.", lat: 52.515833, lon: 13.409444, user: User.all.sample)
-PointOfInterest.create!(name: "Hackesche Höfe", category: "Historical Building", description: "Complex of courtyards, a prime example of Art Nouveau architecture.", lat: 52.525556, lon: 13.401944, user: User.all.sample)
-PointOfInterest.create!(name: "Deutsches Historisches Museum", category: "Historical Building", description: "Museum showcasing German history from the Middle Ages to the present.", lat: 52.517222, lon: 13.396111, user: User.all.sample)
-PointOfInterest.create!(name: "Kulturforum", category: "Historical Building", description: "Cultural center home to museums, a library, and concert halls.", lat: 52.507778, lon: 13.367778, user: User.all.sample)
-PointOfInterest.create!(name: "Alte Nationalgalerie", category: "Historical Building", description: "Museum on Museum Island, displaying 19th-century art.", lat: 52.520556, lon: 13.398056, user: User.all.sample)
-PointOfInterest.create!(name: "Berlin Wall Memorial", category: "Historical Building", description: "Site commemorating the division of Berlin by the Berlin Wall.", lat: 52.535833, lon: 13.389444, user: User.all.sample)
-PointOfInterest.create!(name: "Neue Nationalgalerie", category: "Historical Building", description: "Modern art museum with a striking glass and steel design.", lat: 52.507778, lon: 13.368333, user: User.all.sample)
-PointOfInterest.create!(name: "St. Hedwig's Cathedral", category: "Historical Building", description: "Berlin's Roman Catholic cathedral, modeled after the Pantheon in Rome.", lat: 52.517222, lon: 13.395278, user: User.all.sample)
-PointOfInterest.create!(name: "Berliner Fernsehturm", category: "Historical Building", description: "Iconic TV tower with panoramic views of the city.", lat: 52.520833, lon: 13.409444, user: User.all.sample)
-PointOfInterest.create!(name: "French Cathedral", category: "Historical Building", description: "One of two cathedrals on Gendarmenmarkt, symbolizing religious tolerance.", lat: 52.513056, lon: 13.393611, user: User.all.sample)
-PointOfInterest.create!(name: "Zeughaus Berlin", category: "Historical Building", description: "The oldest surviving building on Unter den Linden, now a museum.", lat: 52.5175, lon: 13.396111, user: User.all.sample)
-PointOfInterest.create!(name: "Rotes Rathaus", category: "Historical Building", description: "Berlin's town hall, notable for its distinctive red brick architecture.", lat: 52.518611, lon: 13.408056, user: User.all.sample)
-PointOfInterest.create!(name: "Topography of Terror", category: "Historical Building", description: "Museum documenting Nazi atrocities, located on the former Gestapo site.", lat: 52.5075, lon: 13.381111, user: User.all.sample)
-PointOfInterest.create!(name: "Palace of Tears", category: "Historical Building", description: "Former border crossing point, now a museum on divided Berlin.", lat: 52.521111, lon: 13.386944, user: User.all.sample)
-PointOfInterest.create!(name: "Villa Liebermann", category: "Historical Building", description: "Historic villa, now a museum dedicated to artist Max Liebermann.", lat: 52.445833, lon: 13.172222, user: User.all.sample)
-PointOfInterest.create!(name: "Bebelplatz", category: "Historical Building", description: "Public square known for the Nazi book burning memorial.", lat: 52.517778, lon: 13.393056, user: User.all.sample)
-PointOfInterest.create!(name: "Berlin Philharmonie", category: "Historical Building", description: "World-renowned concert hall, known for its unique architecture.", lat: 52.509167, lon: 13.369444, user: User.all.sample)
-puts "Created #{PointOfInterest.count} POIs!"
+
+filepath = "json/berlin_fountains.geojson"
+file = File.join(__dir__, filepath)
+points = File.read(file)
+geopoints_hash = JSON.parse(points)
+puts "Creating POIs from #{filepath}"
+geopoints_hash["features"].each do |feature|
+  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
+end
+puts "Created #{PointOfInterest.count} POIs"
 
 puts "Attaching cat images to users!"
 resources = Cloudinary::Api.resources(prefix: 'cats', type: 'upload', max_results: 20)
@@ -181,3 +149,4 @@ Segment.create!(map: Map.last)
 geopoints_array.each do |lat, lon|
   Point.create!(lat: lat, lon: lon, segment: Segment.last)
 end
+puts "Finished creating a BIG segment with #{geopoints_array.size} points."
