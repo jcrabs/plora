@@ -10,7 +10,7 @@ export default class extends Controller {
     segmentsCoordinates: Object,
     pois: Array,
     createUrl: String,
-    destroyUrl: String
+    destroyUrl: String,
     showSearch: Boolean,
     mapId: Number,
     importDrawUrl: String
@@ -90,6 +90,22 @@ export default class extends Controller {
         });
       }
     });
+    // Add the locations as buttons on the map
+    this.poisValue.forEach((location) => {
+      const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
+        location.name? location.name:"Nameless Fountain")
+      .setLngLat([location.lon, location.lat])
+      .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
+      .addTo(this.map);
+      const el = document.createElement("div")
+      location.explored ? el.className = "marker_explored" : el.className = "marker"
+      const marker = new mapboxgl.Marker(el)
+      .setLngLat([ location.lon, location.lat ])
+      .setPopup(popup)
+      .addTo(this.map)
+      marker.id = location.id
+      this.markers.push(marker)
+      });
   }
 
   // Load annotations from the server
@@ -113,13 +129,13 @@ export default class extends Controller {
     }
   }
 
-  const url = this.createUrlValue
-  const url_del = this.destroyUrlValue
-  const marker = this.markers
-  const map = this.map
-
   // Function to create a custom popup card
-  function createCard(location) {
+  createCard(location) {
+    const url = this.createUrlValue
+    const url_del = this.destroyUrlValue
+    const marker = this.markers
+    const map = this.map
+
     const card = document.createElement('div');
     card.className = 'custom-card';
     card.style.width = '200px';
@@ -180,7 +196,7 @@ export default class extends Controller {
         })
       }
       const status = location.explored
-      updateMarkerIcon(marker.find(element => element.id === location.id), status)
+      this.updateMarkerIcon(marker.find(element => element.id === location.id), status)
     });
 
     card.appendChild(button);
@@ -189,45 +205,28 @@ export default class extends Controller {
     }
 
 
-    // Add the locations as buttons on the map
-    this.poisValue.forEach((location) => {
-      const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
-        location.name? location.name:"Nameless Fountain")
-      .setLngLat([location.lon, location.lat])
-      .setDOMContent(createCard(location)) // Attach the custom card to the popup
-      .addTo(this.map);
-      const el = document.createElement("div")
-      location.explored ? el.className = "marker_explored" : el.className = "marker"
-      const marker = new mapboxgl.Marker(el)
-      .setLngLat([ location.lon, location.lat ])
-      .setPopup(popup)
-      .addTo(map)
-      marker.id = location.id
-      this.markers.push(marker)
-      });
-
-    // Function to update the marker icon
-    function updateMarkerIcon(marker, status) {
-      // Get the marker's position and popup
-      const lngLat = marker.getLngLat();
-      const popup = marker.getPopup();
-      // Remove the old marker
-      marker.remove();
-      console.log("marker removed");
-      // Create a new marker with the explored class
-      const el = document.createElement("div")
-      if (status) {
-        el.className = "marker_explored"
-      } else {
-        el.className = "marker"
-      }
-
-      const newMarker = new mapboxgl.Marker(el)
-      .setLngLat(lngLat)
-      .setPopup(popup)
-      .addTo(map);
-      return newMarker;
+  // Function to update the marker icon
+  updateMarkerIcon(marker, status) {
+    // Get the marker's position and popup
+    const lngLat = marker.getLngLat();
+    const popup = marker.getPopup();
+    // Remove the old marker
+    marker.remove();
+    console.log("marker removed");
+    // Create a new marker with the explored class
+    const el = document.createElement("div")
+    if (status) {
+      el.className = "marker_explored"
+    } else {
+      el.className = "marker"
     }
+
+    const newMarker = new mapboxgl.Marker(el)
+    .setLngLat(lngLat)
+    .setPopup(popup)
+    .addTo(this.map);
+    return newMarker;
+  }
 
   saveMatched(event) {
     event.preventDefault()
