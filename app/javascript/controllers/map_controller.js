@@ -8,27 +8,35 @@ export default class extends Controller {
   static values = {
     apiKey: String,
     segmentsCoordinates: Object,
+    pois: Array,
+    createUrl: String,
+    destroyUrl: String,
     showSearch: Boolean,
+    showDrawTool: Boolean,
     mapId: Number,
     importDrawUrl: String
   }
 
-  static targets = ["container", "saveMatched", "saveFreeform", "loading"]
+  static targets = ["container", "saveMatched", "saveFreeform", "loading", "styleSelect"]
 
   connect() {
     // Initialize Mapbox
     mapboxgl.accessToken = this.apiKeyValue;
-    console.log('Controller connected');
+    // Manually set the mapIdValue using direct attribute value
     const mapId = this.element.getAttribute('data-map-id-value');
-    console.log('Direct Attribute Map ID:', mapId);
-    // Manually set the mapIdValue using this direct attribute value
+    // Convert the mapIdValue to an integer
     this.mapIdValue = parseInt(mapId, 10);
     console.log('Converted Map ID:', this.mapIdValue);
-
+    // Initialize the map
+    this.markers = []
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: this.styleSelectTarget.value
     });
+
+    // Add a scale control to the map
+    this.map.addControl(new mapboxgl.ScaleControl())
+
 
     // search bar:
     if (this.showSearchValue) {
@@ -45,16 +53,19 @@ export default class extends Controller {
     }
 
     // drawing tool:
-    this.draw = new MapboxDraw({
-      displayControlsDefault: false,
-      controls: {
-        line_string: true,
-        trash: true
-      }})
-    this.map.addControl(this.draw, 'top-left')
+    if (this.showDrawToolValue) {
+      this.draw = new MapboxDraw({
+        displayControlsDefault: false,
+        controls: {
+          line_string: true,
+          trash: true
+        }})
+      this.map.addControl(this.draw, 'top-left')
+    }
 
+    // after map has loaded:
     this.map.on('load', () => {
-      // draw lines for all segments, if segments exist (after map style has loaded):
+      // draw lines for all segments, if segments exist:
       if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
         this.#drawRoute(this.segmentsCoordinatesValue)
       }
@@ -62,26 +73,51 @@ export default class extends Controller {
       // Load saved annotations from server
       this.#loadAnnotations();
 
-      // Add marker on right-click or long-press
+      // Add marker on right-click on web
       this.map.on('contextmenu', (e) => {
         this.#addMarkerAndSave(e.lngLat);
       });
 
-      this.map.on('touchend', (e) => {
-        const touch = e.originalEvent.touches[0];
-        const lngLat = this.map.unproject([touch.clientX, touch.clientY]);
-        this.#addMarkerAndSave(lngLat);
-      });
+      //  Long touch on mobile to add annotation
+      let touchTimer = null;
+      this.map.getCanvas().addEventListener('touchstart', (e) => {
+        touchTimer = setTimeout(() => {
+          const touch = e.touches[0];
 
-      // Draw lines for all segments, if segments exist (after map style has loaded)
-      if (JSON.stringify(this.segmentsCoordinatesValue) !== '{}') {
-        this.map.on("styledata", () => {
-          this.#drawRoute(this.segmentsCoordinatesValue);
-        });
-      }
+          // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+          const rect = this.map.getCanvas().getBoundingClientRect();
+          const x = touch.clientX - rect.left;
+          const y = touch.clientY - rect.top;
+
+          const lngLat = this.map.unproject([x, y]);
+
+          this.#addMarkerAndSave(lngLat);
+        }, 500); // 500 ms for long press
+      });
+      // Clear the timer and popup if the user lifts their finger before the timeout
+      this.map.getCanvas().addEventListener('touchend', () => {
+        clearTimeout(touchTimer);
+      });
     });
+    // Add the locations as buttons on the map
+    this.poisValue.forEach((location) => {
+      const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
+        location.name? location.name:"Nameless Fountain")
+      .setLngLat([location.lon, location.lat])
+      .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
+      .addTo(this.map);
+      const el = document.createElement("div")
+      location.explored ? el.className = `marker_${location.category.toLowerCase()}_explored` : el.className = `marker_${location.category.toLowerCase()}`
+      const marker = new mapboxgl.Marker(el)
+      .setLngLat([ location.lon, location.lat ])
+      .setPopup(popup)
+      .addTo(this.map)
+      marker.id = location.id
+      this.markers.push(marker)
+      });
   }
 
+  // Load annotations from the server
   #loadAnnotations() {
     fetch(`/maps/${this.mapIdValue}/annotations`)
       .then(response => response.json())
@@ -92,13 +128,116 @@ export default class extends Controller {
       });
   }
 
+  // Add marker on the map and save it to the server
   #addMarkerAndSave(lngLat) {
     const description = prompt("Enter a description:");
     if (description) {
-      console.log('Map ID:', this.mapIdValue);
+      // console.log('Map ID:', this.mapIdValue);
       this.addMarker(lngLat, description);
       this.#saveMarker(lngLat, description);
     }
+  }
+
+  changeStyle() {
+    this.map.setStyle(this.styleSelectTarget.value)
+  }
+
+  // Function to create a custom popup card
+  createCard(location) {
+    const url = this.createUrlValue
+    const url_del = this.destroyUrlValue
+    const marker = this.markers
+    const map = this.map
+
+    const card = document.createElement('div');
+    card.className = 'custom-card';
+    card.style.width = '200px';
+    card.style.padding = '10px';
+    card.style.backgroundColor = 'white';
+    card.style.borderRadius = '8px';
+    card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+
+    const title = document.createElement('h5');
+    title.textContent = location.name;
+    card.appendChild(title);
+
+    const category = document.createElement('p');
+    category.textContent = location.category;
+    card.appendChild(category);
+
+    const description = document.createElement('p');
+    description.textContent = location.description;
+    card.appendChild(description);
+
+    // Create the button
+    const button = document.createElement('button');
+    button.textContent = location.explored ? "Explored" : "Explore"
+    button.style.marginTop = '10px';
+    button.style.padding = '8px 12px';
+    button.style.backgroundColor = location.explored ? '#F4A800' : '#007bff';
+    button.style.color = 'white';
+    button.style.border = 'none';
+    button.style.borderRadius = '4px';
+    button.style.cursor = 'pointer';
+
+    // Button click event
+    button.addEventListener('click', () => {
+      const poiId = { "id": location.id }
+      const poiIdJSON = JSON.stringify(poiId)
+      console.log(location.id);
+      console.log(`location explored status: ${location.explored}`);
+      if (location.explored) {
+        button.style.backgroundColor = '#007bff'
+        button.textContent = "Explore"
+        location.explored = false
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        console.log(url_del + `/${location.id}`);
+        fetch(url_del + `/${location.id}`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+          body: poiIdJSON
+        })
+      } else {
+        button.style.backgroundColor = '#F4A800'
+        button.textContent = "Explored"
+        location.explored = true
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+          body: poiIdJSON
+        })
+      }
+      const status = location.explored
+      this.updateMarkerIcon(marker.find(element => element.id === location.id), status, location.category)
+    });
+
+    card.appendChild(button);
+
+    return card;
+    }
+
+  // Function to update the marker icon
+  updateMarkerIcon(marker, status, category) {
+    // Get the marker's position and popup
+    const lngLat = marker.getLngLat();
+    const popup = marker.getPopup();
+    // Remove the old marker
+    marker.remove();
+    console.log("marker removed");
+    // Create a new marker with the explored class
+    const el = document.createElement("div")
+    if (status) {
+      el.className = `marker_${category.toLowerCase()}_explored`
+    } else {
+      el.className = `marker_${category.toLowerCase()}`
+    }
+
+    const newMarker = new mapboxgl.Marker(el)
+    .setLngLat(lngLat)
+    .setPopup(popup)
+    .addTo(this.map);
+    return newMarker;
   }
 
   saveMatched(event) {
@@ -150,7 +289,7 @@ export default class extends Controller {
         }
       })
   }
-
+  // Saving marker to the server
   #saveMarker(lngLat, description) {
     const data = {
       annotation: {
@@ -160,40 +299,94 @@ export default class extends Controller {
         description: description
       }
     };
+    // console.log('Sending data:', data);
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     fetch(`/maps/${this.mapIdValue}/annotations`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        "X-CSRF-Token": csrfToken
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Marker saved successfully:', data);
-    });
+    .then(response => {
+      // console.log('Response status:', response.status);
+      return response.json();
+    })
+    // .then(data => {
+    //   console.log('Response from server:', data);
+    //   if (data.success) {
+    //     console.log('Annotation saved successfully.');
+    //   } else {
+    //     console.error('Error saving annotation:', data.error);
+    //   }
+    // })
+    // .catch(error => {
+    //   console.error('Network error:', error);
+    // });
   }
 
   // Add marker on the map
-  addMarker(lngLat, description) {
-    const marker = new mapboxgl.Marker()
-      .setLngLat(lngLat)
-      .addTo(this.map);
+  // Add marker on the map
+addMarker(lngLat, description) {
+  // Create a new HTML element for the marker
+  const el = document.createElement('div');
+  el.className = 'custom-marker'; // Add a class for custom styling
+  el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
 
-    if (description) {
-      const popup = new mapboxgl.Popup({ closeButton: false })
-        .setText(description);
+  // Style the marker element
+  el.style.fontSize = '20px'; // Size of the icon
+  el.style.color = '#006B8F'; // Color of the icon
 
-      marker.setPopup(popup);
-      marker.getElement().addEventListener('mouseenter', () => popup.addTo(this.map));
-      marker.getElement().addEventListener('mouseleave', () => popup.remove());
+
+  // Create a new Mapbox marker with the custom element
+  const marker = new mapboxgl.Marker(el)
+    .setLngLat(lngLat)
+    .addTo(this.map);
+
+  // Add a popup to the marker
+  if (description) {
+    const popup = new mapboxgl.Popup({ closeButton: false, offset: 25 })
+      .setText(description);
+
+    marker.setPopup(popup);
+
+    // Detect if the device is touch-enabled
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    const showPopup = () => {
+      // Close the currently open popup, if any
+      if (this.currentPopup && this.currentPopup !== popup) {
+        this.currentPopup.remove();
+      }
+      // Ensure the popup is only shown if it is not already visible
+      if (!popup.isOpen()) {
+        popup.addTo(this.map);
+        this.currentPopup = popup;
+      }
+    };
+
+    if (isTouchDevice) {
+      // When on Mobile: Show popup on touch
+      marker.getElement().addEventListener('touchstart', showPopup);
+    } else {
+      // When on Desktop: Show popup on mouseenter and hide on mouseleave
+      marker.getElement().addEventListener('mouseenter', showPopup);
+      marker.getElement().addEventListener('mouseleave', () => {
+        popup.remove();
+        this.currentPopup = null;
+      });
     }
   }
+}
+
+
 
   #fitMapToCoordinates(coordinates) {
     const bounds = new mapboxgl.LngLatBounds();
     coordinates.forEach(pair => bounds.extend([pair[0], pair[1]]));
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+    this.map.fitBounds(bounds, { padding: 40, maxZoom: 14, duration: 0 });
   }
 
   // Draw the Map Matching routes as new layers on the map
@@ -224,8 +417,11 @@ export default class extends Controller {
             'line-cap': 'round'
           },
           paint: {
-            'line-color': '#03AA46',
-            'line-width': 8,
+            // 'circle-color': '#00afb9',
+            // 'circle-opacity': 0.8,
+            // 'circle-radius': 4,
+            'line-color': '#87A8B3',
+            'line-width': 4,
             'line-opacity': 0.8
           }
         });

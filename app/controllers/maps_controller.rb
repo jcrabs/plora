@@ -1,10 +1,33 @@
 class MapsController < ApplicationController
 
   def index
-    @maps = Map.all
+    @maps = current_user.maps
+    @segments_coordinates = {}
+    @maps.each do |map|
+      @segments_coordinates[map.id] = {}
+      map.segments.each do |segment|
+        points = []
+        segment.points.each do |pair|
+          point_coordinates = {
+            lat: pair.lat,
+            lon: pair.lon
+          }
+          points << point_coordinates
+        end
+        @segments_coordinates[map.id][segment.id] = points
+      end
+    end
   end
 
   def show
+    @expois = ExploredPointOfInterest.where(user: current_user)
+    @pois = PointOfInterest.all
+    @pois = @pois.map do |poi|
+      poi_hash = poi.attributes
+      poi_hash["explored"] = @expois.where(point_of_interest:poi).exists?
+      poi_hash
+    end
+    
     # display map:
     @map = Map.find(params[:id])
     # for the new segment creation form:

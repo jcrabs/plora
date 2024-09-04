@@ -1,0 +1,51 @@
+.marker_fountain{
+  background-image: url("fountain.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;;
+  cursor: pointer;
+}
+
+.marker_fountain_explored {
+  background-image: url("fountain.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #F4A800;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.marker_home {
+  background-image: url("home.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+.marker_toilets {
+  background-image: url("toilet.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;;
+  cursor: pointer;
+}
+
+.marker_toilets_explored {
+  background-image: url("toilet.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #F4A800;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+// Attributions
+//<a href="https://www.flaticon.com/free-icons/architecture-and-city" title="architecture and city icons">Architecture and city icons created by ADMS ICons - Flaticon</a>
+//<a href="https://www.flaticon.com/free-icons/home-button" title="home button icons">Home button icons created by Freepik - Flaticon</a>
+//<a href="https://www.flaticon.com/free-icons/toilet" title="toilet icons">Toilet icons created by mattbadal - Flaticon</a>
