@@ -15,11 +15,13 @@
 
   <div class="row">
     <% @maps.each do |map| %>
-      <div class="col-md-4 mb-4">
-        <%= link_to map_path(map), class: "text-decoration-none" do %>
-          <%= render "shared/mapcard", map: map %>
-        <% end %>
-      </div>
+      <% if map.user == current_user %>
+        <div class="col-md-4 mb-4 col-custom">
+          <%= link_to map_path(map), class: "text-decoration-none" do %>
+            <%= render "shared/mapcard", map: map %>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

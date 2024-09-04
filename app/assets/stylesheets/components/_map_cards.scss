@@ -51,17 +51,17 @@
   z-index: 100;
   }
 
-@media (max-width: 1230px) {
+@media (max-width: 1200px) {
   .col-custom {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 1000px) {
   .col-custom {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 57%;
+    max-width: 80%;
   }
 }
 
