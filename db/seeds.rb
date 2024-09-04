@@ -4,6 +4,8 @@
 require "open-uri"
 require "json"
 
+puts "Destroying all Explored points of interest..."
+ExploredPointOfInterest.destroy_all
 puts "Destroying all annotations..."
 Annotation.destroy_all
 puts "Destroying all points..."
