@@ -2,36 +2,48 @@
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "plora-symbol.svg", alt: "Plora Symbol" %>
-      <span style="font-size: 1.5rem; font-weight: bold">Plora</span>
     <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button style="border: 0px; background-color: #FFF9EE;" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+      <div>
+              <% if user_signed_in?%>
+              <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown",
+              data:{bs_toggle: "dropdown"}, aria_haspopup: "true", aria_expanded: "false" if current_user.photo.attached?%>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 9.48828C8.30762 9.47949 8.58887 9.36523 8.81738 9.11914L15.4971 2.28125C15.6904
+                  2.08789 15.7959 1.8418 15.7959 1.55176C15.7959 0.97168 15.3389 0.505859 14.7588 0.505859C14.4775
+                  0.505859 14.2051 0.620117 14.0029 0.822266L8.00879 6.9834L1.99707 0.822266C1.79492 0.628906
+                  1.53125 0.505859 1.24121 0.505859C0.661133 0.505859 0.204102 0.97168 0.204102 1.55176C0.204102
+                  1.8418 0.30957 2.08789 0.50293 2.28125L7.19141 9.11914C7.42871 9.36523 7.69238 9.48828 8 9.48828Z"
+                  fill="#00ACE6"/>
+                </svg>
+                <% end %>
+      </div>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "My Profile", "#", class: "nav-link" %>
+            <%= link_to "My Profile", "#", class: "nav-link button_link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "My Maps", maps_path, class: "nav-link" %>
+            <%= link_to "My Maps", maps_path, class: "nav-link button_link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %>
-          </li>
-          <li class="nav-item ">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data:{bs_toggle: "dropdown"}, aria_haspopup: "true", aria_expanded: "false" if current_user.photo.attached?%>
-          </a>
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link button_link" %>
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link button_link" %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
+
+  <div class="map_card_separator">
+  </div>

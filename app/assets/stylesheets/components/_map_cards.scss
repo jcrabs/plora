@@ -6,6 +6,14 @@
   position: relative;
 }
 
+.map_card_default:hover {
+  width: 360px;
+  height: 178px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.27);
+  position: relative;
+}
+
 .map_card_img {
   width: 360px;
   height: 109px;
@@ -16,13 +24,13 @@
 .map_card_separator {
   flex-shrink: 360px;
   height: 1px;
-  background-color: $cta_teal_normal;
+  background-color: $cta_yellow_pressed;
 }
 
 .map_card_bottom_box {
   width: 360px;
   height: 69px;
-  background-color: $bg_white_grey;
+  background-color: $bg_white_yellow_light;
   border-radius: 0px 0px 16px 16px;
 }
 

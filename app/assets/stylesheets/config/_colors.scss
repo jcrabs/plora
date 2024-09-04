@@ -9,12 +9,18 @@ $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
 // cta is the acronym for call to action
-$cta_teal_normal: #008A8A;
-$cta_teal_hover: #007070;
-$cta_teal_light: #4AE6E6;
-$cta_teal_pressed: #005858;
+$cta_yellow_normal: #F4A800;
+$cta_yellow_hover: #e29b00;
+$cta_yellow_light: #FFD883;
+$cta_yellow_pressed: #B97F00;
+$cta_teal_normal: #00ACE6;
+$cta_teal_hover: #0094C5;
+$cta_teal_light: #B1EAFD;
+$cta_teal_pressed: #006B8F;
 //bg is the acronym for background
-$bg_white_grey: #F3F3F3;
+$bg_white_yellow_normal: #fff4df;
+$bg_white_yellow_light: #FFF9EE;
+$bg_white_yellow_dark: #B6A072;
 // pg is the acronym for progrssive -- progresiv blue
 $pg_blue_normal: #4AE6E6;
 // greys
@@ -22,3 +28,7 @@ $desabled_grey: #C1C1C1;
 $desabled_grey: #999999;
 // Typography
 $text_black_grey: #161616;
+$text_white_grey: #F3F3F3;
+
+$destroy: #ff5656;
+$destroy_hover: #db4a4a;

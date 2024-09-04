@@ -79,3 +79,6 @@ end
 gem "cloudinary"
 gem 'async-http-faraday'
 gem 'concurrent-ruby'
+
+# testing
+gem 'memory_profiler'
