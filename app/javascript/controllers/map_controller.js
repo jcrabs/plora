@@ -21,10 +21,9 @@ export default class extends Controller {
   connect() {
     // Initialize Mapbox
     mapboxgl.accessToken = this.apiKeyValue;
-    console.log('Controller connected');
+    // Manually set the mapIdValue using direct attribute value
     const mapId = this.element.getAttribute('data-map-id-value');
-    console.log('Direct Attribute Map ID:', mapId);
-    // Manually set the mapIdValue using this direct attribute value
+    // Convert the mapIdValue to an integer
     this.mapIdValue = parseInt(mapId, 10);
     console.log('Converted Map ID:', this.mapIdValue);
     this.markers = []
@@ -65,15 +64,23 @@ export default class extends Controller {
       // Load saved annotations from server
       this.#loadAnnotations();
 
-      // Add marker on right-click or long-press
+      // Add marker on right-click on web
       this.map.on('contextmenu', (e) => {
         this.#addMarkerAndSave(e.lngLat);
       });
 
-      this.map.on('touchend', (e) => {
-        const touch = e.originalEvent.touches[0];
-        const lngLat = this.map.unproject([touch.clientX, touch.clientY]);
-        this.#addMarkerAndSave(lngLat);
+      //  Long touch on mobile to add annotation
+      let touchTimer = null;
+      this.map.getCanvas().addEventListener('touchstart', (e) => {
+        touchTimer = setTimeout(() => {
+          const touch = e.touches[0];
+          const lngLat = this.map.unproject([touch.clientX, touch.clientY]);
+          this.#addMarkerAndSave(lngLat);
+        }, 500); // 500 ms for long press
+      });
+      // Clear the timer and popup if the user lifts their finger before the timeout
+      this.map.getCanvas().addEventListener('touchend', () => {
+        clearTimeout(touchTimer);
       });
 
       // Draw lines for all segments, if segments exist (after map style has loaded)
@@ -101,7 +108,7 @@ export default class extends Controller {
       });
   }
 
-  // annotations:
+  // Load annotations from the server
   #loadAnnotations() {
     fetch(`/maps/${this.mapIdValue}/annotations`)
       .then(response => response.json())
@@ -112,10 +119,11 @@ export default class extends Controller {
       });
   }
 
+  // Add marker on the map and save it to the server
   #addMarkerAndSave(lngLat) {
     const description = prompt("Enter a description:");
     if (description) {
-      console.log('Map ID:', this.mapIdValue);
+      // console.log('Map ID:', this.mapIdValue);
       this.addMarker(lngLat, description);
       this.#saveMarker(lngLat, description);
     }
@@ -279,18 +287,32 @@ export default class extends Controller {
         description: description
       }
     };
+    // console.log('Sending data:', data);
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     fetch(`/maps/${this.mapIdValue}/annotations`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        "X-CSRF-Token": csrfToken
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Marker saved successfully:', data);
-    });
+    .then(response => {
+      // console.log('Response status:', response.status);
+      return response.json();
+    })
+    // .then(data => {
+    //   console.log('Response from server:', data);
+    //   if (data.success) {
+    //     console.log('Annotation saved successfully.');
+    //   } else {
+    //     console.error('Error saving annotation:', data.error);
+    //   }
+    // })
+    // .catch(error => {
+    //   console.error('Network error:', error);
+    // });
   }
 
   // Add marker on the map
@@ -298,16 +320,42 @@ export default class extends Controller {
     const marker = new mapboxgl.Marker()
       .setLngLat(lngLat)
       .addTo(this.map);
-
+    // Add a popup to the marker
     if (description) {
-      const popup = new mapboxgl.Popup({ closeButton: false })
+      const popup = new mapboxgl.Popup({ closeButton: false, offset: 25 })
         .setText(description);
 
       marker.setPopup(popup);
-      marker.getElement().addEventListener('mouseenter', () => popup.addTo(this.map));
-      marker.getElement().addEventListener('mouseleave', () => popup.remove());
+
+      // Detect if the device is touch-enabled
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+      const showPopup = () => {
+        // Close the currently open popup, if any
+        if (this.currentPopup && this.currentPopup !== popup) {
+          this.currentPopup.remove();
+        }
+        // Ensure the popup is only shown if it is not already visible
+        if (!popup.isOpen()) {
+          popup.addTo(this.map);
+          this.currentPopup = popup;
+        }
+      };
+
+      if (isTouchDevice) {
+        // When on Mobile: Show popup on touch
+        marker.getElement().addEventListener('touchstart', showPopup);
+      } else {
+        // When on Desktop: Show popup on mouseenter and hide on mouseleave
+        marker.getElement().addEventListener('mouseenter', showPopup);
+        marker.getElement().addEventListener('mouseleave', () => {
+          popup.remove();
+          this.currentPopup = null;
+        });
+      }
     }
   }
+
 
   #fitMapToCoordinates(coordinates) {
     const bounds = new mapboxgl.LngLatBounds();
