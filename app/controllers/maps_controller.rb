@@ -5,11 +5,14 @@ class MapsController < ApplicationController
   end
 
   def show
+    # display map:
     @map = Map.find(params[:id])
-    # for the new segment creation form
+    # for the new segment creation form:
     @segment = Segment.new
+
+    # display existing segments on the map:
     @segments = Segment.where(map: @map)
-    # prepare coordinates to be passed to the view
+    ## prepare coordinates to be passed to the view
     @segments_coordinates = {}
     @segments.each do |segment|
       points = []
