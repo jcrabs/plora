@@ -19,6 +19,18 @@ class AnnotationsController < ApplicationController
     @annotation.save
   end
 
+  def update
+    map = Map.find(params[:map_id])
+    annotation = map.annotations.find(params[:id])
+    annotation.update(annotation_params)
+  end
+
+  def destroy
+    map = Map.find(params[:map_id])
+    annotation = map.annotations.find(params[:id])
+    annotation.destroy
+  end
+
   private
 
   def annotation_params
