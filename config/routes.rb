@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :maps do
-    post "/segments", to: "segments#import", as: "import"
+    post "/segments/track", to: "segments#import_track", as: "import_track"
     post "/segments/drawing", to: "segments#import_drawing", as: "import_drawing"
 
     resources :annotations, only: [:create, :update, :destroy, :index]
   end
+
+  resources :explored_point_of_interests, only: [:create, :destroy]
 
 end
