@@ -82,6 +82,7 @@ export default class extends Controller {
     });
   }
 
+  // annotations:
   #loadAnnotations() {
     fetch(`/maps/${this.mapIdValue}/annotations`)
       .then(response => response.json())
