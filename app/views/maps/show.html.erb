@@ -1,21 +1,24 @@
-<div class="search-bar", data-controller="map"
+<div data-controller="map"
      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
      data-map-segments-coordinates-value="<%= @segments_coordinates.to_json %>"
      data-map-show-search-value="true"
      data-map-import-draw-url-value="<%= map_import_drawing_path(@map) %>"
      data-map-id-value="<%= @map.id %>">
-  <div id="map-container" style="width: 100%; height: 85vh;" data-map-target="container">
+  <div  id="map-container" style="width: 100%; height: 110vh;" data-map-target="container">
   </div>
   <div>
-    <button type="button" class="btn btn-flat" data-map-target="saveMatched" data-action="click->map#saveMatched">
-      Save data (matched)
-    </button>
-    <button type="button" class="btn btn-flat" data-map-target="saveFreeform" data-action="click->map#saveFreeform">
-      Save data (freeform)
-    </button>
-    <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#createSegmentModal">
-      Import data
-    </button>
+
+    <div class="tool-bar">
+      <span type="button" class="tab-item" data-map-target="saveMatched" data-action="click->map#saveMatched">
+        <%= image_tag "arrow.forward.to.line.svg", alt: "Arrow forward to line" %>Match & save
+      </span>
+      <span type="button" class="tab-item" data-map-target="saveFreeform" data-action="click->map#saveFreeform">
+        <%= image_tag "mappin.svg", alt: "mappin icon" %>Save raw
+      </span>
+      <span type="button" class="tab-item" data-bs-toggle="modal" data-bs-target="#createSegmentModal">
+        <%= image_tag "ipad.and.arrow.forward.svg", alt: "Arrow forward pointing to an area" %>Import
+      </span>
+    </div>
     <div class="modal fade" id="createSegmentModal" tabindex="-1" aria-labelledby="createSegmentModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -30,7 +33,7 @@
                           collection: [['matched', 'matched'], ['freeform', 'freeform']],
                           checked: 'matched',
                           legend_tag: false %>
-              <%= f.button :submit, 'Upload', class: 'btn btn-flat' %>
+              <%= f.button :submit, 'Upload', class: 'button_primary' %>
             <% end %>
           </div>
           <div id="loading" class="modal-footer d-none" data-map-target="loading">
