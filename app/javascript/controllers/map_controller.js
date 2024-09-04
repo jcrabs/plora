@@ -26,6 +26,7 @@ export default class extends Controller {
     // Convert the mapIdValue to an integer
     this.mapIdValue = parseInt(mapId, 10);
     console.log('Converted Map ID:', this.mapIdValue);
+    // Initialize the map
     this.markers = []
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
@@ -204,7 +205,6 @@ export default class extends Controller {
     return card;
     }
 
-
   // Function to update the marker icon
   updateMarkerIcon(marker, status) {
     // Get the marker's position and popup
@@ -277,7 +277,7 @@ export default class extends Controller {
         }
       })
   }
-
+  // Saving marker to the server
   #saveMarker(lngLat, description) {
     const data = {
       annotation: {
@@ -316,45 +316,59 @@ export default class extends Controller {
   }
 
   // Add marker on the map
-  addMarker(lngLat, description) {
-    const marker = new mapboxgl.Marker()
-      .setLngLat(lngLat)
-      .addTo(this.map);
-    // Add a popup to the marker
-    if (description) {
-      const popup = new mapboxgl.Popup({ closeButton: false, offset: 25 })
-        .setText(description);
+  // Add marker on the map
+addMarker(lngLat, description) {
+  // Create a new HTML element for the marker
+  const el = document.createElement('div');
+  el.className = 'custom-marker'; // Add a class for custom styling
+  el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
 
-      marker.setPopup(popup);
+  // Style the marker element
+  el.style.fontSize = '20px'; // Size of the icon
+  el.style.color = '#006B8F'; // Color of the icon
 
-      // Detect if the device is touch-enabled
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-      const showPopup = () => {
-        // Close the currently open popup, if any
-        if (this.currentPopup && this.currentPopup !== popup) {
-          this.currentPopup.remove();
-        }
-        // Ensure the popup is only shown if it is not already visible
-        if (!popup.isOpen()) {
-          popup.addTo(this.map);
-          this.currentPopup = popup;
-        }
-      };
+  // Create a new Mapbox marker with the custom element
+  const marker = new mapboxgl.Marker(el)
+    .setLngLat(lngLat)
+    .addTo(this.map);
 
-      if (isTouchDevice) {
-        // When on Mobile: Show popup on touch
-        marker.getElement().addEventListener('touchstart', showPopup);
-      } else {
-        // When on Desktop: Show popup on mouseenter and hide on mouseleave
-        marker.getElement().addEventListener('mouseenter', showPopup);
-        marker.getElement().addEventListener('mouseleave', () => {
-          popup.remove();
-          this.currentPopup = null;
-        });
+  // Add a popup to the marker
+  if (description) {
+    const popup = new mapboxgl.Popup({ closeButton: false, offset: 25 })
+      .setText(description);
+
+    marker.setPopup(popup);
+
+    // Detect if the device is touch-enabled
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    const showPopup = () => {
+      // Close the currently open popup, if any
+      if (this.currentPopup && this.currentPopup !== popup) {
+        this.currentPopup.remove();
       }
+      // Ensure the popup is only shown if it is not already visible
+      if (!popup.isOpen()) {
+        popup.addTo(this.map);
+        this.currentPopup = popup;
+      }
+    };
+
+    if (isTouchDevice) {
+      // When on Mobile: Show popup on touch
+      marker.getElement().addEventListener('touchstart', showPopup);
+    } else {
+      // When on Desktop: Show popup on mouseenter and hide on mouseleave
+      marker.getElement().addEventListener('mouseenter', showPopup);
+      marker.getElement().addEventListener('mouseleave', () => {
+        popup.remove();
+        this.currentPopup = null;
+      });
     }
   }
+}
+
 
 
   #fitMapToCoordinates(coordinates) {
