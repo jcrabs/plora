@@ -3,7 +3,11 @@
   data-controller="map"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
   data-map-segments-coordinates-value="<%= @segments_coordinates.to_json %>"
-  data-map-show-search-value="true"></div>
+  data-map-pois-value="<%= @pois.to_json %>"
+  data-map-show-search-value="true"
+  data-map-destroy-url-value="<%= explored_point_of_interests_path %>"
+  data-map-create-url-value="<%= explored_point_of_interests_path %>">
+  </div>
 
 <div>
   <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#createSegmentModal">

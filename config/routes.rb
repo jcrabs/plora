@@ -14,4 +14,6 @@ Rails.application.routes.draw do
     post "/segments", to: "segments#import", as: "import"
   end
 
+  resources :explored_point_of_interests, only: [:create, :destroy]
+
 end
