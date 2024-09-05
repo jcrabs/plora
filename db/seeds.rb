@@ -29,7 +29,7 @@ User.create!(username: "Emilia Fischer", email: "emilia.fischer@example.com", pa
 User.create!(username: "Jonas Wagner", email: "jonas.wagner@example.com", password: "password", home_address: "Karl-Marx-Allee 35, 10178 Berlin", home_lat: 52.517855, home_lon: 13.426221)
 User.create!(username: "Lena Hofmann", email: "lena.hofmann@example.com", password: "password", home_address: "Schönhauser Allee 180, 10119 Berlin", home_lat: 52.536295, home_lon: 13.412234)
 User.create!(username: "Paul Weber", email: "paul.weber@example.com", password: "password", home_address: "Frankfurter Allee 120, 10247 Berlin", home_lat: 52.514902, home_lon: 13.464595)
-User.create!(username: "Anna Lehmann", email: " ", password: "password", home_address: "Görlitzer Straße 1, 10997 Berlin", home_lat: 52.503619, home_lon: 13.448775)
+User.create!(username: "Anna Lehmann", email: "anna.lehmann@example.com", password: "password", home_address: "Görlitzer Straße 1, 10997 Berlin", home_lat: 52.503619, home_lon: 13.448775)
 User.create!(username: "Lukas Schmid", email: "lukas.schmid@example.com", password: "password", home_address: "Oranienstraße 60, 10969 Berlin", home_lat: 52.500182, home_lon: 13.409643)
 User.create!(username: "Laura Keller", email: "laura.keller@example.com", password: "password", home_address: "Kantstraße 152, 10623 Berlin", home_lat: 52.507778, home_lon: 13.310877)
 User.create!(username: "David Braun", email: "david.braun@example.com", password: "password", home_address: "Boxhagener Straße 75, 10245 Berlin", home_lat: 52.514445, home_lon: 13.466453)
@@ -48,12 +48,9 @@ file = File.join(__dir__, filepath)
 points = File.read(file)
 geopoints_hash = JSON.parse(points)
 puts "Creating POIs from #{filepath}"
-counter = 0
 geopoints_hash["features"].each do |feature|
-  counter += 1
   PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
 end
-puts "Created #{counter} POIs"
 
 filepath = "json/berlin_historical_toilets.geojson"
 file = File.join(__dir__, filepath)
@@ -62,6 +59,15 @@ geopoints_hash = JSON.parse(points)
 puts "Creating POIs from #{filepath}"
 geopoints_hash["features"].each do |feature|
   PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
+end
+
+filepath = "json/berlin_cemeteries_nodes.geojson"
+file = File.join(__dir__, filepath)
+points = File.read(file)
+geopoints_hash = JSON.parse(points)
+puts "Creating POIs from #{filepath}"
+geopoints_hash["features"].each do |feature|
+  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["landuse"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
 end
 puts "Created #{PointOfInterest.count} POIs"
 

@@ -1,0 +1,5761 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-05T15:15:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/395007",
+        "landuse": "cemetery",
+        "name": "Friedhof Ruhleben",
+        "type": "multipolygon",
+        "wikidata": "Q1124363",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2310763,
+          52.523785
+        ]
+      },
+      "id": "relation/395007"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/2015833",
+        "landuse": "cemetery",
+        "name": "Friedhof Baumschulenweg",
+        "name:en": "Cemetery Baumschulenweg",
+        "name:nl": "Begraafplaats Baumschulenweg",
+        "type": "multipolygon",
+        "wikidata": "Q1457298",
+        "wikipedia": "de:Friedhof Baumschulenweg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4934894,
+          52.4611345
+        ]
+      },
+      "id": "relation/2015833"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4401982",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "81-103",
+        "addr:postcode": "10713",
+        "addr:street": "Berliner Straße",
+        "landuse": "cemetery",
+        "name": "Friedhof Wilmersdorf",
+        "ref:lda": "09010222",
+        "wheelchair": "yes",
+        "wikidata": "Q1457448",
+        "wikipedia": "de:Friedhof Wilmersdorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3111367,
+          52.4857647
+        ]
+      },
+      "id": "way/4401982"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/4514019",
+        "landuse": "cemetery",
+        "name": "Friedhof Biesdorf",
+        "operator": "Land Berlin",
+        "religion": "christian",
+        "type": "multipolygon",
+        "website": "https://www.berlin.de/adressen/friedhof/friedhof-biesdorf-b645eb17f275249753eb3e003007eb3b.html",
+        "wikidata": "Q42310183",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5692026,
+          52.5102289
+        ]
+      },
+      "id": "relation/4514019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4535352",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Schöneberg III, Stubenrauchstraße",
+        "wikidata": "Q873085",
+        "wikipedia": "de:Friedhof Schöneberg III",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3226786,
+          52.4760498
+        ]
+      },
+      "id": "way/4535352"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4610068",
+        "check_date:opening_hours": "2021-02-11",
+        "landuse": "cemetery",
+        "name": "Urnenfriedhof Seestraße",
+        "opening_hours": "Oct-Mar 08:00-16:00; Apr-Sep 08:00-20:00",
+        "wikidata": "Q2500928",
+        "wikimedia_commons": "Category:Urnenfriedhof Seestraße",
+        "wikipedia": "de:Urnenfriedhof Seestraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3547982,
+          52.5528896
+        ]
+      },
+      "id": "way/4610068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4611897",
+        "barrier": "wall",
+        "check_date:opening_hours": "2023-09-22",
+        "landuse": "cemetery",
+        "name": "Friedhöfe am Mehringdamm",
+        "opening_hours": "Dec-Jan 08:00-16:00; Feb 08:00-17:00; Mar 08:00-18:00; Apr 08:00-19:00; May-Aug 08:00-20:00; Sep 08:00-19:00; Oct 08:00-18:00; Nov 08:00-17:00",
+        "wikidata": "Q1457560",
+        "wikipedia": "de:Friedhöfe vor dem Halleschen Tor",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.392005,
+          52.4951564
+        ]
+      },
+      "id": "way/4611897"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4675070",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "St.-Sebastian Friedhof",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3360607,
+          52.5693366
+        ]
+      },
+      "id": "way/4675070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4675877",
+        "barrier": "wall",
+        "cemetery": "war_cemetery",
+        "historic": "yes",
+        "landuse": "cemetery",
+        "name": "Kriegsgräberfriedhof",
+        "wikidata": "Q1554539",
+        "wikipedia": "de:Friedhof Wilsnacker Straße für die Opfer von Krieg und Gewaltherrschaft",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3508337,
+          52.5251646
+        ]
+      },
+      "id": "way/4675877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/4724661",
+        "landuse": "cemetery",
+        "name": "Friedhof Wittenau",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3222172,
+          52.5905808
+        ]
+      },
+      "id": "relation/4724661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4755695",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "47",
+        "addr:street": "Hüttenweg",
+        "addr:suburb": "Dahlem",
+        "landuse": "cemetery",
+        "name": "Waldfriedhof Dahlem",
+        "opening_hours": "Nov-Feb: 08:00-16:00; Mar,Apr,Sep,Oct: 07:00-18:00; May-Aug: 07:00-20:00; Su,PH 07:00-08:00 off",
+        "source": "Geoportal Berlin / k5_2012_sw_sued.zip",
+        "wikidata": "Q875626",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2638189,
+          52.4555591
+        ]
+      },
+      "id": "way/4755695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/4830879",
+        "addr:city": "Berlin",
+        "addr:housenumber": "1-25",
+        "addr:postcode": "12105",
+        "addr:street": "Eythstraße",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Schöneberg II, Friedhof Eythstraße",
+        "type": "multipolygon",
+        "wikidata": "Q1264395",
+        "wikipedia": "de:II. Städtischer Friedhof Eythstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3670034,
+          52.4577546
+        ]
+      },
+      "id": "relation/4830879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5077552",
+        "landuse": "cemetery",
+        "name": "Britischer Soldatenfriedhof",
+        "religion": "christian",
+        "wikidata": "Q320625",
+        "wikipedia": "de:Britischer Friedhof an der Heerstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.221348,
+          52.5071411
+        ]
+      },
+      "id": "way/5077552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5077557",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof der Jüdischen Gemeinde",
+        "religion": "jewish",
+        "wikidata": "Q1716685",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2224375,
+          52.5052442
+        ]
+      },
+      "id": "way/5077557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5096178",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "133",
+        "addr:postcode": "12051",
+        "addr:street": "Hermannstraße",
+        "addr:suburb": "Neukölln",
+        "contact:website": "https://evfbs.de/index.php?id=399",
+        "landuse": "cemetery",
+        "name": "Emmauskirchhof",
+        "opening_hours": "Jan,Dec 8:00-16:00; Feb,Nov 8:00-17:00; Mar,Oct 8:00-18:00; Apr,Sep 8:00-19:00; May-Aug 8:00-20:00",
+        "operator": "Ev. Friedhofsverband Berlin Stadtmitte",
+        "religion": "christian",
+        "wikidata": "Q116140664",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4298364,
+          52.4628553
+        ]
+      },
+      "id": "way/5096178"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/5372759",
+        "landuse": "cemetery",
+        "name": "Evangelischer Friedhof Lichtenrade",
+        "religion": "christian",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4105653,
+          52.3835507
+        ]
+      },
+      "id": "relation/5372759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/5411101",
+        "barrier": "fence",
+        "denomination": "protestant",
+        "fence_type": "chain_link",
+        "landuse": "cemetery",
+        "name": "Evangelischer Friedhof Lichtenrade",
+        "note": "Friedhofskennzahl 5142; 12307 Berlin Paplitzer Straße 10-24",
+        "opening_hours": "Mar 1-Apr 30 08:00-18:00; May 1-Aug 31 08:00-20:00; Sep 1-Oct 31 08:00-19:00; Nov 1-Feb 29 08:00-16:00",
+        "religion": "christian",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4075953,
+          52.3851652
+        ]
+      },
+      "id": "relation/5411101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5880630",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "11-12",
+        "addr:postcode": "10711",
+        "addr:street": "Bornstedter Straße",
+        "alt_name": "\"Toteninsel\"",
+        "barrier": "wall",
+        "contact:phone": "+49 30 902917123",
+        "contact:website": "http://www.gbbb-berlin.com/lankwitz/borni.htm",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gesamtanlage",
+        "name": "Friedhof Grunewald",
+        "official_name": "Städtischer Friedhof Grunewald",
+        "old_name": "Begräbnisplatz der Gemeinde Grunewald",
+        "ref:lda": "09046113",
+        "start_date": "1892",
+        "wheelchair": "no",
+        "wikidata": "Q1457328",
+        "wikipedia": "de:Friedhof Grunewald",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2860205,
+          52.4985286
+        ]
+      },
+      "id": "way/5880630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/6197783",
+        "description": "shabbat und jüdische Feiertage geschlossen",
+        "landuse": "cemetery",
+        "name": "Jüdischer Friedhof Berlin-Weißensee",
+        "name:en": "Jewish Cemetery Berlin-Weißensee",
+        "name:it": "Cimitero ebraico di Weißensee",
+        "name:nl": "Joodse Begraafplaats Berlijn-Weißensee",
+        "opening_hours": "Su 08:00-15:30; Mo-Th 07:30-15:30; Fr 07:30-13:30",
+        "phone": "+49 30 92 53 33 0",
+        "religion": "jewish",
+        "website": "https://www.berlin.de/sehenswuerdigkeiten/3560738-3558930-juedischer-friedhof-weissensee.html3.4644",
+        "wikidata": "Q675174",
+        "wikipedia": "de:Jüdischer Friedhof Berlin-Weißensee",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.462448,
+          52.5420513
+        ]
+      },
+      "id": "way/6197783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/6198896",
+        "landuse": "cemetery",
+        "name": "Parkfriedhof Marzahn",
+        "opening_hours": "sunrise-sunset",
+        "wikidata": "Q1607249",
+        "wikimedia_commons": "Category:Parkfriedhof Marzahn",
+        "wikipedia": "de:Parkfriedhof Marzahn",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5431417,
+          52.5478778
+        ]
+      },
+      "id": "way/6198896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/6626745",
+        "denomination": "orthodox",
+        "landuse": "cemetery",
+        "name": "Russisch-Orthodoxer Friedhof",
+        "religion": "christian",
+        "wikidata": "Q320354",
+        "wikipedia": "de:Russischer Friedhof (Berlin-Tegel)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3007617,
+          52.577566
+        ]
+      },
+      "id": "way/6626745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/7612667",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof St. Petri-Luisenstadt",
+        "postal_code": "10249",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=183",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4408946,
+          52.5205582
+        ]
+      },
+      "id": "way/7612667"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/7614941",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "religion": "christian",
+        "type": "collection",
+        "website": "http://www.friedhoefe-in-berlin.de/golgatha.htm",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3502906,
+          52.5622781
+        ]
+      },
+      "id": "relation/7614941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/8048603",
+        "landuse": "cemetery",
+        "name": "Friedhof Staaken",
+        "wikidata": "Q96033529",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.132042,
+          52.5251455
+        ]
+      },
+      "id": "way/8048603"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/8436159",
+        "landuse": "cemetery",
+        "name": "Dorfkirchhof Blankenburg",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4538497,
+          52.5930705
+        ]
+      },
+      "id": "relation/8436159"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/9842896",
+        "landuse": "cemetery",
+        "name:signed": "no",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4984411,
+          52.6354096
+        ]
+      },
+      "id": "relation/9842896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/13149147",
+        "cemetery": "sector",
+        "description": "Grabfelder für islamische Bestattungen",
+        "landuse": "cemetery",
+        "religion": "muslim",
+        "type": "multipolygon",
+        "website": "https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/friedhoefe-und-begraebnisstaetten/islamische-bestattungen/angebote/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4100595,
+          52.4804921
+        ]
+      },
+      "id": "relation/13149147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/13149149",
+        "cemetery": "sector",
+        "description": "Grabfelder für islamische Bestattungen",
+        "landuse": "cemetery",
+        "religion": "muslim",
+        "type": "multipolygon",
+        "website": "https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/friedhoefe-und-begraebnisstaetten/islamische-bestattungen/angebote/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1523287,
+          52.4944026
+        ]
+      },
+      "id": "relation/13149149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/13853725",
+        "barrier": "wall",
+        "landuse": "cemetery",
+        "name": "Kirchhof Dreifaltigkeit",
+        "religion": "christian",
+        "wheelchair": "yes",
+        "wikidata": "Q1457553",
+        "wikipedia": "de:Friedhöfe an der Bergmannstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4022155,
+          52.4869761
+        ]
+      },
+      "id": "way/13853725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/14084811",
+        "landuse": "cemetery",
+        "name": "Friedhof am Plötzensee",
+        "type": "multipolygon",
+        "wikidata": "Q98557396",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.329871,
+          52.5461376
+        ]
+      },
+      "id": "relation/14084811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/14207480",
+        "alt_name": "Türkische Kriegsgräberstätte zu Berlin",
+        "denomination": "sunni",
+        "landuse": "cemetery",
+        "name": "Türkischer Friedhof Berlin",
+        "name:de": "Türkischer Friedhof Berlin",
+        "name:tr": "Şehitlik Mezarlığı Berlin",
+        "religion": "muslim",
+        "type": "multipolygon",
+        "wikidata": "Q2464823",
+        "wikipedia": "de:Türkischer Friedhof Berlin",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4094248,
+          52.4816493
+        ]
+      },
+      "id": "relation/14207480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/14439164",
+        "landuse": "cemetery",
+        "name": "Friedhof In den Kisseln",
+        "wheelchair": "yes",
+        "wikidata": "Q1660690",
+        "wikimedia_commons": "Category:In den Kisseln",
+        "wikipedia": "de:In den Kisseln",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1796968,
+          52.556139
+        ]
+      },
+      "id": "way/14439164"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/16573560",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "St. Elisabeth-Friedhof I",
+        "religion": "christian",
+        "wikidata": "Q2318053",
+        "wikimedia_commons": "Category:St. Elisabeth-Friedhof",
+        "wikipedia": "de:St. Elisabeth-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.393189,
+          52.53504
+        ]
+      },
+      "id": "way/16573560"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/16648061",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof Lankwitz",
+        "religion": "christian",
+        "type": "multipolygon",
+        "wikidata": "Q1457361",
+        "wikipedia": "de:Friedhof Lankwitz",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3348341,
+          52.4235946
+        ]
+      },
+      "id": "relation/16648061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/17698105",
+        "landuse": "cemetery",
+        "name": "Waldfriedhof Zehlendorf",
+        "religion": "christian",
+        "type": "multipolygon",
+        "wikidata": "Q1314657",
+        "wikipedia": "de:Waldfriedhof Zehlendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2121366,
+          52.4234263
+        ]
+      },
+      "id": "relation/17698105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/19409073",
+        "addr:city": "Berlin",
+        "addr:housenumber": "33-34",
+        "addr:postcode": "13055",
+        "addr:street": "Konrad-Wolf-Straße",
+        "denomination": "protestant",
+        "email": "ost@evfbs.de",
+        "fax": "+49 30 42200423",
+        "landuse": "cemetery",
+        "name": "Kirchhof der evangelischen St. Andreas und St. Markus Gemeinde",
+        "opening_hours": "Jan,Dec 08:00-16:00; Feb,Nov 08:00-17:00; Mar,Oct 08:00-18:00; Apr,Sep 08:00-19:00; May-Aug 08:00-20:00",
+        "phone": "+49 30 42200420",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=218",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4814906,
+          52.5433292
+        ]
+      },
+      "id": "way/19409073"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/20461299",
+        "barrier": "wall",
+        "landuse": "cemetery",
+        "name": "Jüdischer Friedhof",
+        "name:it": "Cimitero ebraico",
+        "religion": "jewish",
+        "wikidata": "Q32651331",
+        "wikipedia": "de:Jüdischer Friedhof Schönhauser Allee",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4143967,
+          52.5347701
+        ]
+      },
+      "id": "way/20461299"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/22495031",
+        "addr:city": "Berlin",
+        "addr:housenumber": "40a",
+        "addr:postcode": "10827",
+        "addr:street": "Eisackstraße",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Schöneberg I, Friedhof Eisackstraße",
+        "wikidata": "Q1252053",
+        "wikipedia": "de:I. Städtischer Friedhof Eisackstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3463647,
+          52.4762766
+        ]
+      },
+      "id": "way/22495031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/22697557",
+        "landuse": "cemetery",
+        "name": "Friedhof Schmargendorf",
+        "note": "barrierefreier Zugang nur vom Eingang Misdroyer Straße",
+        "wheelchair": "yes",
+        "wikidata": "Q1457420",
+        "wikipedia": "de:Friedhof Schmargendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2922687,
+          52.473649
+        ]
+      },
+      "id": "way/22697557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23048101",
+        "landuse": "cemetery",
+        "name": "Martin-Luther-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2966627,
+          52.6018595
+        ]
+      },
+      "id": "way/23048101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23105617",
+        "barrier": "wall",
+        "landuse": "cemetery",
+        "name": "Friedhof Grunewald-Forst",
+        "religion": "christian",
+        "wikidata": "Q1457334",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2108489,
+          52.4926533
+        ]
+      },
+      "id": "way/23105617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23200649",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Kaulsdorf",
+        "website": "https://www.berlin.de/adressen/friedhof/friedhof-kaulsdorf-b645eb17f275249753eb3e0030080d8b.html",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.575956,
+          52.5115083
+        ]
+      },
+      "id": "way/23200649"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23418769",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "100",
+        "addr:postcode": "10245",
+        "addr:street": "Boxhagener Straße",
+        "addr:suburb": "Friedrichshain",
+        "denomination": "protestant",
+        "dog": "no",
+        "landuse": "cemetery",
+        "name": "Kirchhof IV, Ev. Georgen-Parochialgemeinde",
+        "religion": "christian",
+        "wikidata": "Q2699139",
+        "wikipedia": "de:Georgen-Parochial-Friedhof IV",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4612641,
+          52.5133128
+        ]
+      },
+      "id": "way/23418769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23453418",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Friedhof II der Domgemeinde",
+        "opening_hours": "Feb 05-Mar 09,Oct 22-Nov 02 08:00-17:00; Mar 10-Mar 29,Sep 28-Oct 21 08:00-18:00; Mar 30-May 04,Sep 01-Sep 27 08:00-19:00; May 05-Jul 31 08:00-19:30; Nov 03-Nov 26 08:00-16:30; Nov 27-Feb 04 08:00-16:00",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3409217,
+          52.5585519
+        ]
+      },
+      "id": "way/23453418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23453445",
+        "barrier": "wall",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Kirchhof Domgemeinde",
+        "religion": "christian",
+        "website": "https://www.berlinerdom.de/gottesdienst-glaube/glaubensangebote/domfriedhoefe/",
+        "wikidata": "Q108463371",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3438741,
+          52.5600819
+        ]
+      },
+      "id": "way/23453445"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23453660",
+        "contact:website": "https://www.alt-schoeneberg.de/page/454/alter-kirchhof-sch%C3%B6neberg",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Alter Kirchhof Schöneberg",
+        "religion": "christian",
+        "wikidata": "Q105045274",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3480877,
+          52.4840012
+        ]
+      },
+      "id": "way/23453660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23596942",
+        "landuse": "cemetery",
+        "name": "Luisenkirchhof III",
+        "wikidata": "Q1876711",
+        "wikipedia": "de:Luisenfriedhof III",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.276911,
+          52.523882
+        ]
+      },
+      "id": "way/23596942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23964743",
+        "landuse": "cemetery",
+        "name": "Waldfriedhof Grünau",
+        "wikidata": "Q1530182",
+        "wikipedia": "de:Waldfriedhof Grünau",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5907354,
+          52.4077044
+        ]
+      },
+      "id": "way/23964743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23991696",
+        "barrier": "wall",
+        "contact:website": "http://www.garnisonfriedhofberlin.de",
+        "landuse": "cemetery",
+        "name": "Alter Garnisonfriedhof",
+        "opening_hours": "Apr-Sep 07:00-19:00; Oct-Mar 08:00-16:00",
+        "source": "Geoportal Berlin / Grünanlagenbestand Berlin (einschließlich der öffentlichen Spielplätze)",
+        "wikidata": "Q437929",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4041591,
+          52.5284404
+        ]
+      },
+      "id": "way/23991696"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24278381",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Nazareth-Kirchhof II",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3352329,
+          52.5669915
+        ]
+      },
+      "id": "way/24278381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24278382",
+        "landuse": "cemetery",
+        "name": "Friedhof Reinickendorf",
+        "wikidata": "Q1653813",
+        "wikimedia_commons": "Category:Friedhof Reinickendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3392767,
+          52.5693429
+        ]
+      },
+      "id": "way/24278382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24279168",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Dankes-Kirchhof",
+        "religion": "christian",
+        "wikidata": "Q97924458",
+        "wikimedia_commons": "Category:Dankes-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.333543,
+          52.5649732
+        ]
+      },
+      "id": "way/24279168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24279170",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "St. Hedwigs Friedhof III",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3329906,
+          52.5691803
+        ]
+      },
+      "id": "way/24279170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24514951",
+        "landuse": "cemetery",
+        "name": "Sankt Nicolai und Sankt Marien Friedhof II",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4199761,
+          52.5296683
+        ]
+      },
+      "id": "way/24514951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24676664",
+        "landuse": "cemetery",
+        "name": "Friedhof Pankow I",
+        "wikidata": "Q65952740",
+        "wikimedia_commons": "Category:Friedhof Pankow I",
+        "wikipedia": "de:Friedhof Pankow III",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3979473,
+          52.5697738
+        ]
+      },
+      "id": "way/24676664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24684591",
+        "landuse": "cemetery",
+        "name": "Friedhof am Fließtal",
+        "religion": "christian",
+        "wikidata": "Q96213892",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2876225,
+          52.597338
+        ]
+      },
+      "id": "way/24684591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24701653",
+        "landuse": "cemetery",
+        "name": "Friedhof am Nordgraben",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2899555,
+          52.5934635
+        ]
+      },
+      "id": "way/24701653"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24701654",
+        "landuse": "cemetery",
+        "name": "Friedhof Tegel",
+        "wikidata": "Q98805251",
+        "wikimedia_commons": "Category:Friedhof Tegel",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.288609,
+          52.5933538
+        ]
+      },
+      "id": "way/24701654"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24733507",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Dorotheenstädtisch-Friedrichswerderscher Friedhof",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=84",
+        "wikidata": "Q564922",
+        "wikipedia": "de:Friedhof der Dorotheenstädtischen und Friedrichswerderschen Gemeinden",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3838068,
+          52.5280746
+        ]
+      },
+      "id": "way/24733507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24861681",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Pankow III",
+        "wikidata": "Q1457388",
+        "wikipedia": "de:Friedhof Pankow III",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3875537,
+          52.5718572
+        ]
+      },
+      "id": "way/24861681"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24876828",
+        "landuse": "cemetery",
+        "name": "Evangelischer Kirchhof St. Johannis und Heiland",
+        "note": "Der Friedhof ist seit dem 01.07.2022 dauerhaft geschlossen und alle Zugänge verschlossen.",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3229539,
+          52.5464832
+        ]
+      },
+      "id": "way/24876828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24902981",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "66",
+        "addr:postcode": "13359",
+        "addr:street": "Wollankstraße",
+        "addr:suburb": "Gesundbrunnen",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "St. Elisabeth-Friedhof II",
+        "religion": "christian",
+        "source": "Geoportal Berlin / Hausumringe",
+        "website": "https://evfbs.de/index.php?id=315",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3913383,
+          52.5609228
+        ]
+      },
+      "id": "way/24902981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24908465",
+        "landuse": "cemetery",
+        "name": "Friedhof Woltersdorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7531473,
+          52.4483448
+        ]
+      },
+      "id": "way/24908465"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24919114",
+        "landuse": "cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7111967,
+          52.4382993
+        ]
+      },
+      "id": "way/24919114"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24922021",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Kirchhof Dorotheenstadt III",
+        "opening_hours": "Jan 08:00-16:00;\nFeb 08:00-17:00;\nMar 08:00-18:00;\nApr 08:00-19:00;\nMay-Aug 08:00-20:00;\nSep 08:00-19:00;\nOct 08:00-18:00;\nNov 08:00-17:00;\nDec 08:00-16:00",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=262",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3340781,
+          52.5633088
+        ]
+      },
+      "id": "way/24922021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24930705",
+        "landuse": "cemetery",
+        "name": "Urnenfriedhof Gerichtstraße",
+        "website": "https://www.berlin.de/adressen/friedhof/urnenfriedhof-gerichtstrasse-9a1d5272d6e737685d0012460c1a47b4.html",
+        "wikidata": "Q2500925",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3648255,
+          52.5457088
+        ]
+      },
+      "id": "way/24930705"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25073863",
+        "landuse": "cemetery",
+        "name": "Friedhof Pankow II",
+        "wikidata": "Q1254379",
+        "wikimedia_commons": "Category:Friedhof Pankow II",
+        "wikipedia": "de:Friedhof Pankow II",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3974062,
+          52.5634933
+        ]
+      },
+      "id": "way/25073863"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25100732",
+        "cemetery": "war_cemetery",
+        "landuse": "cemetery",
+        "name": "Kriegsgräberstätte Reinickendorf",
+        "religion": "none",
+        "wikidata": "Q98590336",
+        "wikimedia_commons": "Category:Kriegsgräberfriedhof Reinickendorf I",
+        "wikipedia": "de:Kriegsgräberfriedhof Reinickendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3508579,
+          52.577113
+        ]
+      },
+      "id": "way/25100732"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25188158",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "Alter Domfriedhof der St.-Hedwigs-Gemeinde",
+        "religion": "christian",
+        "wikidata": "Q28687014",
+        "wikipedia": "de:Liesenstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3789682,
+          52.5387609
+        ]
+      },
+      "id": "way/25188158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25193760",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Friedhof I der Domgemeinde",
+        "religion": "christian",
+        "website": "https://www.berlinerdom.de/gottesdienst-glaube/glaubensangebote/domfriedhoefe/",
+        "wikidata": "Q98639354",
+        "wikipedia": "de:Liesenstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3779278,
+          52.5378478
+        ]
+      },
+      "id": "way/25193760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25200260",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Dorotheenstädtischer Friedhof II",
+        "opening_hours": "Mar-Oct: 08:00-20:00; Nov-Feb: 08:00-17:00",
+        "religion": "christian",
+        "wikidata": "Q66615619",
+        "wikipedia": "de:Liesenstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3775434,
+          52.5402547
+        ]
+      },
+      "id": "way/25200260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25200555",
+        "landuse": "cemetery",
+        "name": "Friedhof II der Französisch-Reformierten Gemeinde",
+        "religion": "christian",
+        "wikidata": "Q2972583",
+        "wikipedia": "de:Liesenstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3776029,
+          52.5383237
+        ]
+      },
+      "id": "way/25200555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25204155",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "A I",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3360648,
+          52.5705804
+        ]
+      },
+      "id": "way/25204155"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25204156",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "B I",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3368283,
+          52.570484
+        ]
+      },
+      "id": "way/25204156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25335920",
+        "alt_name": "Sophien-Friedhof II",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof II der Sophiengemeinde Berlin",
+        "religion": "christian",
+        "wikidata": "Q1457350",
+        "wikipedia": "de:Friedhof II der Sophiengemeinde Berlin",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3920145,
+          52.5336513
+        ]
+      },
+      "id": "way/25335920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25369701",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Waldfriedhof Oberschöneweide",
+        "operator": "Land Berlin",
+        "wikidata": "Q2541519",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5320209,
+          52.4639571
+        ]
+      },
+      "id": "way/25369701"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25377611",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "229",
+        "addr:postcode": "10405",
+        "addr:street": "Greifswalder Straße",
+        "addr:suburb": "Prenzlauer Berg",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Georgen-Parochial Gemeinde Friedhof I",
+        "opening_hours": "Jan,Dec: Mo-Su,PH 08:00-16:00; Feb,Nov: Mo-Su,PH 08:00-17:00; Mar,Oct: Mo-Su,PH 08:00-18:00; Apr,Sep: Mo-Su,PH 08:00-19:00; May-Aug: Mo-Su,PH 08:00-20:00",
+        "religion": "christian",
+        "start_date": "1814",
+        "url": "http://friedhofsfinder.stiftung-historische-friedhoefe.de/friedhof/p_berg/gp_1/gp1.html",
+        "wikidata": "Q32653745",
+        "wikimedia_commons": "Category:Friedhof I der Georgen-Parochialgemeinde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4225334,
+          52.5295817
+        ]
+      },
+      "id": "way/25377611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25468503",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "57",
+        "addr:street": "Königin-Luise-Straße",
+        "addr:suburb": "Dahlem",
+        "landuse": "cemetery",
+        "name": "Friedhof Dahlem-Dorf",
+        "source": "Geoportal Berlin / k5_2012_sw_sued.zip",
+        "wikidata": "Q321319",
+        "wikipedia": "de:Friedhof Dahlem",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2859171,
+          52.4588883
+        ]
+      },
+      "id": "way/25468503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25532974",
+        "barrier": "wall",
+        "boundary": "protected_area",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Neuer Friedhof Wannsee",
+        "operator:type": "public",
+        "protect_class": "22",
+        "ref:lda": "09045971",
+        "wikidata": "Q1457440",
+        "wikipedia": "de:Friedhof Wannsee, Lindenstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1538862,
+          52.4254362
+        ]
+      },
+      "id": "way/25532974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25569641",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Zehlendorf",
+        "wikidata": "Q1457449",
+        "wikipedia": "de:Friedhof Zehlendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2542343,
+          52.4393441
+        ]
+      },
+      "id": "way/25569641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25768161",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Weißensee",
+        "wikidata": "Q1457444",
+        "wikimedia_commons": "Category:Friedhof Weißensee",
+        "wikipedia": "de:Friedhof Weißensee",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4529175,
+          52.5563887
+        ]
+      },
+      "id": "way/25768161"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25769694",
+        "landuse": "cemetery",
+        "name": "Gottesacker der Brüdergemeine",
+        "wikidata": "Q98526750",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3925626,
+          52.4959246
+        ]
+      },
+      "id": "way/25769694"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25782470",
+        "barrier": "fence",
+        "fence_type": "wire",
+        "landuse": "cemetery",
+        "name:signed": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4977784,
+          52.6352488
+        ]
+      },
+      "id": "way/25782470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25807492",
+        "end_date": "1955",
+        "historic": "yes",
+        "landuse": "cemetery",
+        "name": "Friedpark Friedhof Wuhlgarten",
+        "protection_title": "Geschützte Grünanlage",
+        "start_date": "1909-11-29",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5684047,
+          52.5239613
+        ]
+      },
+      "id": "way/25807492"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25809274",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "10-12",
+        "addr:postcode": "10829",
+        "addr:street": "Großgörschenstraße",
+        "addr:suburb": "Schöneberg",
+        "barrier": "wall",
+        "description": "Alter Friedhof der St.-Mathäus-Gemeinde (Tiergarten)",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "heritage:website": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09045874",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Alter St.-Matthäus-Kirchhof",
+        "name:en": "Old St. Matthew's Churchyard",
+        "ref:lda": "09045874",
+        "start_date": "1856",
+        "wikidata": "Q438183",
+        "wikimedia_commons": "File:Alter St Matthaeus Kirchhof Berlin 7b.jpg",
+        "wikipedia": "de:Alter St.-Matthäus-Kirchhof Berlin",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.367225,
+          52.4897651
+        ]
+      },
+      "id": "way/25809274"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25836255",
+        "landuse": "cemetery",
+        "name": "Friedhof Pankow IV",
+        "wikidata": "Q1457389",
+        "wikipedia": "de:Friedhof Pankow IV",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4089129,
+          52.5833538
+        ]
+      },
+      "id": "way/25836255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25836978",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Gethsemane-Friedhof, Nordend",
+        "religion": "christian",
+        "source": "extrapolation",
+        "website": "http://www.stiftung-historische-friedhoefe.de/friedhof/pankow/Nordend/nordendtxt.htm",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4100582,
+          52.5958702
+        ]
+      },
+      "id": "way/25836978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25902310",
+        "landuse": "cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.365325,
+          52.5936071
+        ]
+      },
+      "id": "way/25902310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25960318",
+        "contact:website": "https://evfbs.de/index.php?id=205",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Georgen-Parochial-Friedhof III",
+        "opening_hours": "Jan,Dec 08:00-16:00; Feb,Nov 08:00-17:00; Mar,Oct 08:00-18:00; Apr,Sep 08:00-19:00; May-Aug 08:00-20:00",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.44358,
+          52.5561029
+        ]
+      },
+      "id": "way/25960318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26135490",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof Golgatha-Gnaden",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=304",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.349833,
+          52.5636633
+        ]
+      },
+      "id": "way/26135490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26330581",
+        "animal": "cemetery",
+        "cat": "yes",
+        "description": "animals only",
+        "dog": "yes",
+        "landuse": "cemetery",
+        "name": "Tierfriedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.540485,
+          52.5752379
+        ]
+      },
+      "id": "way/26330581"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26413642",
+        "landuse": "cemetery",
+        "name": "Luisenfriedhof II",
+        "wikidata": "Q1876701",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2829471,
+          52.5156327
+        ]
+      },
+      "id": "way/26413642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26413728",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Buschkrugallee (Britz I)",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4440869,
+          52.4598943
+        ]
+      },
+      "id": "way/26413728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26437883",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Neuer Zwölf-Apostel-Kirchhof",
+        "religion": "christian",
+        "wikidata": "Q1980261",
+        "wikipedia": "de:Neuer Zwölf-Apostel-Kirchhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3531195,
+          52.4772885
+        ]
+      },
+      "id": "way/26437883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26489793",
+        "boundary": "protected_area",
+        "denomination": "protestant",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Friedhof der Evangelischen Kirchengemeinde Friedrichshagen",
+        "protect_class": "22",
+        "ref:lda": "09046020,T",
+        "religion": "christian",
+        "start_date": "1832",
+        "wikidata": "Q99519536",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6186061,
+          52.449513
+        ]
+      },
+      "id": "way/26489793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26956469",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Alter Zwölf-Apostel-Friedhof",
+        "ref:lda": "09046244,T",
+        "wikidata": "Q438234",
+        "wikipedia": "de:Alter Zwölf-Apostel-Kirchhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3653326,
+          52.4836675
+        ]
+      },
+      "id": "way/26956469"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26986346",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof der Evangelischen Sankt-Laurentius-Stadtkirchengemeinde",
+        "opening_hours": "Nov-Jan 08:00-17:00; Feb-Oct 08:00-18:00; Mar-Sep 07:00-19:00; Apr-Aug 07:00-20:00",
+        "religion": "christian",
+        "wikidata": "Q1384435",
+        "wikimedia_commons": "Category:Friedhof St. Laurentius (Berlin-Köpenick)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5650234,
+          52.4419305
+        ]
+      },
+      "id": "way/26986346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/26995076",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "50",
+        "addr:postcode": "13359",
+        "addr:street": "Wollankstraße",
+        "addr:suburb": "Gesundbrunnen",
+        "denomination": "reformed",
+        "landuse": "cemetery",
+        "name": "Kirchhof III der Französischen Gemeinde",
+        "opening_hours": "Mar-Oct Mo-Su 08:00-20:00; Nov-Feb Mo-Su 08:00-17:00",
+        "religion": "christian",
+        "source": "Geoportal Berlin / K5",
+        "website": "https://www.franzoesische-kirche.de/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3876735,
+          52.5622446
+        ]
+      },
+      "id": "way/26995076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27280671",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Luisenfriedhof I",
+        "religion": "christian",
+        "wikidata": "Q1590571",
+        "wikipedia": "de:Luisenfriedhof I",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3158354,
+          52.5171325
+        ]
+      },
+      "id": "way/27280671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27330843",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Heilig-Kreuz- Friedhof",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3910956,
+          52.4497905
+        ]
+      },
+      "id": "way/27330843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27530711",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Dreifaltigkeits-Friedhof",
+        "religion": "christian",
+        "wikidata": "Q2677632",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3502873,
+          52.4327093
+        ]
+      },
+      "id": "way/27530711"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/28104405",
+        "cemetery": "war_cemetery",
+        "historic": "memorial",
+        "landuse": "cemetery",
+        "memorial": "war_memorial",
+        "name": "Sowjetisches Ehrenmal Schönholzer Heide",
+        "name:en": "Soviet War Memorial in Schönholzer Heide",
+        "name:ru": "Советский военный мемориал в Панкове",
+        "opening_hours": "Apr-Sep: 7:00-19:00; Oct-Mar: 8:00-16:00",
+        "start_date": "1949-11-07",
+        "tourism": "attraction",
+        "website": "http://www.berlin.de/senuvk/umwelt/stadtgruen/friedhoefe_begraebnisstaetten/de/sowjet_ehrenmale/schoenholzerheide/index.shtml",
+        "wheelchair": "limited",
+        "wikidata": "Q49745",
+        "wikimedia_commons": "Category:Soviet Cenotaph in Berlin (Schönholzer Heide)",
+        "wikipedia": "de:Sowjetisches Ehrenmal (Schönholzer Heide)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3733044,
+          52.5811174
+        ]
+      },
+      "id": "way/28104405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/28492627",
+        "landuse": "cemetery",
+        "name": "Kirchhof Mariendorf II",
+        "wikidata": "Q1282117",
+        "wikipedia": "de:Kirchhof II der ev. Kirchengemeinde Mariendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.385983,
+          52.4373197
+        ]
+      },
+      "id": "way/28492627"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/29769746",
+        "access": "yes",
+        "ele": "101",
+        "gnis:feature_id": "1979591",
+        "landuse": "cemetery",
+        "massgis:ARTICLE97": "9",
+        "massgis:ASSESS_ACR": "0.80000000",
+        "massgis:ASSESS_LOT": "22",
+        "massgis:ASSESS_MAP": "10.3",
+        "massgis:ATT_DATE": "1994/05/27",
+        "massgis:DCAM_ID": "0",
+        "massgis:DEED_ACRES": "0.00000000",
+        "massgis:EOEAINVOLV": "0",
+        "massgis:FEESYM": "M",
+        "massgis:FEE_OWNER": "Town of Berlin",
+        "massgis:FY_FUNDING": "0",
+        "massgis:LEV_PROT": "P",
+        "massgis:MANAGER": "Town of Berlin Cemetery Commission",
+        "massgis:MANAGR_ABR": "M028CMC",
+        "massgis:MANAGR_TYP": "M",
+        "massgis:OS_DEED_BO": "0",
+        "massgis:OS_DEED_PA": "0",
+        "massgis:OS_ID": "28-5452",
+        "massgis:OWNER_ABRV": "M028",
+        "massgis:OWNER_TYPE": "M",
+        "massgis:POLY_ID": "5452",
+        "massgis:PRIM_PURP": "O",
+        "massgis:PUB_ACCESS": "Y",
+        "massgis:SITE_NAME": "OLD BURYING GROUND",
+        "massgis:SOURCE_MAP": "1",
+        "massgis:TOWN_ID": "28",
+        "name": "Center Cemetery",
+        "owner": "Town Of Berlin",
+        "ownership": "municipal",
+        "protected": "perpetuity",
+        "source": "MassGIS OpenSpace (http://www.mass.gov/mgis/osp.htm)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6374342,
+          42.3810925
+        ]
+      },
+      "id": "way/29769746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/29777163",
+        "access": "yes",
+        "area": "yes",
+        "created_by": "polyshp2osm",
+        "landuse": "cemetery",
+        "massgis:ARTICLE97": "9",
+        "massgis:ASSESS_ACR": "5.13000000",
+        "massgis:ASSESS_LOT": "3",
+        "massgis:ASSESS_MAP": "21",
+        "massgis:ATT_DATE": "1994/05/27",
+        "massgis:DCAM_ID": "0",
+        "massgis:DEED_ACRES": "0.00000000",
+        "massgis:EOEAINVOLV": "0",
+        "massgis:FEESYM": "M",
+        "massgis:FEE_OWNER": "Town of Berlin",
+        "massgis:FY_FUNDING": "0",
+        "massgis:LEV_PROT": "P",
+        "massgis:MANAGER": "Town of Berlin Cemetery Commission",
+        "massgis:MANAGR_ABR": "M028CMC",
+        "massgis:MANAGR_TYP": "M",
+        "massgis:OS_DEED_BO": "0",
+        "massgis:OS_DEED_PA": "0",
+        "massgis:OS_ID": "28-5450",
+        "massgis:OWNER_ABRV": "M028",
+        "massgis:OWNER_TYPE": "M",
+        "massgis:POLY_ID": "5450",
+        "massgis:PRIM_PURP": "O",
+        "massgis:PUB_ACCESS": "Y",
+        "massgis:SITE_NAME": "NORTH CEMETERY",
+        "massgis:SOURCE_MAP": "1",
+        "massgis:TOWN_ID": "28",
+        "name": "North Cemetery",
+        "owner": "Town Of Berlin",
+        "ownership": "municipal",
+        "protected": "perpetuity",
+        "source": "MassGIS OpenSpace (http://www.mass.gov/mgis/osp.htm)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6239416,
+          42.4039748
+        ]
+      },
+      "id": "way/29777163"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/29777249",
+        "access": "yes",
+        "ele": "84",
+        "gnis:feature_id": "601786",
+        "landuse": "cemetery",
+        "massgis:ARTICLE97": "9",
+        "massgis:ASSESS_ACR": "7.37000000",
+        "massgis:ASSESS_LOT": "34",
+        "massgis:ASSESS_MAP": "6",
+        "massgis:ATT_DATE": "1994/05/27",
+        "massgis:DCAM_ID": "0",
+        "massgis:DEED_ACRES": "0.00000000",
+        "massgis:EOEAINVOLV": "0",
+        "massgis:FEESYM": "M",
+        "massgis:FEE_OWNER": "Town of Berlin",
+        "massgis:FY_FUNDING": "0",
+        "massgis:LEV_PROT": "P",
+        "massgis:MANAGER": "Town of Berlin Cemetery Commission",
+        "massgis:MANAGR_ABR": "M028CMC",
+        "massgis:MANAGR_TYP": "M",
+        "massgis:OS_DEED_BO": "0",
+        "massgis:OS_DEED_PA": "0",
+        "massgis:OS_ID": "28-5451",
+        "massgis:OWNER_ABRV": "M028",
+        "massgis:OWNER_TYPE": "M",
+        "massgis:POLY_ID": "5451",
+        "massgis:PRIM_PURP": "O",
+        "massgis:PUB_ACCESS": "Y",
+        "massgis:SITE_NAME": "SOUTH CEMETERY",
+        "massgis:SOURCE_MAP": "1",
+        "massgis:TOWN_ID": "28",
+        "name": "South Berlin Cemetery",
+        "owner": "Town Of Berlin",
+        "ownership": "municipal",
+        "protected": "perpetuity",
+        "source": "MassGIS OpenSpace (http://www.mass.gov/mgis/osp.htm)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6280077,
+          42.365995
+        ]
+      },
+      "id": "way/29777249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30033086",
+        "amenity": "grave_yard",
+        "ele": "50",
+        "gnis:feature_id": "874696",
+        "landuse": "cemetery",
+        "name": "Berlin Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.943313,
+          39.8013285
+        ]
+      },
+      "id": "way/30033086"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30087895",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Ev Friedhof Marienfelde",
+        "religion": "christian",
+        "wikipedia": "de:Friedhof Marienfelde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3668559,
+          52.4149079
+        ]
+      },
+      "id": "way/30087895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30156523",
+        "bldam:criteria": "Gartendenkmal",
+        "dog": "no",
+        "heritage": "4",
+        "heritage:operator": "bldam",
+        "landuse": "cemetery",
+        "name": "Friedhof Columbiadamm",
+        "ref:bldam": "09046176",
+        "religion": "multifaith",
+        "wikidata": "Q1457313",
+        "wikipedia": "de:Friedhof Columbiadamm",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4101763,
+          52.4802299
+        ]
+      },
+      "id": "way/30156523"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30273496",
+        "landuse": "cemetery",
+        "name": "Friedhof an der Lilienthalstraße",
+        "religion": "multifaith",
+        "website": "https://www.berlin.de/adressen/friedhof/friedhof-lilienthalstrasse-b645eb17f275249753eb3e003006afca.html",
+        "wikidata": "Q17321741",
+        "wikimedia_commons": "Category:Friedhof Lilienthalstraße (Berlin-Neukölln)",
+        "wikipedia": "de:Friedhof Lilienthalstraße (Berlin)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4100266,
+          52.4864451
+        ]
+      },
+      "id": "way/30273496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30422142",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Ehemaliger Friedhof Marzahn",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5656785,
+          52.5437301
+        ]
+      },
+      "id": "way/30422142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30720549",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Luther-Friedhof",
+        "religion": "christian",
+        "wikidata": "Q1495974",
+        "wikipedia": "de:Luther-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3562097,
+          52.4204546
+        ]
+      },
+      "id": "way/30720549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30768154",
+        "landuse": "cemetery",
+        "name": "Friedhof Pankow VIII",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3797217,
+          52.6173948
+        ]
+      },
+      "id": "way/30768154"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30980181",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Kreuz-Friedhof",
+        "religion": "christian",
+        "wikidata": "Q1257265",
+        "wikipedia": "de:Kreuz-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3570058,
+          52.419909
+        ]
+      },
+      "id": "way/30980181"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31427052",
+        "addr:housenumber": "1",
+        "addr:postcode": "12559",
+        "addr:street": "Gosener Landstraße",
+        "architect": "Oskar Köster",
+        "barrier": "fence",
+        "check_date:opening_hours": "2022-11-06",
+        "landuse": "cemetery",
+        "name": "Waldfriedhof Müggelheim",
+        "opening_hours": "Apr-Sep 07:30-20:00; Oct-Mar 07:30-18:00",
+        "ref:lda": "09046026",
+        "website": "https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/friedhoefe/artikel.16574.php",
+        "wikidata": "Q105453408",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6760133,
+          52.4066222
+        ]
+      },
+      "id": "way/31427052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31959078",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "25-27",
+        "addr:postcode": "10115",
+        "addr:street": "Große Hamburger Straße",
+        "addr:suburb": "Mitte",
+        "alt_name": "Jüdischer Friedhof (Teil)",
+        "bicycle": "no",
+        "contact:email": "service@jg-berlin.org",
+        "contact:fax": "+49 30 880282679",
+        "contact:phone": "+49 30 880280",
+        "description": "Jüdischer Friedhof an der Großen Hamburger Straße",
+        "dog": "no",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "heritage:website": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09010188",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Historischer jüdischer Friedhof",
+        "name:en": "Jewish cemetery",
+        "name:fi": "Mitten juutalainen hautausmaa",
+        "name:he": "בית הקברות היהודי הישן בברלין",
+        "old_name": "Jüdische Begräbnisstätte",
+        "opening_hours": "Apr-Sep: Mo-Th 07:30-17:00; Apr-Sep: Fr 07:30-14:30; Apr-Sep: Su 08:00-17:00; Oct-Mar: Mo-Th 07:30-16:00; Oct-Mar: Fr 07:30-14:30; Oct-Mar: Su 08:00-16:00",
+        "ref:lda": "09010188",
+        "religion": "jewish",
+        "smoking": "no",
+        "start_date": "1672",
+        "stroller": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q878485",
+        "wikimedia_commons": "Category:Jüdischer Friedhof Berlin-Mitte",
+        "wikipedia": "de:Jüdischer Friedhof Berlin-Mitte",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4001475,
+          52.5243659
+        ]
+      },
+      "id": "way/31959078"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31990753",
+        "landuse": "cemetery",
+        "leisure": "park",
+        "name": "Friedhofspark Pappelallee",
+        "protection_title": "Geschützte Grünanlage",
+        "wheelchair": "yes",
+        "wikidata": "Q32651320",
+        "wikipedia": "de:Friedhofspark Pappelallee",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4157547,
+          52.5430348
+        ]
+      },
+      "id": "way/31990753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/32842046",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Neuer Friedhof Friedrichsfelde",
+        "opening_hours": "Nov-Jan PH,Mo-Su 08:00-16:00; Feb-Mar PH,Mo-Su 08:00-17:00; Apr-Aug PH,Mo-Su 08:00-20:00; Sep-Oct PH,Mo-Su 08:00-19:00",
+        "operator": "Evangelischer Friedhofsverbund Friedrichsfeld / Karlshorst / Mahlsdorf",
+        "religion": "christian",
+        "website": "http://www.efbso.de/pages/friedhoefe/karlshorster-und-neuer-friedrichsfelder-friefhof.php",
+        "wikidata": "Q41793780",
+        "wikipedia": "de:Karlshorster und Neuer Friedrichsfelder Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5329759,
+          52.4943479
+        ]
+      },
+      "id": "way/32842046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/32848633",
+        "addr:city": "Berlin",
+        "addr:housenumber": "534",
+        "addr:postcode": "05641",
+        "addr:state": "VT",
+        "addr:street": "Industrial Lane",
+        "ele": "344",
+        "gnis:feature_id": "1457316",
+        "landuse": "cemetery",
+        "name": "East Road Cemetery",
+        "ref:vcgi:esiteid": "610950",
+        "source": "esri/Vermont_US_Addresses",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.558836,
+          44.2118052
+        ]
+      },
+      "id": "way/32848633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34647461",
+        "alt_name": "St.-Jacobi-Kirchhof I",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "heritage:website": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09046184",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Alter Friedhof der St.-Jacobi-Kirchengemeinde",
+        "opening_hours": "Nov-Feb: 08:00-17:00; Mar-Oct: 08:00-20:00",
+        "ref:lda": "09046184,T",
+        "religion": "christian",
+        "start_date": "1852",
+        "wikidata": "Q55317330",
+        "wikimedia_commons": "File:Karl-Marx-Straße 4 1.JPG",
+        "wikipedia": "de:St.-Jacobi-Kirchhof I",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4257321,
+          52.4840441
+        ]
+      },
+      "id": "way/34647461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34885997",
+        "landuse": "cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3774374,
+          52.6056705
+        ]
+      },
+      "id": "way/34885997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/35003187",
+        "landuse": "cemetery",
+        "name": "Neuer St. Jacobi-Friedhof",
+        "note": "Insbesondere der westliche Teil des Friedhofsgeländes ist durch die Gemeinschaftsgartenflächen des Prinzessinnengartens geprägt. Garten- und Friedhofsnutzung finden auf dem Gelände gleichzeitig statt.",
+        "religion": "christian",
+        "wikidata": "Q98704349",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4260553,
+          52.4687684
+        ]
+      },
+      "id": "way/35003187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/35007360",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "191 - 195",
+        "addr:postcode": "12049",
+        "addr:street": "Hermannstraße",
+        "addr:suburb": "Neukölln",
+        "contact:fax": "+49 30 6221042",
+        "contact:phone": "+49 30 6221078",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "Alter St. Michael-Friedhof",
+        "opening_hours": "Dec,Jan: 08:00-16:00; Feb,Nov: 08:00-17:00; Mar,Oct: 08:00-18:00; Apr,Sep: 08:00-19:00; May-Aug: 08:00-20:00",
+        "ref": "5204",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4310161,
+          52.4744
+        ]
+      },
+      "id": "way/35007360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/35007362",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Neuer Luisenstadt-Friedhof",
+        "opening_hours": "Mar-Oct: 08:00-20:00; Nov-Feb: 08:00-17:00",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4322688,
+          52.4737495
+        ]
+      },
+      "id": "way/35007362"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/36696588",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Neuer St. Michael-Kirchhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4117008,
+          52.4528638
+        ]
+      },
+      "id": "way/36696588"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/36932430",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof der evangelischen Kirchengemeinde Berlin-Hohenschönhausen",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4794069,
+          52.5458521
+        ]
+      },
+      "id": "way/36932430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/38915496",
+        "landuse": "cemetery",
+        "name": "Kirchhof Rudow",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5122921,
+          52.4092967
+        ]
+      },
+      "id": "way/38915496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/40387083",
+        "amenity": "grave_yard",
+        "ele": "45",
+        "gnis:feature_id": "876570",
+        "landuse": "cemetery",
+        "name": "Gate of Heaven Cemetery",
+        "source": "NJ2002LULC",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.9598386,
+          39.8062336
+        ]
+      },
+      "id": "way/40387083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/40387253",
+        "landuse": "cemetery",
+        "source": "NJ2002LULC",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.9433288,
+          39.8013253
+        ]
+      },
+      "id": "way/40387253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/41361987",
+        "contact:website": "https://evfbs.de/index.php?id=169",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof Georgen-Parochial II",
+        "religion": "christian",
+        "wikidata": "Q99373328",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4428623,
+          52.5212196
+        ]
+      },
+      "id": "way/41361987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/41418414",
+        "landuse": "cemetery",
+        "name": "Evangelischer Magdalenen-Friedhof",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4420697,
+          52.4714101
+        ]
+      },
+      "id": "way/41418414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/41418632",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Böhmischer Gottesacker",
+        "religion": "christian",
+        "wikidata": "Q1019769",
+        "wikipedia": "de:Böhmischer Gottesacker Rixdorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.441973,
+          52.4729267
+        ]
+      },
+      "id": "way/41418632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/41425401",
+        "landuse": "cemetery",
+        "name": "Friedhof Rummelsburg",
+        "wikidata": "Q1457417",
+        "wikipedia": "de:Friedhof Rummelsburg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4993322,
+          52.5007614
+        ]
+      },
+      "id": "way/41425401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/42030261",
+        "landuse": "cemetery",
+        "name": "Alter Friedhof Friedrichsfelde",
+        "note": "Öffnungszeiten: November bis Januar 8.00 - 16.00 Uhr Februar bis März 8.00 - 17.00 Uhr September bis Oktober 8.00 - 19.00 Uhr April bis August 8.00 - 20.00 Uhr",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5239461,
+          52.5125586
+        ]
+      },
+      "id": "way/42030261"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43000948",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Parochialkirchhof",
+        "religion": "christian",
+        "wikidata": "Q67184847",
+        "wikimedia_commons": "Category:Parochialkirchhof (Berlin)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4132376,
+          52.5169987
+        ]
+      },
+      "id": "way/43000948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43165688",
+        "landuse": "cemetery",
+        "name": "Friedhof Hessenwinkel",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7156763,
+          52.4266215
+        ]
+      },
+      "id": "way/43165688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43304522",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "179-185",
+        "addr:postcode": "12049",
+        "addr:street": "Hermannstraße",
+        "addr:suburb": "Neukölln",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "St. Thomas-Friedhof (Alter Teil)",
+        "opening_hours": "Mar-Oct: 08:00-20:00; Nov-Feb: 08:00-17:00",
+        "religion": "christian",
+        "wheelchair": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4322791,
+          52.4729373
+        ]
+      },
+      "id": "way/43304522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43435974",
+        "landuse": "cemetery",
+        "name": "Blue Hills Cemetery",
+        "ownership": "private",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7882089,
+          41.6277751
+        ]
+      },
+      "id": "way/43435974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43436071",
+        "gnis:feature_id": "1950180",
+        "landuse": "cemetery",
+        "name": "Dunham Cemetery",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7672183,
+          41.6135479
+        ]
+      },
+      "id": "way/43436071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43438748",
+        "gnis:feature_id": "210967",
+        "landuse": "cemetery",
+        "name": "South Burying Ground",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.8015229,
+          41.6019409
+        ]
+      },
+      "id": "way/43438748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43438775",
+        "landuse": "cemetery",
+        "name": "South Middle Cemetery",
+        "ownership": "private",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7692273,
+          41.6281382
+        ]
+      },
+      "id": "way/43438775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43439156",
+        "landuse": "cemetery",
+        "name": "Hall Cemetery",
+        "ownership": "private",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7554393,
+          41.5973564
+        ]
+      },
+      "id": "way/43439156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43439429",
+        "gnis:feature_id": "212118",
+        "landuse": "cemetery",
+        "name": "Wilcox Cemetery",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7184399,
+          41.619194
+        ]
+      },
+      "id": "way/43439429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43439725",
+        "gnis:feature_id": "208706",
+        "landuse": "cemetery",
+        "name": "Maple Grove Cemetery",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7504525,
+          41.6107347
+        ]
+      },
+      "id": "way/43439725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43440277",
+        "landuse": "cemetery",
+        "name": "Beckley Cemetery",
+        "ownership": "private",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.717642,
+          41.6448303
+        ]
+      },
+      "id": "way/43440277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43440662",
+        "ele": "13",
+        "gnis:feature_id": "206273",
+        "landuse": "cemetery",
+        "name": "Christian Lane Cemetery",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7511473,
+          41.6425608
+        ]
+      },
+      "id": "way/43440662"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43617618",
+        "addr:city": "Berlin",
+        "addr:housenumber": "31-32",
+        "addr:postcode": "13055",
+        "addr:street": "Konrad-Wolf-Straße",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "Friedhof der St. Hedwig und St. Pius Gemeinde",
+        "religion": "christian",
+        "wikidata": "Q116138221",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4836618,
+          52.5435452
+        ]
+      },
+      "id": "way/43617618"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43962591",
+        "alt_name": "Friedhof Hohenschönhausen",
+        "amenity": "grave_yard",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Dorffriedhof Alt-Hohenschönhausen",
+        "religion": "christian",
+        "wikidata": "Q89195371",
+        "wikipedia": "de:Friedhof Hohenschönhausen",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.50857,
+          52.5456995
+        ]
+      },
+      "id": "way/43962591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/44393777",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Auferstehungskirchhof",
+        "opening_hours": "08:00-sunset",
+        "religion": "christian",
+        "website": "http://auferstehungskirchhof.de/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4704256,
+          52.5489038
+        ]
+      },
+      "id": "way/44393777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46877030",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Rahnsdorf",
+        "wikidata": "Q15810544",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6965582,
+          52.4378571
+        ]
+      },
+      "id": "way/46877030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/47296962",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Buchholz",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4269024,
+          52.6092917
+        ]
+      },
+      "id": "way/47296962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/47391017",
+        "image": "https://commons.wikimedia.org/wiki/File:Segensgemeinde_Verwaltung.jpg",
+        "landuse": "cemetery",
+        "name": "Friedhof der Segenskirchengemeinde",
+        "religion": "christian",
+        "start_date": "1882",
+        "wikidata": "Q105045195",
+        "wikimedia_commons": "Category:Friedhof der Segensgemeinde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4519696,
+          52.5593855
+        ]
+      },
+      "id": "way/47391017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/48687660",
+        "contact:website": "https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/friedhoefe/artikel.274211.php",
+        "landuse": "cemetery",
+        "name": "Parkfriedhof Neukölln",
+        "protection_title": "Geschützte Grünanlage",
+        "wikidata": "Q1380363",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4270025,
+          52.4311837
+        ]
+      },
+      "id": "way/48687660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/48732637",
+        "description": "Landeseigener Friedhof Neukölln",
+        "landuse": "cemetery",
+        "name": "Friedhof Koppelweg",
+        "operator": "Zentrale Friedhofsverwaltung Neukölln",
+        "religion": "none",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "limited",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.43061,
+          52.4462988
+        ]
+      },
+      "id": "way/48732637"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/48790670",
+        "landuse": "cemetery",
+        "name": "Parkfriedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4043761,
+          52.4541442
+        ]
+      },
+      "id": "way/48790670"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/49038916",
+        "barrier": "fence",
+        "denomination": "catholic",
+        "landuse": "cemetery",
+        "name": "St. Matthias-Friedhof",
+        "religion": "christian",
+        "wikidata": "Q1457479",
+        "wikipedia": "de:Friedhof der St.-Matthias-Gemeinde (Berlin-Tempelhof)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3635558,
+          52.4540655
+        ]
+      },
+      "id": "way/49038916"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/50887359",
+        "landuse": "cemetery",
+        "name": "Friedhof Turiner Straße",
+        "website": "https://www.berlin.de/adressen/friedhof/friedhof-turiner-strasse-9a1d5272d6e737685d0012460c1a5182.html",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3582173,
+          52.5487675
+        ]
+      },
+      "id": "way/50887359"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51197206",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "heritage:website": "http://www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?DOK_TPL=lda_doc.tpl&KEY=obj%2009065985",
+        "landuse": "cemetery",
+        "lda:criteria": "Ensemble",
+        "name": "Friedhof Lichterfelde",
+        "ref:lda": "09065985",
+        "wikidata": "Q1457364",
+        "wikipedia": "de:Friedhof Lichterfelde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3109783,
+          52.4443352
+        ]
+      },
+      "id": "way/51197206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51316591",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "St. Bartholomäus-Friedhof",
+        "religion": "christian",
+        "website": "http://kirchhof-bartholomaeus.de/",
+        "wikipedia": "de:Kirchhof St. Bartholomäus",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4823173,
+          52.5591681
+        ]
+      },
+      "id": "way/51316591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51316688",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Evangelischer Friedhof Weißensee",
+        "religion": "christian",
+        "website": "https://www.friedhof-weissensee.de/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4791178,
+          52.558645
+        ]
+      },
+      "id": "way/51316688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51316739",
+        "landuse": "cemetery",
+        "name": "Adass Jisroel Gemeindefriedhof",
+        "religion": "jewish",
+        "wikipedia": "de:Adass-Jisroel-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4771107,
+          52.5580049
+        ]
+      },
+      "id": "way/51316739"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51440106",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Zentralfriedhof Friedrichsfelde",
+        "opening_hours": "Feb-Nov 07:30-sunset; Dec-Jan 08:00-sunset",
+        "website": "https://www.stadtentwicklung.berlin.de/umwelt/stadtgruen/friedhoefe_begraebnisstaetten/de/friedhoefe/friedrichsfelde/",
+        "wikidata": "Q190494",
+        "wikipedia": "de:Zentralfriedhof Friedrichsfelde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5140087,
+          52.5191145
+        ]
+      },
+      "id": "way/51440106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51804411",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "historic": "cemetery",
+        "landuse": "cemetery",
+        "name": "Invaliden-Friedhof",
+        "opening_hours": "Oct-Mar PH,Mo-Su 07:00-18:30, Mar-Sep PH,Mo-Su 07:00-21:30",
+        "start_date": "1748",
+        "website": "https://foerderverein-invalidenfriedhof.de/",
+        "wikidata": "Q643891",
+        "wikipedia": "de:Invalidenfriedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.37107,
+          52.5321488
+        ]
+      },
+      "id": "way/51804411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/51832225",
+        "landuse": "cemetery",
+        "name": "Friedhof Heiligensee",
+        "religion": "christian",
+        "source": "Geoportal Berlin / Friedhöfe",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2181668,
+          52.5984881
+        ]
+      },
+      "id": "way/51832225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/53836727",
+        "barrier": "fence",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Kirchhof Mariendorf III",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4061262,
+          52.4487211
+        ]
+      },
+      "id": "way/53836727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/56176837",
+        "addr:city": "Berlin",
+        "addr:postcode": "10829",
+        "addr:street": "Priesterweg",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Schöneberg IV, Friedhof am Priesterweg",
+        "opening_hours": "Jan: 08:00-16:00; Feb: 08:00-17:00; Mar: 08:00-18:00; Apr-Jul: 08:00-19:00; Aug: 08:00-20:00; Sep: 08:00-19:00; Oct: 08:00-18:00; Nov: 08:00-17:00; Dec: 08:00-16:00",
+        "surface": "grass",
+        "wikidata": "Q25090014",
+        "wikipedia": "de:Friedhof Priesterweg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3585191,
+          52.4692774
+        ]
+      },
+      "id": "way/56176837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/56415348",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Dorfkirchhof Karow",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.484511,
+          52.6117365
+        ]
+      },
+      "id": "way/56415348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/57386542",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "30",
+        "addr:postcode": "12623",
+        "addr:street": "Rahnsdorfer Straße",
+        "landuse": "cemetery",
+        "name": "Waldkirchhof Mahlsdorf",
+        "operator": "Evangelischer Friedhofsverband Berlin-Südost",
+        "religion": "christian",
+        "website": "http://www.effkm.de/pages/friedhoefe/waldkirchhof-mahlsdorf.php",
+        "wikidata": "Q42184862",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6256011,
+          52.4948062
+        ]
+      },
+      "id": "way/57386542"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/65337322",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Dreifaltigkeitsfriedhof III",
+        "religion": "christian",
+        "wikidata": "Q1257745",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3940545,
+          52.4487843
+        ]
+      },
+      "id": "way/65337322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/66000048",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Mahlsdorf",
+        "website": "https://www.berlin.de/adressen/friedhof/friedhof-mahlsdorf-b645eb17f275249753eb3e00300846b5.html",
+        "wikidata": "Q124619835",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6334593,
+          52.5213191
+        ]
+      },
+      "id": "way/66000048"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/72175248",
+        "boundary": "protected_area",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Friedhof Heerstraße",
+        "name:ja": "墓地 ヘール通り",
+        "protect_class": "22",
+        "protection_title": "Geschützte Grünanlage",
+        "ref:lda": "09046366",
+        "start_date": "1924",
+        "wheelchair": "yes",
+        "wikidata": "Q176298",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2505901,
+          52.513896
+        ]
+      },
+      "id": "way/72175248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/76407336",
+        "landuse": "cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2689534,
+          52.5949932
+        ]
+      },
+      "id": "way/76407336"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/76886276",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Evangelischer Kirchhof Nikolassee",
+        "religion": "christian",
+        "wikidata": "Q1381254",
+        "wikipedia": "de:Evangelischer Kirchhof Nikolassee",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2050787,
+          52.4260751
+        ]
+      },
+      "id": "way/76886276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/79173622",
+        "denomination": "lutheran",
+        "image": "File:Friedhof Falkenberg Dorfstraße 39A Berlin 02.jpg",
+        "landuse": "cemetery",
+        "name": "Friedhof Falkenberg",
+        "religion": "christian",
+        "wikidata": "Q116138194",
+        "wikimedia_commons": "Category:Dorfkirchhof Falkenberg (Berlin-Falkenberg)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5377868,
+          52.5705805
+        ]
+      },
+      "id": "way/79173622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/79193199",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "18",
+        "addr:postcode": "14109",
+        "addr:street": "Nikolskoer Weg",
+        "addr:suburb": "Wannsee",
+        "description": "Traditioneller Begräbnisplatz der Bewohner der Pfaueninsel",
+        "landuse": "cemetery",
+        "name": "Friedhof Nikolskoe, St. Peter und Paul",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1186995,
+          52.423287
+        ]
+      },
+      "id": "way/79193199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/79522783",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Karlshorster Friedhof",
+        "opening_hours": "Nov-Jan PH,Mo-Su 08:00-16:00; Feb-Mar PH,Mo-Su 08:00-17:00; Apr-Aug PH,Mo-Su 08:00-20:00; Sep-Oct PH,Mo-Su 08:00-19:00",
+        "operator": "Evangelischer Friedhofsverbund Friedrichsfeld / Karlshorst / Mahlsdorf",
+        "religion": "christian",
+        "website": "http://www.efbso.de/pages/friedhoefe/karlshorster-und-neuer-friedrichsfelder-friefhof.php",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.534489,
+          52.4947513
+        ]
+      },
+      "id": "way/79522783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/82257162",
+        "landuse": "cemetery",
+        "name": "Dorfkirchhof Blankenfelde",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3897095,
+          52.6189339
+        ]
+      },
+      "id": "way/82257162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83676148",
+        "landuse": "cemetery",
+        "name": "Landeseigener Friedhof Pankow V",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3785741,
+          52.5778535
+        ]
+      },
+      "id": "way/83676148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/91899330",
+        "landuse": "cemetery",
+        "name": "Landschaftsfriedhof Gatow",
+        "wikidata": "Q14531659",
+        "wikipedia": "de:Landschaftsfriedhof Gatow",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1520718,
+          52.4945968
+        ]
+      },
+      "id": "way/91899330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/96835819",
+        "addr:housenumber": "52",
+        "addr:street": "Bismarckstraße",
+        "cat": "yes",
+        "cemetery": "pet",
+        "crematorium": "pet",
+        "dog": "yes",
+        "hamster": "yes",
+        "horse": "no",
+        "landuse": "cemetery",
+        "name": "Bärliner Tierfriedhof",
+        "reptile": "yes",
+        "website": "http://www.tierfriedhof-berlin-steglitz.de",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3394725,
+          52.454733
+        ]
+      },
+      "id": "way/96835819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98412083",
+        "landuse": "cemetery",
+        "name": "Friedhof XII",
+        "wikidata": "Q1457393",
+        "wikipedia": "de:Friedhof Pankow XII",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5152576,
+          52.6304351
+        ]
+      },
+      "id": "way/98412083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99294514",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof St. Paul - St. Johannis II - Nazareth",
+        "opening_hours": "Mar-Oct Mo-Su 08:00-20:00; Nov-Feb Mo-Su 08:00-17:00",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3387141,
+          52.5446719
+        ]
+      },
+      "id": "way/99294514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99687116",
+        "denomination": "orthodox",
+        "landuse": "cemetery",
+        "name": "Griechisch-Orthodoxer Friedhof",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3900028,
+          52.4514906
+        ]
+      },
+      "id": "way/99687116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/104764513",
+        "cemetery": "pet",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Tierfriedhof im Wiesengrund",
+        "religion": "christian",
+        "website": "http://www.efbso.de/pages/besonderheiten/tierfriedhof.php",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5332402,
+          52.4961433
+        ]
+      },
+      "id": "way/104764513"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/113775573",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Kirchhof V der Evangelischen Georgen-Parochialgemeinde",
+        "postal_code": "10249",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=176",
+        "wikidata": "Q99395422",
+        "wikimedia_commons": "Category:Georgen-Parochial-Friedhof V",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4392279,
+          52.5207191
+        ]
+      },
+      "id": "way/113775573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/119163877",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Karow II",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4762696,
+          52.6045352
+        ]
+      },
+      "id": "way/119163877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/123119416",
+        "alt_name": "Erbbegräbnisstätte der Familie von Treskow-Friedrichsfelde",
+        "amenity": "grave_yard",
+        "barrier": "fence",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Baudenkmal",
+        "name": "Familienfriedhof von Treskow",
+        "ref:lda": "09040202",
+        "wikidata": "Q1348236",
+        "wikipedia": "de:Erbbegräbnisstätte der Familie von Treskow-Friedrichsfelde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.526765,
+          52.4974556
+        ]
+      },
+      "id": "way/123119416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137041447",
+        "barrier": "fence",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Sankt Simeon und Sankt Lukas Kirchhof",
+        "religion": "christian",
+        "wikidata": "Q88101296",
+        "wikipedia": "de:Kirchhof Sankt Simeon und Sankt Lukas",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4237603,
+          52.4598091
+        ]
+      },
+      "id": "way/137041447"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/141809383",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "5-11",
+        "addr:postcode": "10245",
+        "addr:street": "Tunnelstraße",
+        "addr:suburb": "Friedrichshain",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "heritage:website": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09046081",
+        "landuse": "cemetery",
+        "lda:criteria": "Gartendenkmal",
+        "name": "Friedhof der Evangelischen Kirchengemeinde Alt-Stralau",
+        "ref:lda": "09046081",
+        "religion": "christian",
+        "start_date": "1464",
+        "wikidata": "Q1381242",
+        "wikimedia_commons": "Category:Friedhof Stralau",
+        "wikipedia": "de:Evangelischer Friedhof Stralau",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4793662,
+          52.4908329
+        ]
+      },
+      "id": "way/141809383"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/145407844",
+        "landuse": "cemetery",
+        "name": "Jerusalems- und Neue Kirche, Friedhof V",
+        "ref": "5163",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.425291,
+          52.4709539
+        ]
+      },
+      "id": "way/145407844"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/147053825",
+        "landuse": "cemetery",
+        "name": "Friedhof Adlershof",
+        "opening_hours": "Apr-Sep 07:30-20:00; Oct-Mar 07:30-18:00",
+        "wikidata": "Q1457292",
+        "wikimedia_commons": "Category:Friedhof Adlershof",
+        "wikipedia": "de:Friedhof Adlershof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5471108,
+          52.4426629
+        ]
+      },
+      "id": "way/147053825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/148326854",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Parkfriedhof Lichterfelde",
+        "wikidata": "Q1486230",
+        "wikipedia": "de:Parkfriedhof Lichterfelde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2922468,
+          52.4215585
+        ]
+      },
+      "id": "way/148326854"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/152494986",
+        "denomination": "protestant",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gesamtanlage",
+        "name": "Evangelischer Friedhof Altglienicke",
+        "ref:lda": "09020224",
+        "religion": "christian",
+        "wikidata": "Q1381232",
+        "wikimedia_commons": "Category:Evangelischer Friedhof Altglienicke",
+        "wikipedia": "de:Evangelischer Friedhof Altglienicke",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5283863,
+          52.4207674
+        ]
+      },
+      "id": "way/152494986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/152872806",
+        "barrier": "fence",
+        "fence_type": "metal",
+        "landuse": "cemetery",
+        "name": "Friedhof Bohnsdorf",
+        "wikidata": "Q1457303",
+        "wikipedia": "de:Friedhof Bohnsdorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5587092,
+          52.3998503
+        ]
+      },
+      "id": "way/152872806"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/152892294",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "100",
+        "addr:inclusion": "actual",
+        "addr:postcode": "12524",
+        "addr:street": "Schönefelder Chaussee",
+        "addr:suburb": "Altglienicke",
+        "landuse": "cemetery",
+        "name": "Städtischer Friedhof Altglienicke",
+        "source": "Geoportal Berlin / Hauskoordinaten",
+        "wikidata": "Q1527253",
+        "wikipedia": "de:Städtischer Friedhof Altglienicke",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5264366,
+          52.4112734
+        ]
+      },
+      "id": "way/152892294"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/156138102",
+        "addr:housenumber": "36",
+        "addr:postcode": "13088",
+        "addr:street": "Smetanastraße",
+        "denomination": "catholic",
+        "email": "hedwig-pius@domfriedhoefe.de",
+        "landuse": "cemetery",
+        "name": "St.-Hedwigs-Friedhof",
+        "opening_hours": "Mo-Su 08:00-16:00",
+        "phone": "+49 3097104105",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4598262,
+          52.5455754
+        ]
+      },
+      "id": "way/156138102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/157045098",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Steglitz",
+        "wikidata": "Q1457429",
+        "wikipedia": "de:Friedhof Steglitz",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3429027,
+          52.4563143
+        ]
+      },
+      "id": "way/157045098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/157669503",
+        "landuse": "cemetery",
+        "name": "Beamtenfriedhof des ehemaligen Zellengefängnisses Moabit",
+        "wikidata": "Q32651379",
+        "wikipedia": "de:Beamtenfriedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3653753,
+          52.5282103
+        ]
+      },
+      "id": "way/157669503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/158572213",
+        "landuse": "cemetery",
+        "name": "Berlin IOOF Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.9511356,
+          39.9180427
+        ]
+      },
+      "id": "way/158572213"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/159557129",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "80",
+        "addr:postcode": "10365",
+        "addr:street": "Gotlindestraße",
+        "addr:suburb": "Lichtenberg",
+        "description": "Geschützte Grünanlage ohne Radfreigabe",
+        "landuse": "cemetery",
+        "name": "Friedhof Gotlindestraße",
+        "operator": "Land Berlin",
+        "source": "Geoportal Berlin / Grünanlagenbestand Berlin (einschließlich der öffentlichen Spielplätze)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4907324,
+          52.51893
+        ]
+      },
+      "id": "way/159557129"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/166694533",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "10405",
+        "addr:street": "Prenzlauer Allee",
+        "addr:suburb": "Prenzlauer Berg",
+        "landuse": "cemetery",
+        "name": "St. Nicolai- und St. Marien-Friedhof I",
+        "opening_hours": "Jan-Dec Mo-Su,PH 08:00-16:00; Feb,Nov Mo-Su,PH 08:00-17:00; Mar,Oct Mo-Su,PH 08:00-18:00; Apr,Sep Mo-Su,PH 08:00-19:00; May-Aug Mo-Su,PH 08:00-20:00",
+        "religion": "christian",
+        "wikidata": "Q2316486",
+        "wikipedia": "de:St.-Marien- und St.-Nikolai-Friedhof I",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4187177,
+          52.5276336
+        ]
+      },
+      "id": "way/166694533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/178211230",
+        "landuse": "cemetery",
+        "name": "Heidefriedhof",
+        "wikidata": "Q1593941",
+        "wikipedia": "de:Heidefriedhof (Berlin)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3949565,
+          52.4375803
+        ]
+      },
+      "id": "way/178211230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/193768732",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Alter Friedhof Wannsee",
+        "wikidata": "Q437926",
+        "wikipedia": "de:Alter Friedhof Wannsee",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1412262,
+          52.4140702
+        ]
+      },
+      "id": "way/193768732"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/204032165",
+        "landuse": "cemetery",
+        "name": "Kaiser-Wilhelm-Gedächtnis-Friedhof",
+        "wikidata": "Q1324474",
+        "wikimedia_commons": "Category:Kaiser-Wilhelm-Gedächtnis-Friedhof",
+        "wikipedia": "de:Kaiser-Wilhelm-Gedächtnis-Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2765383,
+          52.5263824
+        ]
+      },
+      "id": "way/204032165"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230951812",
+        "landuse": "cemetery",
+        "name": "Parkfriedhof Neukölln - Urnenhain",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4251725,
+          52.4275423
+        ]
+      },
+      "id": "way/230951812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236696439",
+        "landuse": "cemetery",
+        "name": "Kirchhof Kladow",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1413512,
+          52.4524693
+        ]
+      },
+      "id": "way/236696439"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/239899994",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Heinersdorf",
+        "religion": "christian",
+        "wikidata": "Q1457341",
+        "wikipedia": "de:Friedhof Heinersdorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4383339,
+          52.5746775
+        ]
+      },
+      "id": "way/239899994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/249422994",
+        "landuse": "cemetery",
+        "name": "Friedhof Alt-Buckow",
+        "protection_title": "Geschützte Grünanlage",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4308316,
+          52.4206207
+        ]
+      },
+      "id": "way/249422994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/256008712",
+        "access": "no",
+        "landuse": "cemetery",
+        "name": "Laehrsch'er Privatfriedhof",
+        "subject:wikidata": "Q90567",
+        "subject:wikipedia": "de:Heinrich Laehr",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2642926,
+          52.4270257
+        ]
+      },
+      "id": "way/256008712"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/259555191",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Ev. Friedhof Rudow",
+        "protection_title": "Geschützte Grünanlage",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5037098,
+          52.4209775
+        ]
+      },
+      "id": "way/259555191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/270177311",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "19B",
+        "addr:postcode": "13359",
+        "addr:street": "Freienwalder Straße",
+        "addr:suburb": "Gesundbrunnen",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Sophien-Friedhof III",
+        "religion": "christian",
+        "source": "Geoportal Berlin / Hausumringe",
+        "website": "https://evfbs.de/index.php?id=325",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.394124,
+          52.5594969
+        ]
+      },
+      "id": "way/270177311"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/288446598",
+        "landuse": "cemetery",
+        "name": "Friedhof Pankow XI",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5077621,
+          52.6476296
+        ]
+      },
+      "id": "way/288446598"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/289685432",
+        "alt_name": "Friedhof Blankenburg",
+        "description": "landeseigener Friedhof",
+        "landuse": "cemetery",
+        "name": "Pankow X",
+        "ref": "5074",
+        "religion": "christian",
+        "start_date": "1893",
+        "wikidata": "Q1457305",
+        "wikipedia": "de:Friedhof Blankenburg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4603142,
+          52.5949527
+        ]
+      },
+      "id": "way/289685432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/290098102",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "64",
+        "addr:street": "Hainbuchenstraße",
+        "addr:suburb": "Frohnau",
+        "landuse": "cemetery",
+        "name": "Friedhof Frohnau",
+        "note": "landeseigener Friedhof",
+        "ref": "5035",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2643437,
+          52.6396047
+        ]
+      },
+      "id": "way/290098102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/290098107",
+        "alt_name": "Friedhof Hermsdorf I",
+        "architect": "Ludwig Lesser",
+        "architect:wikidata": "Q101934",
+        "landuse": "cemetery",
+        "name": "Friedhof Hermsdorf",
+        "note": "landeseigener Friedhof",
+        "ref": "5037",
+        "ref:lda": "09046234",
+        "start_date": "1911",
+        "wikidata": "Q56239343",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2928916,
+          52.6275564
+        ]
+      },
+      "id": "way/290098107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/290350681",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "53",
+        "addr:postcode": "13467",
+        "addr:street": "Schulzendorfer Straße",
+        "barrier": "fence",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof Hermsdorf II",
+        "phone": "+4930 4016288",
+        "religion": "christian",
+        "start_date": "24-11-1876",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3030719,
+          52.6107724
+        ]
+      },
+      "id": "way/290350681"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/303367239",
+        "description": "Russisches Denkmal",
+        "landuse": "cemetery",
+        "name": "Platz des 8. Mai 1945 (Tag der Befreiung)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7022003,
+          52.4641058
+        ]
+      },
+      "id": "way/303367239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/304368739",
+        "ele": "340",
+        "gnis:feature_id": "871603",
+        "landuse": "cemetery",
+        "name": "Calvary Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1571098,
+          44.4951646
+        ]
+      },
+      "id": "way/304368739"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/304368740",
+        "gnis:feature_id": "872608",
+        "landuse": "cemetery",
+        "name": "Saint Anne Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1610626,
+          44.4905219
+        ]
+      },
+      "id": "way/304368740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/304368741",
+        "ele": "340",
+        "gnis:feature_id": "871603",
+        "landuse": "cemetery",
+        "name": "Calvary Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1546828,
+          44.4968157
+        ]
+      },
+      "id": "way/304368741"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/309974520",
+        "landuse": "cemetery",
+        "name": "Friedrich Wilhelm Heinrich Bensch (1781–1858)",
+        "subject:wikidata": "Q83973380",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1790791,
+          52.4166307
+        ]
+      },
+      "id": "way/309974520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/310023152",
+        "addr:city": "Berlin",
+        "addr:housenumber": "11",
+        "addr:postcode": "12099",
+        "addr:street": "Schätzelbergstraße",
+        "landuse": "cemetery",
+        "name": "Tierfriedhof Tempelhof",
+        "note": "Cemetry for animals. Begrenzung des Areals ist von mir nach Luftbild frei Schnauze eingetragen und stark verbesserungsfähig",
+        "source": "Eigene Ansicht von der Schätzelbergstraße her",
+        "website": "http://www.tierfriedhof-tempelhof.de",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4000923,
+          52.4537475
+        ]
+      },
+      "id": "way/310023152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/311145526",
+        "gnis:feature_id": "1669029",
+        "landuse": "cemetery",
+        "name": "Saint Pauls Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2168588,
+          38.3231931
+        ]
+      },
+      "id": "way/311145526"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/311166164",
+        "gnis:feature_id": "583460",
+        "landuse": "cemetery",
+        "name": "Buckingham Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2211229,
+          38.314335
+        ]
+      },
+      "id": "way/311166164"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/311166166",
+        "gnis:feature_id": "1669076",
+        "landuse": "cemetery",
+        "name": "Tyree Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2154224,
+          38.3137347
+        ]
+      },
+      "id": "way/311166166"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/325102536",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Friedhof Schönow",
+        "religion": "christian",
+        "wikidata": "Q98593268",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2665867,
+          52.4097253
+        ]
+      },
+      "id": "way/325102536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/326449443",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Friedhof der Karl-Bonhoeffer-Nervenklinik",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3212621,
+          52.5789821
+        ]
+      },
+      "id": "way/326449443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/363601838",
+        "gnis:feature_id": "872611",
+        "landuse": "cemetery",
+        "name": "Saint Kieran Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1576259,
+          44.4902755
+        ]
+      },
+      "id": "way/363601838"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/363601843",
+        "landuse": "cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1566062,
+          44.4938532
+        ]
+      },
+      "id": "way/363601843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/371924330",
+        "landuse": "cemetery",
+        "name": "Tierfriedhof Pfötchenhain",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2873445,
+          52.5935393
+        ]
+      },
+      "id": "way/371924330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/387882541",
+        "ele": "13",
+        "gnis:feature_id": "205718",
+        "landuse": "cemetery",
+        "name": "Denison Cemetery",
+        "ownership": "private",
+        "source": "University of Connecticut (http://magic.lib.uconn.edu/connecticut_data.html)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7515201,
+          41.6258906
+        ]
+      },
+      "id": "way/387882541"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/408898212",
+        "landuse": "cemetery",
+        "name": "Waldfriedhof",
+        "religion": "christian",
+        "wikidata": "Q15991976",
+        "wikipedia": "de:Friedhof Rauchfangswerder",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6453985,
+          52.3462593
+        ]
+      },
+      "id": "way/408898212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/439075068",
+        "barrier": "fence",
+        "capacity": "352",
+        "cemetery": "war_cemetery",
+        "end_date": "1948",
+        "historic": "yes",
+        "landuse": "cemetery",
+        "name": "Kriegsgräberstätte Schönholzer Heide",
+        "start_date": "1945",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3835367,
+          52.5771544
+        ]
+      },
+      "id": "way/439075068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/459221241",
+        "boundary": "protected_area",
+        "heritage": "4",
+        "heritage:operator": "lda",
+        "landuse": "cemetery",
+        "lda:criteria": "Gesamtanlage",
+        "name": "Christuskirchhof",
+        "protect_class": "22",
+        "ref:lda": "09055079,T",
+        "wikidata": "Q1087449",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3951995,
+          52.4309825
+        ]
+      },
+      "id": "way/459221241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/488046799",
+        "landuse": "cemetery",
+        "name": "Wartenberger Friedhof",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5189401,
+          52.5742839
+        ]
+      },
+      "id": "way/488046799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/528598725",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof St. Johannes Evangelist",
+        "religion": "christian",
+        "website": "https://evfbs.de/index.php?id=305",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3519435,
+          52.5606883
+        ]
+      },
+      "id": "way/528598725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/554663504",
+        "alt_name": "Prinzenfriedhof",
+        "barrier": "fence",
+        "fence_type": "chain_link",
+        "historic": "yes",
+        "landuse": "cemetery",
+        "name": "Familienfriedhof Hohenzollern",
+        "wikipedia": "de:Park Klein-Glienicke",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1000843,
+          52.4171906
+        ]
+      },
+      "id": "way/554663504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/595902382",
+        "landuse": "cemetery",
+        "name": "Friedhof Karow III",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4842388,
+          52.6114195
+        ]
+      },
+      "id": "way/595902382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/601149139",
+        "amenity": "grave_yard",
+        "landuse": "cemetery",
+        "name": "Friedrichswerderscher Friedhof II",
+        "wikidata": "Q1298781",
+        "wikimedia_commons": "Category:Friedrichswerderscher Friedhof",
+        "wikipedia": "de:Friedrichswerderscher Friedhof"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4012296,
+          52.4874383
+        ]
+      },
+      "id": "node/601149139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/601149272",
+        "amenity": "grave_yard",
+        "landuse": "cemetery",
+        "name": "Jerusalems- und Neue Kirche, Friedhof IV",
+        "wikidata": "Q1457352",
+        "wikimedia_commons": "Category:Friedhof IV der Gemeinde Jerusalems- und Neue Kirche",
+        "wikipedia": "de:Friedhof IV der Gemeinde Jerusalems- und Neue Kirche"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4033002,
+          52.4878238
+        ]
+      },
+      "id": "node/601149272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/605724272",
+        "barrier": "fence",
+        "landuse": "cemetery",
+        "name": "Friedhof Lübars",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3497602,
+          52.6143656
+        ]
+      },
+      "id": "way/605724272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/620941623",
+        "ele": "306",
+        "gnis:feature_id": "1919000",
+        "landuse": "cemetery",
+        "name": "Black Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5916706,
+          44.2074408
+        ]
+      },
+      "id": "way/620941623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/625098989",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof Gatow",
+        "religion": "christian",
+        "wikidata": "Q96071942",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1812923,
+          52.4865872
+        ]
+      },
+      "id": "way/625098989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/630807696",
+        "amenity": "place_of_worship",
+        "landuse": "cemetery",
+        "name": "Gemeinschaftsgrabstätte",
+        "religion": "multifaith",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3547314,
+          52.5528453
+        ]
+      },
+      "id": "way/630807696"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/631126439",
+        "addr:city": "Berlin",
+        "addr:country": "DE",
+        "addr:housenumber": "44-45",
+        "addr:postcode": "13349",
+        "addr:street": "Müllerstraße",
+        "addr:suburb": "Wedding",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "Friedhof St. Philippus Apostel",
+        "opening_hours": "May-Aug PH,Mo-Su 08:00-20:00; Sep,Apr PH,Mo-Su 08:00-19:00; Oct,Mar PH,Mo-Su 08:00-18:00; Nov,Feb PH,Mo-Su 08:00-17:00; Dec-Jan PH,Mo-Su 08:00-16:00",
+        "operator": "Evangelischer Friedhofsverband Berlin Stadtmitte, Region Nord",
+        "religion": "christian",
+        "start_date": "1859",
+        "wikidata": "Q22136968",
+        "wikimedia_commons": "Category:St. Philippus-Apostel-Kirchhof (Berlin-Wedding)",
+        "wikipedia": "de:Sankt-Philippus-Apostel-Kirchhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3537437,
+          52.5532144
+        ]
+      },
+      "id": "way/631126439"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/660170639",
+        "denomination": "protestant",
+        "landuse": "cemetery",
+        "name": "I. Französischer Friedhof",
+        "religion": "christian",
+        "wikidata": "Q877794",
+        "wikimedia_commons": "Category:Französischer Friedhof",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3850469,
+          52.5283106
+        ]
+      },
+      "id": "way/660170639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/687225151",
+        "alt_name": "Italienischer Soldatenfriedhof",
+        "cemetery": "war_cemetery",
+        "historic": "yes",
+        "landuse": "cemetery",
+        "name": "Italienischer Ehrenfriedhof",
+        "ref": "Feld 056",
+        "start_date": "1953",
+        "website": "https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/friedhoefe/artikel.82246.php",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2133113,
+          52.4244841
+        ]
+      },
+      "id": "way/687225151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/690173150",
+        "amenity": "grave_yard",
+        "ele": "463",
+        "gnis:feature_id": "872337",
+        "landuse": "cemetery",
+        "name": "Mount Calvaire Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1817355,
+          44.4872338
+        ]
+      },
+      "id": "way/690173150"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/708151155",
+        "amenity": "grave_yard",
+        "artwork_type": "sculpture",
+        "historic": "memorial",
+        "landuse": "cemetery",
+        "material": "stone",
+        "memorial": "stele",
+        "name": "Gedenkstätte der Sozialisten",
+        "name:de": "Gedenkstätte der Sozialisten",
+        "name:en": "Memorial to the Socialists",
+        "name:nl": "Gedenkteken voor de Socialisten",
+        "tourism": "attraction",
+        "website": "https://www.sozialistenfriedhof.de/",
+        "wheelchair": "no",
+        "wikidata": "Q1497554",
+        "wikimedia_commons": "Category:Gedenkstätte der Sozialisten",
+        "wikipedia": "de:Gedenkstätte der Sozialisten",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5112301,
+          52.5149285
+        ]
+      },
+      "id": "way/708151155"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/884150073",
+        "landuse": "cemetery",
+        "religion": "christian",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3185982,
+          52.4557253
+        ]
+      },
+      "id": "way/884150073"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/896537737",
+        "landuse": "cemetery",
+        "name": "Evangelischer Friedhof Alt-Schmargendorf",
+        "wikidata": "Q1294974",
+        "wikipedia": "de:Evangelischer Friedhof Alt-Schmargendorf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2936727,
+          52.4737169
+        ]
+      },
+      "id": "way/896537737"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/977975940",
+        "cemetery": "sector",
+        "description": "Grabfelder für islamische Bestattungen",
+        "landuse": "cemetery",
+        "religion": "muslim",
+        "website": "https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/friedhoefe-und-begraebnisstaetten/islamische-bestattungen/angebote/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3534621,
+          52.4775077
+        ]
+      },
+      "id": "way/977975940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/977975941",
+        "cemetery": "sector",
+        "description": "Grabfelder für islamische Bestattungen",
+        "landuse": "cemetery",
+        "religion": "muslim",
+        "website": "https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/friedhoefe-und-begraebnisstaetten/islamische-bestattungen/angebote/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.232041,
+          52.5251184
+        ]
+      },
+      "id": "way/977975941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1010409126",
+        "ele": "258",
+        "gnis:feature_id": "1730172",
+        "landuse": "cemetery",
+        "name": "Mount Carmel Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.7511663,
+          34.1830485
+        ]
+      },
+      "id": "way/1010409126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1013070687",
+        "landuse": "cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4365058,
+          52.5244687
+        ]
+      },
+      "id": "way/1013070687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1052455351",
+        "ele": "326",
+        "gnis:feature_id": "1918991",
+        "landuse": "cemetery",
+        "name": "Berlin Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5772192,
+          44.2058773
+        ]
+      },
+      "id": "way/1052455351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1052456999",
+        "addr:city": "Berlin",
+        "addr:housenumber": "1061",
+        "addr:postcode": "05602",
+        "addr:state": "VT",
+        "addr:street": "Junction Road",
+        "ele": "189",
+        "gnis:feature_id": "1919026",
+        "landuse": "cemetery",
+        "name": "Colby Cemetery",
+        "ref:vcgi:esiteid": "754410",
+        "source": "esri/Vermont_US_Addresses",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.6219832,
+          44.2605069
+        ]
+      },
+      "id": "way/1052456999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1052457068",
+        "ele": "250",
+        "gnis:feature_id": "1919029",
+        "landuse": "cemetery",
+        "name": "Cox Brook-Glinnis Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.6709865,
+          44.1877217
+        ]
+      },
+      "id": "way/1052457068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1052459242",
+        "ele": "171",
+        "gnis:feature_id": "1460329",
+        "landuse": "cemetery",
+        "name": "Dewey-Wright Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.618623,
+          44.2201104
+        ]
+      },
+      "id": "way/1052459242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1052461650",
+        "ele": "176",
+        "gnis:feature_id": "1919086",
+        "landuse": "cemetery",
+        "name": "Johnson-Sawyer Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.6070339,
+          44.2289751
+        ]
+      },
+      "id": "way/1052461650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1079774217",
+        "landuse": "cemetery",
+        "name": "Friedhof Nordend Bereich Zion",
+        "wikidata": "Q113149099",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4086472,
+          52.5973486
+        ]
+      },
+      "id": "way/1079774217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1079774218",
+        "landuse": "cemetery",
+        "name": "Friedhof Nordend Bereich Frieden-Himmelfahrt",
+        "wikidata": "Q113148230",
+        "wikimedia_commons": "Category:Friedhof der Himmelfahrt- und Friedenskirchengemeinde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4080275,
+          52.5956213
+        ]
+      },
+      "id": "way/1079774218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1079774219",
+        "denomination": "lutheran",
+        "landuse": "cemetery",
+        "name": "Friedhof Nordend Bereich Gethsemane",
+        "religion": "christian",
+        "website": "http://www.stiftung-historische-friedhoefe.de/friedhof/pankow/Nordend/nordendtxt.htm",
+        "wikidata": "Q113149542",
+        "wikimedia_commons": "Category:Friedhof der Gethsemane-Kirchengemeinde",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4100582,
+          52.5946156
+        ]
+      },
+      "id": "way/1079774219"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1124748774",
+        "amenity": "grave_yard",
+        "ele": "195",
+        "gnis:feature_id": "1821035",
+        "landuse": "cemetery",
+        "name": "Berlin Cemetery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.9051058,
+          39.7612438
+        ]
+      },
+      "id": "way/1124748774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1291689193",
+        "cemetery": "war_cemetery",
+        "landuse": "cemetery",
+        "name": "Ehrenhain der Gefallenen des Ersten Weltkriegs",
+        "wikidata": "Q111949985",
+        "wikimedia_commons": "Category:Ehrenhain der Gefallenen des Ersten Weltkriegs (Parkfriedhof Marzahn)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5414809,
+          52.5457677
+        ]
+      },
+      "id": "way/1291689193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1978654353",
+        "cemetery": "war_cemetery",
+        "cemetery:conflict": "WW2",
+        "cemetery:historic": "yes",
+        "description": "Grabfeld",
+        "landuse": "cemetery",
+        "name": "Opfer 2. Weltkrieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5467133,
+          52.4409489
+        ]
+      },
+      "id": "node/1978654353"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1982592598",
+        "amenity": "grave_yard",
+        "landuse": "cemetery",
+        "name": "Dreifaltigkeitskirchhof II",
+        "wikidata": "Q1257743",
+        "wikipedia": "de:Dreifaltigkeitskirchhof II"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3993949,
+          52.4877227
+        ]
+      },
+      "id": "node/1982592598"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6404690275",
+        "cemetery": "war_cemetery",
+        "cemetery:conflict": "WW1;WW2",
+        "cemetery:historic": "yes",
+        "description": "Grabfeld",
+        "landuse": "cemetery",
+        "name": "Opfer 1. und 2. Weltkrieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5451858,
+          52.4421303
+        ]
+      },
+      "id": "node/6404690275"
+    }
+  ]
+}
