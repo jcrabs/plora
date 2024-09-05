@@ -20,8 +20,8 @@
         <option value="mapbox://styles/mapbox/satellite-v9">Satellite</option>
       </select>
     </div>
-  <div  id="map-container" style="width: 100%; height: calc(100vh - 65.5px - 57px);" data-map-target="container">
-  </div>
+  <div id="map-container" style="width: 100%; height: calc(100vh - 65.5px - 57px);" data-map-target="container"></div>
+
   <div>
     <div class="tool-bar">
       <span type="button" class="tab-item" data-map-target="saveMatched" data-action="click->map#saveMatched">
@@ -31,7 +31,7 @@
         <%= image_tag "mappin.svg", alt: "mappin icon" %>Save raw
       </span>
       <span type="button" class="tab-item" data-bs-toggle="modal" data-bs-target="#createSegmentModal">
-        <%= image_tag "ipad.and.arrow.forward.svg", alt: "Arrow forward pointing to an area" %>Import
+        <%= image_tag "tray.and.arrow.down.svg", alt: "Arrow forward pointing to an area" %>Import
       </span>
     </div>
     <div class="modal fade" id="createSegmentModal" tabindex="-1" aria-labelledby="createSegmentModalLabel" aria-hidden="true">
@@ -53,7 +53,7 @@
           </div>
           <div id="loading" class="modal-footer d-none" data-map-target="loading">
             <div><p>Processing the file...</p></div>
-            <div><%= image_tag "ploraloadingcat.gif", alt: "loading animation", style: "width: 100px; height: 100px;" %></div>
+            <div><%= image_tag "Plora2.gif", alt: "loading animation", style: "width: 100px; height: 100px;" %></div>
           </div>
         </div>
       </div>
