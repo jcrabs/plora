@@ -346,7 +346,7 @@
           }
         })
     }
-  }
+
   // Saving marker to the server
   #saveMarker(lngLat, description) {
     const data = {
