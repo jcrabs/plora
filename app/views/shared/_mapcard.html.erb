@@ -5,7 +5,8 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         data-map-id-value="<%= map.id %>"
         data-map-segments-coordinates-value="<%= @segments_coordinates[map.id].to_json %>"
-        data-map-show-draw-tool-value="false">
+        data-map-show-draw-tool-value="false"
+        data-map-padding-value="10">
       <div data-map-target="container" style="width: 100%; height: 200px;"></div>
       <div data-map-target="styleSelect"></div>
     </div>

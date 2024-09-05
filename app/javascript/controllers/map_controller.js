@@ -17,7 +17,8 @@
       showDrawTool: Boolean,
       showAnnotations: Boolean,
       mapId: Number,
-      importDrawUrl: String
+      importDrawUrl: String,
+      padding: Number
     }
 
     static targets = ["container", "saveMatched", "saveFreeform", "loading", "styleSelect"]
@@ -29,7 +30,6 @@
       const mapId = this.element.getAttribute('data-map-id-value');
       // Convert the mapIdValue to an integer
       this.mapIdValue = parseInt(mapId, 10);
-      console.log('Converted Map ID:', this.mapIdValue);
       // Initialize the map
       this.markers = []
       let mapStyle = ""
@@ -49,7 +49,8 @@
       if (this.showSearchValue) {
         let geocoder = new MapboxGeocoder({
           accessToken: mapboxgl.accessToken,
-          mapboxgl: mapboxgl
+          mapboxgl: mapboxgl,
+          marker: false
         });
 
         this.map.addControl(geocoder);
@@ -87,7 +88,7 @@
         this.#loadAnnotations();
       }
 
-        // Add marker on right-click on web
+      // Add marker on right-click on web
       this.map.on('contextmenu', (e) => {
         this.#addMarkerAndSave(e.lngLat);
       });
@@ -446,7 +447,11 @@
           bounds.extend([pair[0], pair[1]])
         })
       })
-      this.map.fitBounds(bounds, { padding: 5, maxZoom: 15, duration: 0 });
+      let padding = 50
+      if (this.paddingValue != 0) {
+        padding = this.paddingValue
+      }
+      this.map.fitBounds(bounds, { padding: padding, maxZoom: 15, duration: 0 });
     }
 
     #formatCoordinates(coords) {
