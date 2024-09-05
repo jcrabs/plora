@@ -29,9 +29,15 @@ export default class extends Controller {
     console.log('Converted Map ID:', this.mapIdValue);
     // Initialize the map
     this.markers = []
+    let mapStyle = ""
+    if (this.styleSelectTarget.value != undefined) {
+      mapStyle = this.styleSelectTarget.value
+    } else {
+      mapStyle = "mapbox://styles/mapbox/streets-v11"
+    }
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
-      style: this.styleSelectTarget.value
+      style: mapStyle
     });
 
     // Add a scale control to the map
@@ -65,10 +71,9 @@ export default class extends Controller {
 
     // after map has loaded:
     this.map.on('load', () => {
-      // draw lines for all segments, if segments exist:
-      if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
-        this.#drawRoute(this.segmentsCoordinatesValue)
-      }
+
+      // draw lines for all segments:
+      this.#drawRoute(this.segmentsCoordinatesValue)
 
       // Load saved annotations from server
       this.#loadAnnotations();
@@ -129,6 +134,7 @@ export default class extends Controller {
       marker.id = location.id
       this.markers.push(marker)
       });
+    });
   }
 
   // Load annotations from the server
@@ -154,6 +160,10 @@ export default class extends Controller {
 
   changeStyle() {
     this.map.setStyle(this.styleSelectTarget.value)
+    // have to draw the routes again after the new style has loaded
+    this.map.on("styledata", () => {
+      this.#drawRoute(this.segmentsCoordinatesValue)
+    })
   }
 
   // Function to create a custom popup card
@@ -396,53 +406,54 @@ export default class extends Controller {
   }
 }
 
-
   #fitMapToCoordinates(coordinates) {
     const bounds = new mapboxgl.LngLatBounds();
     coordinates.forEach(pair => bounds.extend([pair[0], pair[1]]));
-    this.map.fitBounds(bounds, { padding: 40, maxZoom: 14, duration: 0 });
+    this.map.fitBounds(bounds, { padding: 5, maxZoom: 15, duration: 0 });
   }
 
   // Draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
-    const all_segments = [];
-    Object.entries(coords).forEach(([id, segment]) => {
-      const all_coords = [];
-      segment.forEach(pair => {
-        all_coords.push([pair.lon, pair.lat]);
-        all_segments.push([pair.lon, pair.lat]);
-      });
-      const formattedCoordinates = { coordinates: all_coords, type: "LineString" };
-
-      if (!this.map.getSource(id)) {
-        this.map.addLayer({
-          id: id,
-          type: 'line',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              properties: {},
-              geometry: formattedCoordinates
-            }
-          },
-          layout: {
-            'line-join': 'round',
-            'line-cap': 'round'
-          },
-          paint: {
-            // 'circle-color': '#00afb9',
-            // 'circle-opacity': 0.8,
-            // 'circle-radius': 4,
-            'line-color': '#87A8B3',
-            'line-width': 4,
-            'line-opacity': 0.8
-          }
+    if (JSON.stringify(coords) != '{}') {
+      const all_segments = [];
+      Object.entries(coords).forEach(([id, segment]) => {
+        const all_coords = [];
+        segment.forEach(pair => {
+          all_coords.push([pair.lon, pair.lat]);
+          all_segments.push([pair.lon, pair.lat]);
         });
-      }
-    });
+        const formattedCoordinates = { coordinates: all_coords, type: "LineString" };
 
-    this.#fitMapToCoordinates(all_segments);
+        // if the map doesn't already include a layer with the same id: draw line
+        if (!this.map.getSource(id)) {
+          this.map.addLayer({
+            id: id,
+            type: 'line',
+            source: {
+              type: 'geojson',
+              data: {
+                type: 'Feature',
+                properties: {},
+                geometry: formattedCoordinates
+              }
+            },
+            layout: {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            paint: {
+              // 'circle-color': '#00afb9',
+              // 'circle-opacity': 0.8,
+              // 'circle-radius': 4,
+              'line-color': '#F4A800',
+              'line-width': 4,
+              'line-opacity': 0.8
+            }
+          });
+        }
+      });
+      this.#fitMapToCoordinates(all_segments);
+    }
   }
 
   loading() {
