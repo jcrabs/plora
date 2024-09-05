@@ -79,44 +79,40 @@ export default class extends Controller {
       });
 
       // Long touch on mobile to add annotation
-let touchTimer = null;
-let touchMoved = false; // Flag to detect if the touch has moved
+      let touchTimer = null;
+      let touchMoved = false; // Flag to detect if the touch has moved
 
-this.map.getCanvas().addEventListener('touchstart', (e) => {
-  touchMoved = false; // Reset the flag on touch start
+      this.map.getCanvas().addEventListener('touchstart', (e) => {
+        touchMoved = false; // Reset the flag on touch start
 
-  touchTimer = setTimeout(() => {
-    if (!touchMoved) { // Check if touch has not moved
-      const touch = e.touches[0];
+        touchTimer = setTimeout(() => {
+          if (!touchMoved) { // Check if touch has not moved
+            const touch = e.touches[0];
 
-      // Convert the touch screen coordinates to map coordinates, adjusting for any offset
-      const rect = this.map.getCanvas().getBoundingClientRect();
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
+            // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+            const rect = this.map.getCanvas().getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
 
-      const lngLat = this.map.unproject([x, y]);
+            const lngLat = this.map.unproject([x, y]);
 
-      this.#addMarkerAndSave(lngLat);
-    }
-  }, 500); // 500 ms for long press
-});
-
-// Clear the timer and popup if the user lifts their finger before the timeout
-this.map.getCanvas().addEventListener('touchend', () => {
-  clearTimeout(touchTimer);
-  touchMoved = false; // Reset the flag on touch end
-});
-
-// Set the flag to true if touch has moved (i.e., dragging)
-this.map.getCanvas().addEventListener('touchmove', () => {
-  touchMoved = true;
-});
+            this.#addMarkerAndSave(lngLat);
+          }
+        }, 500); // 500 ms for long press
+      });
 
       // Clear the timer and popup if the user lifts their finger before the timeout
       this.map.getCanvas().addEventListener('touchend', () => {
         clearTimeout(touchTimer);
+        touchMoved = false; // Reset the flag on touch end
+      });
+
+      // Set the flag to true if touch has moved
+      this.map.getCanvas().addEventListener('touchmove', () => {
+        touchMoved = true;
       });
     });
+
     // Add the locations as buttons on the map
     this.poisValue.forEach((location) => {
       const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
@@ -347,26 +343,27 @@ this.map.getCanvas().addEventListener('touchmove', () => {
 
   // Add marker on the map
   // Add marker on the map
-addMarker(lngLat, description) {
-  // Create a new HTML element for the marker
-  const el = document.createElement('div');
-  el.className = 'custom-marker'; // Add a class for custom styling
-  el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
+  addMarker(lngLat, description) {
+    // Create a new HTML element for the marker
+    const el = document.createElement('div');
+    el.className = 'custom-marker'; // Add a class for custom styling
+    el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
 
-  // Style the marker element
-  el.style.fontSize = '20px'; // Size of the icon
-  el.style.color = '#006B8F'; // Color of the icon
+    // Style the marker element
+    el.style.fontSize = '20px'; // Size of the icon
+    el.style.color = '#006B8F'; // Color of the icon
 
 
-  // Create a new Mapbox marker with the custom element
-  const marker = new mapboxgl.Marker(el)
-    .setLngLat(lngLat)
-    .addTo(this.map);
+    // Create a new Mapbox marker with the custom element
+    const marker = new mapboxgl.Marker(el)
+      .setLngLat(lngLat)
+      .addTo(this.map);
 
   // Add a popup to the marker
   if (description) {
-    const popup = new mapboxgl.Popup({ closeButton: false, offset: 25 })
-      .setText(description);
+    const popup = new mapboxgl.Popup({ closeButton: true, offset: 25 })
+    .setHTML(`<p class="popup-description">${description}</p>`); // Apply the CSS class to description
+
 
     marker.setPopup(popup);
 
@@ -374,7 +371,7 @@ addMarker(lngLat, description) {
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     const showPopup = () => {
-      // Close the currently open popup, if any
+    // Close the currently open popup, if any
       if (this.currentPopup && this.currentPopup !== popup) {
         this.currentPopup.remove();
       }
@@ -398,7 +395,6 @@ addMarker(lngLat, description) {
     }
   }
 }
-
 
 
   #fitMapToCoordinates(coordinates) {
