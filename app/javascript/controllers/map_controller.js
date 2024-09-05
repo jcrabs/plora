@@ -129,12 +129,12 @@ this.map.getCanvas().addEventListener('touchmove', () => {
       .addTo(this.map)
       // Add touchstart event listener to the marker
       marker.getElement().addEventListener('touchstart', function(e) {
-        console.log(popups.length);
-        popups.forEach((element) => element.remove())
+        if (popup !== popups[0]){
+          popups.forEach((element) => element.remove())
+          popups = []
+          popups.push(popup)
+        }
         marker.togglePopup(); // Toggle the popup when the marker is touched
-        popups = []
-        console.log(popups.length);
-        popups.push(popup)
         });
         marker.id = location.id
         this.markers.push(marker)
