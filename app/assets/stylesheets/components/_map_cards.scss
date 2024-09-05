@@ -51,6 +51,12 @@
   z-index: 100;
   }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
 @media (max-width: 1200px) {
   .col-custom {
     flex: 0 0 50%;
@@ -58,10 +64,10 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 990px) {
   .col-custom {
-    flex: 0 0 57%;
-    max-width: 80%;
+    flex: 0 0 50%;
+    max-width: 100%;
   }
 }
 
