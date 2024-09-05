@@ -133,9 +133,8 @@ export default class extends Controller {
       .addTo(this.map)
       marker.id = location.id
       this.markers.push(marker)
-      });
     });
-  }
+  };
 
   // Load annotations from the server
   #loadAnnotations() {
