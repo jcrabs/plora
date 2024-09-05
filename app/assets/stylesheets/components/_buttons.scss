@@ -1,7 +1,7 @@
 .button_primary {
   text-decoration: none;
   font-family: $headers-font;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -9,7 +9,9 @@
   padding-left: 16px;
   color: $text_white_grey;
   background-color: $cta_teal_normal;
+  border: 2px solid $cta_teal_normal;
   border-radius: 20px;
+  align-self: center;
 }
 
 .button_primary:hover {
@@ -23,7 +25,9 @@
   padding-left: 16px;
   color: $text_white_grey;
   background-color: $cta_teal_hover;
+  border: 2px solid $cta_teal_hover;
   border-radius: 20px;
+  align-self: center;
 }
 
 .button_link {
@@ -74,7 +78,6 @@
   border: 0px;
 }
 
-
 .button_destroy {
   text-decoration: none;
   font-family: $headers-font;
@@ -84,10 +87,11 @@
   padding-bottom: 8px;
   padding-right: 16px;
   padding-left: 16px;
-  color: $text_white_grey;
-  background-color: $destroy;
+  color: $destroy;
+  background-color: transparent;
+  border: 2px solid $destroy;
   border-radius: 20px;
-  align-items: center;
+  align-self: center;
 }
 
 .button_destroy:hover {
@@ -101,8 +105,9 @@
   padding-left: 16px;
   color: $text_white_grey;
   background-color: $destroy_hover;
+  border: 2px solid $destroy_hover;
   border-radius: 20px;
-  align-items: center;
+  align-self: center;
 }
 
 .buttons-container {
