@@ -136,7 +136,7 @@
       // Add the locations as buttons on the map
       this.poisValue.forEach((location) => {
         const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
-          location.name? location.name:"Nameless Fountain")
+          location.name? location.name:`Nameless ${location.category}`)
         .setLngLat([location.lon, location.lat])
         .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
         .addTo(this.map);
@@ -405,6 +405,7 @@
     if (description) {
       const popup = new mapboxgl.Popup({ closeButton: true, offset: 25 })
       .setHTML(`<p class="popup-description">${description}</p>`); // Apply the CSS class to description
+
 
       marker.setPopup(popup);
 
