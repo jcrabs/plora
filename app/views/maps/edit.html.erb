@@ -26,7 +26,7 @@
         </div>
         <div class="buttons-container">
           <%= link_to "Delete Map", map_path(@map), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button_destroy" %>
-          <%= f.submit 'Save', style: 'height: 34.5px; border: 0px; padding-top: 0px; padding-bottom: 0px;', class: 'button_primary' %>
+          <%= f.submit 'Save', class: 'button_primary' %>
         </div>
       <% end %>
 

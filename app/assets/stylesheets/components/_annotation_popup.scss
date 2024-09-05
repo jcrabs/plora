@@ -1,0 +1,22 @@
+/* CSS to style the popup description */
+.popup-description {
+  font-size: 15px;
+  color: #006B8F;
+  padding: 12px;
+}
+
+/* Remove border and customize the appearance of the close button */
+.mapboxgl-popup-close-button {
+  outline: none;
+  padding: 10px;
+}
+
+/* Style the popup content */
+.mapboxgl-popup-content {
+  border-radius: 25px;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 0 20px 0 #FFD883;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
