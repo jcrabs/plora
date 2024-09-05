@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus";
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
-
+let popups = []
 // Connects to data-controller="map"
 export default class extends Controller {
   static values = {
@@ -33,10 +33,8 @@ export default class extends Controller {
       container: this.containerTarget,
       style: this.styleSelectTarget.value
     });
-
     // Add a scale control to the map
     this.map.addControl(new mapboxgl.ScaleControl())
-
 
     // search bar:
     if (this.showSearchValue) {
@@ -69,7 +67,6 @@ export default class extends Controller {
       if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
         this.#drawRoute(this.segmentsCoordinatesValue)
       }
-
       // Load saved annotations from server
       this.#loadAnnotations();
 
@@ -130,8 +127,17 @@ this.map.getCanvas().addEventListener('touchmove', () => {
       .setLngLat([ location.lon, location.lat ])
       .setPopup(popup)
       .addTo(this.map)
-      marker.id = location.id
-      this.markers.push(marker)
+      // Add touchstart event listener to the marker
+      marker.getElement().addEventListener('touchstart', function(e) {
+        console.log(popups.length);
+        popups.forEach((element) => element.remove())
+        marker.togglePopup(); // Toggle the popup when the marker is touched
+        popups = []
+        console.log(popups.length);
+        popups.push(popup)
+        });
+        marker.id = location.id
+        this.markers.push(marker)
       });
   }
 
@@ -197,8 +203,8 @@ this.map.getCanvas().addEventListener('touchmove', () => {
     button.style.border = 'none';
     button.style.borderRadius = '4px';
     button.style.cursor = 'pointer';
+    button.style.width = "100%";
 
-    // Button click event
     button.addEventListener('click', () => {
       const poiId = { "id": location.id }
       const poiIdJSON = JSON.stringify(poiId)
@@ -229,7 +235,6 @@ this.map.getCanvas().addEventListener('touchmove', () => {
       const status = location.explored
       this.updateMarkerIcon(marker.find(element => element.id === location.id), status, location.category)
     });
-
     card.appendChild(button);
 
     return card;
@@ -255,6 +260,12 @@ this.map.getCanvas().addEventListener('touchmove', () => {
     .setLngLat(lngLat)
     .setPopup(popup)
     .addTo(this.map);
+    newMarker.getElement().addEventListener('touchstart', function(e) {
+      e.preventDefault(); // Prevent default touch behavior
+      popups.forEach((element) => element.remove())
+      newMarker.togglePopup(); // Toggle the popup when the marker is touched
+      popups.push(popup)
+    });
     return newMarker;
   }
 
