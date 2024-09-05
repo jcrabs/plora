@@ -1,7 +1,7 @@
 <% content_for :meta_title, "#{DEFAULT_META["meta_product_name"]} - #{@map.name} map" %>
 <% content_for :meta_description, @map.description %>
 
-<div class="search-bar", data-controller="map"
+<div class="search-bar", data-controller="map", style="position: relative"
      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
      data-map-segments-coordinates-value="<%= @segments_coordinates.to_json %>"
      data-map-show-search-value="true"
@@ -11,16 +11,18 @@
      data-map-destroy-url-value="<%= explored_point_of_interests_path %>"
      data-map-create-url-value="<%= explored_point_of_interests_path %>"
      data-map-pois-value="<%= @pois.to_json %>">
-  <div  id="map-container" style="width: 100%; height: 110vh;" data-map-target="container">
+    <div style="position: absolute; bottom:8px; right:40px; z-index:99; background-color:rgba(255,255,255)">
+      <select data-action="change->map#changeStyle" data-map-target="styleSelect" style="background-color:rgba(255,255,255)">
+        <option value="mapbox://styles/mapbox/streets-v11">Streets</option>
+        <option value="mapbox://styles/mapbox/outdoors-v11">Outdoors</option>
+        <option value="mapbox://styles/mapbox/light-v10">Light</option>
+        <option value="mapbox://styles/mapbox/dark-v10">Dark</option>
+        <option value="mapbox://styles/mapbox/satellite-v9">Satellite</option>
+      </select>
+    </div>
+  <div  id="map-container" style="width: 100%; height: calc(100vh - 65.5px - 57px);" data-map-target="container">
   </div>
   <div>
-    <select data-action="change->map#changeStyle" data-map-target="styleSelect">
-      <option value="mapbox://styles/mapbox/streets-v11">Streets</option>
-      <option value="mapbox://styles/mapbox/outdoors-v11">Outdoors</option>
-      <option value="mapbox://styles/mapbox/light-v10">Light</option>
-      <option value="mapbox://styles/mapbox/dark-v10">Dark</option>
-      <option value="mapbox://styles/mapbox/satellite-v9">Satellite</option>
-    </select>
     <div class="tool-bar">
       <span type="button" class="tab-item" data-map-target="saveMatched" data-action="click->map#saveMatched">
         <%= image_tag "arrow.forward.to.line.svg", alt: "Arrow forward to line" %>Match & save

@@ -22472,21 +22472,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/11552838811",
-        "amenity": "fountain"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.1811237,
-          44.4697714
-        ]
-      },
-      "id": "node/11552838811"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/11582391525",
         "amenity": "fountain",
         "name": "Springbrunnen und Plansche",
