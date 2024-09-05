@@ -23,8 +23,9 @@ class DataImporter
       end
     else # match the coordinates
       extracted_segments.each do |segment|
-        formatted_data = format_extracted_data(segment)
-        processed_data << format_matched_coordinates(formatted_data)
+        preformatted_data = split_coordinates(segment, 50)
+        matched_data = make_API_calls(preformatted_data)
+        processed_data << format_matched_coordinates(matched_data)
       end
     end
 
@@ -62,78 +63,110 @@ class DataImporter
     return all_segments
   end
 
-  def format_extracted_data(data)
-    # formats data for the mapbox API
+  def split_coordinates(coords, part_length)
+    # max of 50 radiuses per API call -> default: split the data into 50 piece chunks
 
-    # radius = the maximum distance a coordinate can be moved to snap to the road network, in meters
-    # min. 0.0, max 50.0, default 5.0
-    radius = 10
-    # data needs to be a semicolon-separated list of {longitude},{latitude} coordinate pairs to visit in order
-    formatted_data = []
-    formatted_data_part = []
-    # radiuses needs to be a semicolon-separated list
-    # the number of radiuses must be the same as the number of coordinates in the request
-    radiuses = []
-    data.each_with_index do |points, index|
-      formatted_data_part << points.join(",")
-      # max of 50 radiuses per API call -> split the data into 50 piece chunks
-      if (((index + 1) % 50) == 0) || (index == (data.size - 1))
-        radiuses_part = formatted_data_part.map { radius }
-        radiuses << radiuses_part.join(";")
-
-        formatted_data << formatted_data_part.join(";")
-        formatted_data_part = []
+    return_list = []
+    current_part = []
+    coords.each_with_index do |points, index|
+      current_part << points.join(",")
+      # when we have reached a chunk length of part_length,
+      # or when we have reached the end of the track:
+      # finish this chunk and start the next one
+      if (((index + 1) % part_length) == 0) || (index == (coords.size - 1))
+        return_list << current_part
+        current_part = []
       end
     end
-
-    return {formatted_data: formatted_data, radiuses: radiuses}
+    return return_list
   end
 
-  def get_match(coordinates, profile, radiuses)
+  def get_match(coordinates, profile, radius)
     # gets coordinates matched to the closest paths/sidewalks/roads
 
     Concurrent::Promise.execute do
       connection = Faraday.new("https://api.mapbox.com") do |f|
         f.adapter Faraday.default_adapter
       end
+      # formatted_coordinates needs to be a semicolon-separated list of
+      # {longitude},{latitude} coordinate pairs to visit in order
+      formatted_coordinates = coordinates.join(";")
       # make the API call
-      response = connection.get("/matching/v5/mapbox/#{profile}/#{coordinates}") do |req|
+      response = connection.get("/matching/v5/mapbox/#{profile}/#{formatted_coordinates}") do |req|
         req.params['geometries'] = 'geojson'
-        req.params['radiuses'] = radiuses
+        # the number of radiuses must be the same as the number of coordinates in the request
+        req.params['radiuses'] = ([radius] * coordinates.length).join(";")
         req.params['access_token'] = ENV['MAPBOX_API_KEY']
       end
-      JSON.parse(response.body)
+      parsed_response = JSON.parse(response.body)
+      if parsed_response["message"]
+        Rails.logger.info "Received response #{parsed_response["message"]} for input coordinates #{coordinates}"
+      end
+
+      # if there are no matchings for a chunk:
+      if parsed_response["matchings"] == []
+        # if the chunk was small: skip it
+        if coordinates.length <= 2
+          []
+        # split the chunk in halves and try each half;
+        # recursively until there are matches or the chunk gets too small
+        else
+          middle = coordinates.length / 2
+          first_half_response = get_match(coordinates[0..middle], profile, radius).value
+          second_half_response = get_match(coordinates[middle..-1], profile, radius).value
+          # only keep the halves that contain matchings, skip others
+          if first_half_response && second_half_response
+            first_half_response + second_half_response
+          elsif first_half_response
+            first_half_response
+          elsif second_half_response
+            second_half_response
+          else
+            []
+          end
+        end
+      # if there are matchings for a chunk: get the matched coordinates
+      else
+        parsed_response["matchings"][0]["geometry"]["coordinates"]
+      end
     end
   end
 
-  def format_matched_coordinates(data)
+  def make_API_calls(formatted_data)
     # gets matched coordinates from multiple API calls, collects them in a single array
 
-    formatted_data = data[:formatted_data]
-    radiuses = data[:radiuses]
+    # radius = the maximum distance a coordinate can be moved to snap to the road network, in meters
+    # min. 0.0, max 50.0, default 5.0
+    radius = 10
     # collect the promises from the API calls; make 1 API call per 50 piece data chunk
-    coord_futures = formatted_data.zip(radiuses).map do |formatted_data_part, radius_part|
-      Concurrent::Promises.future { get_match(formatted_data_part, "walking", radius_part) }
+    coord_futures = formatted_data.each_with_index.map do |formatted_data_part, index|
+      Concurrent::Promises.future do
+        result = get_match(formatted_data_part, "walking", radius)
+        [index, result]
+      end
     end
-    # collect the results once they have arrived
+    # collect the results
     begin
-      coords = coord_futures.map { |future| future.value! }
+      coords = {}
+      coord_futures.map do |promise|
+        index, result = promise.value
+        coords[index] = result
+      end
       Rails.logger.info "Received #{coords.length} coordinate sets"
       coords
     rescue => error
       Rails.logger.error "An error occurred: #{error.message}"
       nil
     end
+  end
 
-    # collect all coordinates in one array
+  def format_matched_coordinates(data)
+    # collect all matched coordinates in a single array for drawing a single line
+
     coordinates = []
-    coords.each do |part|
-      if part.value["matchings"] == []
-        coordinates << part.value["message"]
-      else
-        part.value["matchings"][0]["geometry"]["coordinates"].each do |pair|
-          coordinates << pair
-        end
+    data.sort.each do |part|
+      part[1].value.each do |pair|
+        coordinates << pair
       end
     end
     return coordinates
