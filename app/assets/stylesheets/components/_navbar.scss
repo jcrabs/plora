@@ -2,6 +2,8 @@
   justify-content: space-between;
   background: $bg_white_yellow_light;
   z-index: 99;
+  border-bottom: solid 1px;
+  border-color: $cta_yellow_pressed;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,10 +23,4 @@
   width: 120px;
   margin-bottom: 8px;
   margin-top: 8px;
-}
-
-.navbar-separator {
-  width: 100%;
-  height: 1px;
-  background-color: $cta_yellow_pressed;
 }
