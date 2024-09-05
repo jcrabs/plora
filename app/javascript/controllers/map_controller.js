@@ -78,22 +78,40 @@ export default class extends Controller {
         this.#addMarkerAndSave(e.lngLat);
       });
 
-      //  Long touch on mobile to add annotation
-      let touchTimer = null;
-      this.map.getCanvas().addEventListener('touchstart', (e) => {
-        touchTimer = setTimeout(() => {
-          const touch = e.touches[0];
+      // Long touch on mobile to add annotation
+let touchTimer = null;
+let touchMoved = false; // Flag to detect if the touch has moved
 
-          // Convert the touch screen coordinates to map coordinates, adjusting for any offset
-          const rect = this.map.getCanvas().getBoundingClientRect();
-          const x = touch.clientX - rect.left;
-          const y = touch.clientY - rect.top;
+this.map.getCanvas().addEventListener('touchstart', (e) => {
+  touchMoved = false; // Reset the flag on touch start
 
-          const lngLat = this.map.unproject([x, y]);
+  touchTimer = setTimeout(() => {
+    if (!touchMoved) { // Check if touch has not moved
+      const touch = e.touches[0];
 
-          this.#addMarkerAndSave(lngLat);
-        }, 500); // 500 ms for long press
-      });
+      // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+      const rect = this.map.getCanvas().getBoundingClientRect();
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+
+      const lngLat = this.map.unproject([x, y]);
+
+      this.#addMarkerAndSave(lngLat);
+    }
+  }, 500); // 500 ms for long press
+});
+
+// Clear the timer and popup if the user lifts their finger before the timeout
+this.map.getCanvas().addEventListener('touchend', () => {
+  clearTimeout(touchTimer);
+  touchMoved = false; // Reset the flag on touch end
+});
+
+// Set the flag to true if touch has moved (i.e., dragging)
+this.map.getCanvas().addEventListener('touchmove', () => {
+  touchMoved = true;
+});
+
       // Clear the timer and popup if the user lifts their finger before the timeout
       this.map.getCanvas().addEventListener('touchend', () => {
         clearTimeout(touchTimer);
