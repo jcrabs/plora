@@ -83,32 +83,38 @@
         this.#loadAnnotations();
 
         // Add marker on right-click on web
-        this.map.on('contextmenu', (e) => {
-          this.#addMarkerAndSave(e.lngLat);
-        });
+      this.map.on('contextmenu', (e) => {
+        this.#addMarkerAndSave(e.lngLat);
+      });
 
-        // Long touch on mobile to add annotation
-        let touchTimer = null;
-        let touchMoved = false; // Flag to detect if the touch has moved
+      // Long touch on mobile to add annotation
+      let touchTimer = null;
+      let touchMoved = false; // Flag to detect if the touch has moved
 
-        this.map.getCanvas().addEventListener('touchstart', (e) => {
-          touchMoved = false; // Reset the flag on touch start
+      this.map.getCanvas().addEventListener('touchstart', (e) => {
+        touchMoved = false; // Reset the flag on touch start
 
-          touchTimer = setTimeout(() => {
-            if (!touchMoved) { // Check if touch has not moved
-              const touch = e.touches[0];
+        // If more than one touch is detected (multi-touch gesture), cancel the long press behavior
+        if (e.touches.length > 1) {
+          touchMoved = true; // Set touchMoved to true to avoid triggering long press
+          return;
+        }
 
-              // Convert the touch screen coordinates to map coordinates, adjusting for any offset
-              const rect = this.map.getCanvas().getBoundingClientRect();
-              const x = touch.clientX - rect.left;
-              const y = touch.clientY - rect.top;
+        touchTimer = setTimeout(() => {
+          if (!touchMoved) { // Check if touch has not moved
+            const touch = e.touches[0];
 
-              const lngLat = this.map.unproject([x, y]);
+            // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+            const rect = this.map.getCanvas().getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
 
-              this.#addMarkerAndSave(lngLat);
-            }
-          }, 500); // 500 ms for long press
-        });
+            const lngLat = this.map.unproject([x, y]);
+
+            this.#addMarkerAndSave(lngLat);
+          }
+        }, 500); // 500 ms for long press
+      });
 
         // Clear the timer and popup if the user lifts their finger before the timeout
         this.map.getCanvas().addEventListener('touchend', () => {
