@@ -48,7 +48,18 @@ export default class extends Controller {
 
   #fitMapToHome() {
     const bounds = new mapboxgl.LngLatBounds()
-    bounds.extend([ this.homeValue.lon, this.homeValue.lat ])
+    bounds.extend([this.homeValue.lon, this.homeValue.lat])
     this.map.fitBounds(bounds, { padding: 200, maxZoom: 12, duration: 0 })
   }
 }
+
+// #fitMapToCoordinates(coords) {
+//   // fits the map to the given coordinates
+//   const bounds = new mapboxgl.LngLatBounds();
+//   coords.forEach((segment) => {
+//     segment.geometry.coordinates.forEach((pair) => {
+//       bounds.extend([pair[0], pair[1]])
+//     })
+//   })
+//   this.map.fitBounds(bounds, { padding: 5, maxZoom: 15, duration: 0 });
+// }
