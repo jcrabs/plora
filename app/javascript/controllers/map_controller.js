@@ -90,18 +90,18 @@ export default class extends Controller {
       this.map.getCanvas().addEventListener('touchstart', (e) => {
         touchMoved = false; // Reset the flag on touch start
 
-      touchTimer = setTimeout(() => {
-        if (!touchMoved) { // Check if touch has not moved
-          const touch = e.touches[0];
+        touchTimer = setTimeout(() => {
+          if (!touchMoved) { // Check if touch has not moved
+            const touch = e.touches[0];
 
-          // Convert the touch screen coordinates to map coordinates, adjusting for any offset
-          const rect = this.map.getCanvas().getBoundingClientRect();
-          const x = touch.clientX - rect.left;
-          const y = touch.clientY - rect.top;
+            // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+            const rect = this.map.getCanvas().getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
 
-          const lngLat = this.map.unproject([x, y]);
+            const lngLat = this.map.unproject([x, y]);
 
-          this.#addMarkerAndSave(lngLat);
+            this.#addMarkerAndSave(lngLat);
           }
         }, 500); // 500 ms for long press
       });
@@ -112,26 +112,22 @@ export default class extends Controller {
         touchMoved = false; // Reset the flag on touch end
       });
 
-      // Set the flag to true if touch has moved (i.e., dragging)
+      // Set the flag to true if touch has moved
       this.map.getCanvas().addEventListener('touchmove', () => {
         touchMoved = true;
       });
+    });
 
-      // Clear the timer and popup if the user lifts their finger before the timeout
-      this.map.getCanvas().addEventListener('touchend', () => {
-        clearTimeout(touchTimer);
-      });
-
-      // Add the locations as buttons on the map
-      this.poisValue.forEach((location) => {
-        const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
-          location.name? location.name:"Nameless Fountain")
-          .setLngLat([location.lon, location.lat])
-          .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
-          .addTo(this.map);
-          const el = document.createElement("div")
-          location.explored ? el.className = `marker_${location.category.toLowerCase()}_explored` : el.className = `marker_${location.category.toLowerCase()}`
-          const marker = new mapboxgl.Marker(el)
+    // Add the locations as buttons on the map
+    this.poisValue.forEach((location) => {
+      const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
+        location.name? location.name:"Nameless Fountain")
+      .setLngLat([location.lon, location.lat])
+      .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
+      .addTo(this.map);
+      const el = document.createElement("div")
+      location.explored ? el.className = `marker_${location.category.toLowerCase()}_explored` : el.className = `marker_${location.category.toLowerCase()}`
+      const marker = new mapboxgl.Marker(el)
       .setLngLat([ location.lon, location.lat ])
       .setPopup(popup)
       .addTo(this.map)
@@ -357,26 +353,27 @@ export default class extends Controller {
 
   // Add marker on the map
   // Add marker on the map
-addMarker(lngLat, description) {
-  // Create a new HTML element for the marker
-  const el = document.createElement('div');
-  el.className = 'custom-marker'; // Add a class for custom styling
-  el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
+  addMarker(lngLat, description) {
+    // Create a new HTML element for the marker
+    const el = document.createElement('div');
+    el.className = 'custom-marker'; // Add a class for custom styling
+    el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
 
-  // Style the marker element
-  el.style.fontSize = '20px'; // Size of the icon
-  el.style.color = '#006B8F'; // Color of the icon
+    // Style the marker element
+    el.style.fontSize = '20px'; // Size of the icon
+    el.style.color = '#006B8F'; // Color of the icon
 
 
-  // Create a new Mapbox marker with the custom element
-  const marker = new mapboxgl.Marker(el)
-    .setLngLat(lngLat)
-    .addTo(this.map);
+    // Create a new Mapbox marker with the custom element
+    const marker = new mapboxgl.Marker(el)
+      .setLngLat(lngLat)
+      .addTo(this.map);
 
   // Add a popup to the marker
   if (description) {
-    const popup = new mapboxgl.Popup({ closeButton: false, offset: 25 })
-      .setText(description);
+    const popup = new mapboxgl.Popup({ closeButton: true, offset: 25 })
+    .setHTML(`<p class="popup-description">${description}</p>`); // Apply the CSS class to description
+
 
     marker.setPopup(popup);
 
@@ -384,7 +381,7 @@ addMarker(lngLat, description) {
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     const showPopup = () => {
-      // Close the currently open popup, if any
+    // Close the currently open popup, if any
       if (this.currentPopup && this.currentPopup !== popup) {
         this.currentPopup.remove();
       }
