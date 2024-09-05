@@ -70,19 +70,17 @@ export default class extends Controller {
     }
 
     // before map loads: fit it to coordinates if they exist
-    let formattedCoordinates = []
+    this.formattedCoordinates = []
     if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
-      formattedCoordinates = this.#formatCoordinates(this.segmentsCoordinatesValue)
-      this.#fitMapToCoordinates(formattedCoordinates)
+      this.formattedCoordinates = this.#formatCoordinates(this.segmentsCoordinatesValue)
+      this.#fitMapToCoordinates(this.formattedCoordinates)
     }
 
     // after map has loaded:
     this.map.on('load', () => {
 
       // draw lines for all segments if they exist:
-      if (formattedCoordinates!= []) {
-        this.#drawRoute(formattedCoordinates)
-      }
+      this.#drawRoute(this.formattedCoordinates)
 
       // Load saved annotations from server
       this.#loadAnnotations();
@@ -166,11 +164,12 @@ export default class extends Controller {
     }
   }
 
+  // Change style of the map
   changeStyle() {
     this.map.setStyle(this.styleSelectTarget.value)
     // have to draw the routes again after the new style has loaded
     this.map.on("styledata", () => {
-      this.#drawRoute(this.segmentsCoordinatesValue)
+      this.#drawRoute(this.formattedCoordinates)
     })
   }
 
@@ -439,35 +438,37 @@ export default class extends Controller {
 
   // Draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
-    coords.forEach((segment) => {
-      // if the map doesn't already include a layer with the same id: draw line
-      if (!this.map.getSource(segment.id)) {
-        this.map.addLayer({
-          id: segment.id,
-          type: 'line',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              properties: {},
-              geometry: segment.geometry
+    if (coords != []) {
+      coords.forEach((segment) => {
+        // if the map doesn't already include a layer with the same id: draw line
+        if (!this.map.getSource(segment.id)) {
+          this.map.addLayer({
+            id: segment.id,
+            type: 'line',
+            source: {
+              type: 'geojson',
+              data: {
+                type: 'Feature',
+                properties: {},
+                geometry: segment.geometry
+              }
+            },
+            layout: {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            paint: {
+              // 'circle-color': '#00afb9',
+              // 'circle-opacity': 0.8,
+              // 'circle-radius': 4,
+              'line-color': '#F4A800',
+              'line-width': 4,
+              'line-opacity': 0.8
             }
-          },
-          layout: {
-            'line-join': 'round',
-            'line-cap': 'round'
-          },
-          paint: {
-            // 'circle-color': '#00afb9',
-            // 'circle-opacity': 0.8,
-            // 'circle-radius': 4,
-            'line-color': '#F4A800',
-            'line-width': 4,
-            'line-opacity': 0.8
-          }
-        });
-      }
-    })
+          });
+        }
+      })
+    }
   }
 
   loading() {
