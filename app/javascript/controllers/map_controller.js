@@ -13,6 +13,7 @@ export default class extends Controller {
     destroyUrl: String,
     showSearch: Boolean,
     showDrawTool: Boolean,
+    showAnnotations: Boolean,
     mapId: Number,
     importDrawUrl: String
   }
@@ -80,7 +81,9 @@ export default class extends Controller {
       // draw lines for all segments if they exist:
       this.#drawRoute(this.formattedCoordinates)
       // Load saved annotations from server
-      this.#loadAnnotations();
+      if (this.showAnnotationsValue) {
+        this.#loadAnnotations();
+      }
 
       // Add marker on right-click on web
       this.map.on('contextmenu', (e) => {
@@ -359,10 +362,10 @@ export default class extends Controller {
       },
       body: JSON.stringify(data)
     })
-    .then(response => {
-      // console.log('Response status:', response.status);
-      return response.json();
-    })
+    // .then(response => {
+    //   // console.log('Response status:', response.status);
+    //   return response.json();
+    // })
     // .then(data => {
     //   console.log('Response from server:', data);
     //   if (data.success) {
@@ -377,7 +380,7 @@ export default class extends Controller {
   }
 
   // Add marker on the map
-  addMarker(lngLat, description) {
+    addMarker(lngLat, description) {
     // Create a new HTML element for the marker
     const el = document.createElement('div');
     el.className = 'custom-marker'; // Add a class for custom styling
@@ -390,8 +393,8 @@ export default class extends Controller {
 
     // Create a new Mapbox marker with the custom element
     const marker = new mapboxgl.Marker(el)
-      .setLngLat(lngLat)
-      .addTo(this.map);
+    .setLngLat(lngLat)
+    .addTo(this.map);
 
   // Add a popup to the marker
   if (description) {
