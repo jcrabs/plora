@@ -2,7 +2,9 @@
   import mapboxgl from 'mapbox-gl';
   import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
   import MapboxDraw from "@mapbox/mapbox-gl-draw";
+
   let popups = []
+
   // Connects to data-controller="map"
   export default class extends Controller {
     static values = {
@@ -13,6 +15,7 @@
       destroyUrl: String,
       showSearch: Boolean,
       showDrawTool: Boolean,
+      showAnnotations: Boolean,
       mapId: Number,
       importDrawUrl: String
     }
@@ -77,10 +80,12 @@
       // after map has loaded:
       this.map.on('load', () => {
 
-        // draw lines for all segments if they exist:
-        this.#drawRoute(this.formattedCoordinates)
-        // Load saved annotations from server
+      // draw lines for all segments if they exist:
+      this.#drawRoute(this.formattedCoordinates)
+      // Load saved annotations from server
+      if (this.showAnnotationsValue) {
         this.#loadAnnotations();
+      }
 
         // Add marker on right-click on web
       this.map.on('contextmenu', (e) => {
@@ -341,60 +346,60 @@
           }
         })
     }
-    // Saving marker to the server
-    #saveMarker(lngLat, description) {
-      const data = {
-        annotation: {
-          lat: lngLat.lat,
-          lon: lngLat.lng,
-          name: 'New Marker',
-          description: description
-        }
-      };
-      // console.log('Sending data:', data);
-      const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-      fetch(`/maps/${this.mapIdValue}/annotations`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          "X-CSRF-Token": csrfToken
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
-        // console.log('Response status:', response.status);
-        return response.json();
-      })
-      // .then(data => {
-      //   console.log('Response from server:', data);
-      //   if (data.success) {
-      //     console.log('Annotation saved successfully.');
-      //   } else {
-      //     console.error('Error saving annotation:', data.error);
-      //   }
-      // })
-      // .catch(error => {
-      //   console.error('Network error:', error);
-      // });
-    }
+  }
+  // Saving marker to the server
+  #saveMarker(lngLat, description) {
+    const data = {
+      annotation: {
+        lat: lngLat.lat,
+        lon: lngLat.lng,
+        name: 'New Marker',
+        description: description
+      }
+    };
+    // console.log('Sending data:', data);
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    fetch(`/maps/${this.mapIdValue}/annotations`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        "X-CSRF-Token": csrfToken
+      },
+      body: JSON.stringify(data)
+    })
+    // .then(response => {
+    //   // console.log('Response status:', response.status);
+    //   return response.json();
+    // })
+    // .then(data => {
+    //   console.log('Response from server:', data);
+    //   if (data.success) {
+    //     console.log('Annotation saved successfully.');
+    //   } else {
+    //     console.error('Error saving annotation:', data.error);
+    //   }
+    // })
+    // .catch(error => {
+    //   console.error('Network error:', error);
+    // });
+  }
 
-    // Add marker on the map
+  // Add marker on the map
     addMarker(lngLat, description) {
-      // Create a new HTML element for the marker
-      const el = document.createElement('div');
-      el.className = 'custom-marker'; // Add a class for custom styling
-      el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
+    // Create a new HTML element for the marker
+    const el = document.createElement('div');
+    el.className = 'custom-marker'; // Add a class for custom styling
+    el.innerHTML = '<i class="fa-solid fa-message"></i>'; // Set Font Awesome icon
 
       // Style the marker element
       el.style.fontSize = '20px'; // Size of the icon
       el.style.color = '#006B8F'; // Color of the icon
 
-
-      // Create a new Mapbox marker with the custom element
-      const marker = new mapboxgl.Marker(el)
-        .setLngLat(lngLat)
-        .addTo(this.map);
+    // Create a new Mapbox marker with the custom element
+    const marker = new mapboxgl.Marker(el)
+    .setLngLat(lngLat)
+    .addTo(this.map);
 
     // Add a popup to the marker
     if (description) {

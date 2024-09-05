@@ -6,6 +6,7 @@
      data-map-segments-coordinates-value="<%= @segments_coordinates.to_json %>"
      data-map-show-search-value="true"
      data-map-show-draw-tool-value="true"
+     data-map-show-annotations-value="true"
      data-map-import-draw-url-value="<%= map_import_drawing_path(@map) %>"
      data-map-id-value="<%= @map.id %>"
      data-map-destroy-url-value="<%= explored_point_of_interests_path %>"
@@ -53,7 +54,7 @@
           </div>
           <div id="loading" class="modal-footer d-none" data-map-target="loading">
             <div><p>Processing the file...</p></div>
-            <div><%= image_tag "Plora2.gif", alt: "loading animation", style: "width: 100px; height: 100px;" %></div>
+            <div><%= image_tag "Plora2.gif", alt: "loading animation" %></div>
           </div>
         </div>
       </div>
