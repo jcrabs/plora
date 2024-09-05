@@ -97,6 +97,12 @@ export default class extends Controller {
       this.map.getCanvas().addEventListener('touchstart', (e) => {
         touchMoved = false; // Reset the flag on touch start
 
+        // If more than one touch is detected (multi-touch gesture), cancel the long press behavior
+        if (e.touches.length > 1) {
+          touchMoved = true; // Set touchMoved to true to avoid triggering long press
+          return;
+        }
+
         touchTimer = setTimeout(() => {
           if (!touchMoved) { // Check if touch has not moved
             const touch = e.touches[0];
@@ -379,7 +385,6 @@ export default class extends Controller {
   if (description) {
     const popup = new mapboxgl.Popup({ closeButton: true, offset: 25 })
     .setHTML(`<p class="popup-description">${description}</p>`); // Apply the CSS class to description
-
 
     marker.setPopup(popup);
 
