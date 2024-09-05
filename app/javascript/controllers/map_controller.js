@@ -29,9 +29,15 @@ export default class extends Controller {
     console.log('Converted Map ID:', this.mapIdValue);
     // Initialize the map
     this.markers = []
+    let mapStyle = ""
+    if (this.styleSelectTarget.value != undefined) {
+      mapStyle = this.styleSelectTarget.value
+    } else {
+      mapStyle = "mapbox://styles/mapbox/streets-v11"
+    }
     this.map = new mapboxgl.Map({
       container: this.containerTarget,
-      style: this.styleSelectTarget.value
+      style: mapStyle
     });
 
     // Add a scale control to the map
@@ -65,10 +71,9 @@ export default class extends Controller {
 
     // after map has loaded:
     this.map.on('load', () => {
-      // draw lines for all segments, if segments exist:
-      if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
-        this.#drawRoute(this.segmentsCoordinatesValue)
-      }
+
+      // draw lines for all segments:
+      this.#drawRoute(this.segmentsCoordinatesValue)
 
       // Load saved annotations from server
       this.#loadAnnotations();
@@ -79,60 +84,61 @@ export default class extends Controller {
       });
 
       // Long touch on mobile to add annotation
-let touchTimer = null;
-let touchMoved = false; // Flag to detect if the touch has moved
+      let touchTimer = null;
+      let touchMoved = false; // Flag to detect if the touch has moved
 
-this.map.getCanvas().addEventListener('touchstart', (e) => {
-  touchMoved = false; // Reset the flag on touch start
+      this.map.getCanvas().addEventListener('touchstart', (e) => {
+        touchMoved = false; // Reset the flag on touch start
 
-  touchTimer = setTimeout(() => {
-    if (!touchMoved) { // Check if touch has not moved
-      const touch = e.touches[0];
+      touchTimer = setTimeout(() => {
+        if (!touchMoved) { // Check if touch has not moved
+          const touch = e.touches[0];
 
-      // Convert the touch screen coordinates to map coordinates, adjusting for any offset
-      const rect = this.map.getCanvas().getBoundingClientRect();
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
+          // Convert the touch screen coordinates to map coordinates, adjusting for any offset
+          const rect = this.map.getCanvas().getBoundingClientRect();
+          const x = touch.clientX - rect.left;
+          const y = touch.clientY - rect.top;
 
-      const lngLat = this.map.unproject([x, y]);
+          const lngLat = this.map.unproject([x, y]);
 
-      this.#addMarkerAndSave(lngLat);
-    }
-  }, 500); // 500 ms for long press
-});
+          this.#addMarkerAndSave(lngLat);
+          }
+        }, 500); // 500 ms for long press
+      });
 
-// Clear the timer and popup if the user lifts their finger before the timeout
-this.map.getCanvas().addEventListener('touchend', () => {
-  clearTimeout(touchTimer);
-  touchMoved = false; // Reset the flag on touch end
-});
+      // Clear the timer and popup if the user lifts their finger before the timeout
+      this.map.getCanvas().addEventListener('touchend', () => {
+        clearTimeout(touchTimer);
+        touchMoved = false; // Reset the flag on touch end
+      });
 
-// Set the flag to true if touch has moved (i.e., dragging)
-this.map.getCanvas().addEventListener('touchmove', () => {
-  touchMoved = true;
-});
+      // Set the flag to true if touch has moved (i.e., dragging)
+      this.map.getCanvas().addEventListener('touchmove', () => {
+        touchMoved = true;
+      });
 
       // Clear the timer and popup if the user lifts their finger before the timeout
       this.map.getCanvas().addEventListener('touchend', () => {
         clearTimeout(touchTimer);
       });
-    });
-    // Add the locations as buttons on the map
-    this.poisValue.forEach((location) => {
-      const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
-        location.name? location.name:"Nameless Fountain")
-      .setLngLat([location.lon, location.lat])
-      .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
-      .addTo(this.map);
-      const el = document.createElement("div")
-      location.explored ? el.className = `marker_${location.category.toLowerCase()}_explored` : el.className = `marker_${location.category.toLowerCase()}`
-      const marker = new mapboxgl.Marker(el)
+
+      // Add the locations as buttons on the map
+      this.poisValue.forEach((location) => {
+        const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: true }).setText(
+          location.name? location.name:"Nameless Fountain")
+          .setLngLat([location.lon, location.lat])
+          .setDOMContent(this.createCard(location)) // Attach the custom card to the popup
+          .addTo(this.map);
+          const el = document.createElement("div")
+          location.explored ? el.className = `marker_${location.category.toLowerCase()}_explored` : el.className = `marker_${location.category.toLowerCase()}`
+          const marker = new mapboxgl.Marker(el)
       .setLngLat([ location.lon, location.lat ])
       .setPopup(popup)
       .addTo(this.map)
       marker.id = location.id
       this.markers.push(marker)
       });
+    });
   }
 
   // Load annotations from the server
@@ -158,6 +164,10 @@ this.map.getCanvas().addEventListener('touchmove', () => {
 
   changeStyle() {
     this.map.setStyle(this.styleSelectTarget.value)
+    // have to draw the routes again after the new style has loaded
+    this.map.on("styledata", () => {
+      this.#drawRoute(this.segmentsCoordinatesValue)
+    })
   }
 
   // Function to create a custom popup card
@@ -399,54 +409,54 @@ addMarker(lngLat, description) {
   }
 }
 
-
-
   #fitMapToCoordinates(coordinates) {
     const bounds = new mapboxgl.LngLatBounds();
     coordinates.forEach(pair => bounds.extend([pair[0], pair[1]]));
-    this.map.fitBounds(bounds, { padding: 40, maxZoom: 14, duration: 0 });
+    this.map.fitBounds(bounds, { padding: 5, maxZoom: 15, duration: 0 });
   }
 
   // Draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
-    const all_segments = [];
-    Object.entries(coords).forEach(([id, segment]) => {
-      const all_coords = [];
-      segment.forEach(pair => {
-        all_coords.push([pair.lon, pair.lat]);
-        all_segments.push([pair.lon, pair.lat]);
-      });
-      const formattedCoordinates = { coordinates: all_coords, type: "LineString" };
-
-      if (!this.map.getSource(id)) {
-        this.map.addLayer({
-          id: id,
-          type: 'line',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              properties: {},
-              geometry: formattedCoordinates
-            }
-          },
-          layout: {
-            'line-join': 'round',
-            'line-cap': 'round'
-          },
-          paint: {
-            // 'circle-color': '#00afb9',
-            // 'circle-opacity': 0.8,
-            // 'circle-radius': 4,
-            'line-color': '#87A8B3',
-            'line-width': 4,
-            'line-opacity': 0.8
-          }
+    if (JSON.stringify(coords) != '{}') {
+      const all_segments = [];
+      Object.entries(coords).forEach(([id, segment]) => {
+        const all_coords = [];
+        segment.forEach(pair => {
+          all_coords.push([pair.lon, pair.lat]);
+          all_segments.push([pair.lon, pair.lat]);
         });
-      }
-    });
+        const formattedCoordinates = { coordinates: all_coords, type: "LineString" };
 
-    this.#fitMapToCoordinates(all_segments);
+        // if the map doesn't already include a layer with the same id: draw line
+        if (!this.map.getSource(id)) {
+          this.map.addLayer({
+            id: id,
+            type: 'line',
+            source: {
+              type: 'geojson',
+              data: {
+                type: 'Feature',
+                properties: {},
+                geometry: formattedCoordinates
+              }
+            },
+            layout: {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            paint: {
+              // 'circle-color': '#00afb9',
+              // 'circle-opacity': 0.8,
+              // 'circle-radius': 4,
+              'line-color': '#F4A800',
+              'line-width': 4,
+              'line-opacity': 0.8
+            }
+          });
+        }
+      });
+      this.#fitMapToCoordinates(all_segments);
+    }
   }
 
   loading() {
