@@ -113,7 +113,7 @@ export default class extends Controller {
 
             this.#addMarkerAndSave(lngLat);
           }
-        }, 500); // 500 ms for long press
+        }, 600); // 500 ms for long press
       });
 
       // Clear the timer and popup if the user lifts their finger before the timeout
