@@ -69,11 +69,20 @@ export default class extends Controller {
       this.map.addControl(this.draw, 'top-left')
     }
 
+    // before map loads: fit it to coordinates if they exist
+    let formattedCoordinates = []
+    if (JSON.stringify(this.segmentsCoordinatesValue) != '{}') {
+      formattedCoordinates = this.#formatCoordinates(this.segmentsCoordinatesValue)
+      this.#fitMapToCoordinates(formattedCoordinates)
+    }
+
     // after map has loaded:
     this.map.on('load', () => {
 
-      // draw lines for all segments:
-      this.#drawRoute(this.segmentsCoordinatesValue)
+      // draw lines for all segments if they exist:
+      if (formattedCoordinates!= []) {
+        this.#drawRoute(formattedCoordinates)
+      }
 
       // Load saved annotations from server
       this.#loadAnnotations();
@@ -351,7 +360,6 @@ export default class extends Controller {
   }
 
   // Add marker on the map
-  // Add marker on the map
   addMarker(lngLat, description) {
     // Create a new HTML element for the marker
     const el = document.createElement('div');
@@ -405,54 +413,61 @@ export default class extends Controller {
   }
 }
 
-  #fitMapToCoordinates(coordinates) {
+  #fitMapToCoordinates(coords) {
+    // fits the map to the given coordinates
     const bounds = new mapboxgl.LngLatBounds();
-    coordinates.forEach(pair => bounds.extend([pair[0], pair[1]]));
+    coords.forEach((segment) => {
+      segment.geometry.coordinates.forEach((pair) => {
+        bounds.extend([pair[0], pair[1]])
+      })
+    })
     this.map.fitBounds(bounds, { padding: 5, maxZoom: 15, duration: 0 });
+  }
+
+  #formatCoordinates(coords) {
+    // formats coordinates for the #drawRoute and #fitMapToCoordinates functions
+    const allSegments = []
+    Object.entries(coords).forEach(([id, segment]) => {
+      const allCoords = []
+      segment.forEach(pair => {
+        allCoords.push([pair.lon, pair.lat]);
+      })
+      allSegments.push({ id: id, geometry: { coordinates: allCoords, type: "LineString" } })
+    })
+    return allSegments
   }
 
   // Draw the Map Matching routes as new layers on the map
   #drawRoute(coords) {
-    if (JSON.stringify(coords) != '{}') {
-      const all_segments = [];
-      Object.entries(coords).forEach(([id, segment]) => {
-        const all_coords = [];
-        segment.forEach(pair => {
-          all_coords.push([pair.lon, pair.lat]);
-          all_segments.push([pair.lon, pair.lat]);
-        });
-        const formattedCoordinates = { coordinates: all_coords, type: "LineString" };
-
-        // if the map doesn't already include a layer with the same id: draw line
-        if (!this.map.getSource(id)) {
-          this.map.addLayer({
-            id: id,
-            type: 'line',
-            source: {
-              type: 'geojson',
-              data: {
-                type: 'Feature',
-                properties: {},
-                geometry: formattedCoordinates
-              }
-            },
-            layout: {
-              'line-join': 'round',
-              'line-cap': 'round'
-            },
-            paint: {
-              // 'circle-color': '#00afb9',
-              // 'circle-opacity': 0.8,
-              // 'circle-radius': 4,
-              'line-color': '#F4A800',
-              'line-width': 4,
-              'line-opacity': 0.8
+    coords.forEach((segment) => {
+      // if the map doesn't already include a layer with the same id: draw line
+      if (!this.map.getSource(segment.id)) {
+        this.map.addLayer({
+          id: segment.id,
+          type: 'line',
+          source: {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              properties: {},
+              geometry: segment.geometry
             }
-          });
-        }
-      });
-      this.#fitMapToCoordinates(all_segments);
-    }
+          },
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          paint: {
+            // 'circle-color': '#00afb9',
+            // 'circle-opacity': 0.8,
+            // 'circle-radius': 4,
+            'line-color': '#F4A800',
+            'line-width': 4,
+            'line-opacity': 0.8
+          }
+        });
+      }
+    })
   }
 
   loading() {
