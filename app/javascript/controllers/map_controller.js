@@ -266,6 +266,10 @@
       return card;
       }
 
+    removeMarkers(markers_array) {
+      markers_array.forEach((marker) => marker.remove())
+    }
+
     // Function to update the marker icon
     updateMarkerIcon(marker, status, category) {
       // Get the marker's position and popup
@@ -427,7 +431,7 @@
 
       if (isTouchDevice) {
         // When on Mobile: Show popup on touch
-        marker.getElement().addEventListener('touchstart', showPopup);
+        marker.getElement().addEventListener('touchstart', showPopup, this.removeMarkers);
       } else {
         // When on Desktop: Show popup on mouseenter and hide on mouseleave
         marker.getElement().addEventListener('mouseenter', showPopup);
