@@ -51,7 +51,7 @@
             <%= simple_form_for([@map, @segment], url: map_import_track_path(@map), data: {action: "submit->map#loading"}) do |f| %>
               <%= f.input :gpx, as: :file, input_html: { class: "form-control" }, label_html: { class: "form-label" } %>
               <%= f.input :mode, as: :radio_buttons,
-                          collection: [['matched', 'matched'], ['freeform', 'freeform']],
+                          collection: [['matched', 'matched'], ['raw data', 'freeform']],
                           checked: 'matched',
                           legend_tag: false %>
               <%= f.button :submit, 'Upload', class: 'button_primary' %>
