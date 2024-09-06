@@ -14,7 +14,7 @@
      data-map-pois-value="<%= @pois.to_json %>">
 
 
-  <div id="map-container" style="width: 100%; position: absolute; top:42.46px; height: calc(100vh - 64.8px - 42.46px);" data-map-target="container"></div>
+  <div id="map-container" style="width: 100%; height: calc(100vh - 64.8px - 42.46px);" data-map-target="container"></div>
 
   <div class="search-bar", style="position: relative"></div>
 
@@ -29,7 +29,7 @@
   </div>
 
   <div>
-    <div class="tool-bar">
+    <div class="tool-bar" style="z-index: 99;">
       <span type="button" class="tab-item" data-map-target="saveMatched" data-action="click->map#saveMatched">
         <%= image_tag "arrow.forward.to.line.svg", alt: "Arrow forward to line" %>Match & save
       </span>
