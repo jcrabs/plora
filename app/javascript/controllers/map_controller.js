@@ -205,11 +205,24 @@
       card.style.padding = '10px';
       card.style.backgroundColor = 'white';
       card.style.borderRadius = '8px';
-      card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+      // card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+      card.style.display = 'flex';                // Use flexbox
+      card.style.flexDirection = 'column';        // Stack elements vertically
+      card.style.justifyContent = 'center';       // Center elements vertically
+      card.style.alignItems = 'center';           // Center elements horizontally
+
+      const icon = document.createElement('div');
+      icon.alt = location.category
+      location.explored ? icon.className = `marker_${location.category.toLowerCase()}_explored` : icon.className = `marker_${location.category.toLowerCase()}`
+      icon.style.width = "50px";
+      icon.style.height = "50px";
+      icon.style.marginBottom = "8px";
+      card.appendChild(icon);
 
       const title = document.createElement('h5');
       title.textContent = location.name;
       card.appendChild(title);
+
 
       const category = document.createElement('p');
       category.textContent = location.category;
@@ -259,7 +272,7 @@
           })
         }
         const status = location.explored
-        this.updateMarkerIcon(marker.find(element => element.id === location.id), status, location.category)
+        this.updateMarkerIcon(marker.find(element => element.id === location.id), status, location.category, icon)
       });
       card.appendChild(button);
 
@@ -271,7 +284,7 @@
     }
 
     // Function to update the marker icon
-    updateMarkerIcon(marker, status, category) {
+    updateMarkerIcon(marker, status, category, icon) {
       // Get the marker's position and popup
       const lngLat = marker.getLngLat();
       const popup = marker.getPopup();
@@ -281,8 +294,10 @@
       // Create a new marker with the explored class
       const el = document.createElement("div")
       if (status) {
+        icon.className = `marker_${category.toLowerCase()}_explored`
         el.className = `marker_${category.toLowerCase()}_explored`
       } else {
+        icon.className = `marker_${category.toLowerCase()}`
         el.className = `marker_${category.toLowerCase()}`
       }
 
