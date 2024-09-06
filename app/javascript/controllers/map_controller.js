@@ -222,14 +222,18 @@
       // Create the button
       const button = document.createElement('button');
       button.textContent = location.explored ? "Explored" : "Explore"
-      button.style.marginTop = '10px';
-      button.style.padding = '8px 12px';
-      button.style.backgroundColor = location.explored ? '#F4A800' : '#007bff';
-      button.style.color = 'white';
+      button.style.marginTop = '16px';
+      button.style.padding = '8px 16px';
+      button.style.backgroundColor = location.explored ? '#F4A800' : '#00C2CE';
+      button.style.color = '#F3F3F3';
       button.style.border = 'none';
-      button.style.borderRadius = '4px';
+      button.style.borderRadius = '20px';
       button.style.cursor = 'pointer';
       button.style.width = "100%";
+      button.style.fontFamily = "Montserrat", "sans-serif";
+      button.style.fontSize = "15px"
+      button.style.fontWeight = "bold"
+
 
       button.addEventListener('click', () => {
         const poiId = { "id": location.id }
