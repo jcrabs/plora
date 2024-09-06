@@ -49,7 +49,7 @@ points = File.read(file)
 geopoints_hash = JSON.parse(points)
 puts "Creating POIs from #{filepath}"
 geopoints_hash["features"].each do |feature|
-  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
+  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
 end
 
 filepath = "json/berlin_historical_toilets.geojson"
@@ -58,7 +58,7 @@ points = File.read(file)
 geopoints_hash = JSON.parse(points)
 puts "Creating POIs from #{filepath}"
 geopoints_hash["features"].each do |feature|
-  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
+  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["amenity"].capitalize, lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
 end
 
 filepath = "json/berlin_cemeteries_nodes.geojson"
@@ -67,7 +67,7 @@ points = File.read(file)
 geopoints_hash = JSON.parse(points)
 puts "Creating POIs from #{filepath}"
 geopoints_hash["features"].each do |feature|
-  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["landuse"].capitalize, description: "Placeholder description", lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
+  PointOfInterest.create!(name: feature["properties"]["name"], category: feature["properties"]["landuse"].capitalize, lat: feature["geometry"]["coordinates"][1], lon: feature["geometry"]["coordinates"][0], user: User.first)
 end
 puts "Created #{PointOfInterest.count} POIs"
 
