@@ -10,7 +10,7 @@
         <div class="menu-dropdown" >
           <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown",
             data:{bs_toggle: "dropdown"}, aria_haspopup: "true", aria_expanded: "false" if current_user.photo.attached?%>
-          <%= image_tag "chevron.down.svg", alt: "Chevron pointing down", class: "menu-chevron" %>
+          <%# <%= image_tag "chevron.down.svg", alt: "Chevron pointing down", class: "menu-chevron" %>
         </div>
       </span>
     <% else %>
@@ -39,7 +39,7 @@
   </div>
 </div>
 
-<script>
+<%# <script>
 document.addEventListener('DOMContentLoaded', function () {
   const chevronElement = document.querySelector('.menu-chevron');
   const collapseElement = document.querySelector('#navbarSupportedContent');
@@ -52,4 +52,4 @@ document.addEventListener('DOMContentLoaded', function () {
     chevronElement.src = '/assets/chevron.down.svg';
   });
 });
-</script>
+</script> %>
