@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon pt-0 pb-0">
-  <div class="container-fluid">
+  <div class="container-fluid p-1">
     <%= link_to root_path, class: "logo" do %>
       <%= image_tag "Group 8797.svg", alt: "Plora Logo" %>
     <% end %>
@@ -18,12 +18,12 @@
     <% end %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto d-flex flex-row justify-content-around ">
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "My Profile", "#", class: "nav-link button_link" %>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <%= link_to "My Maps", maps_path, class: "nav-link button_link" %>
           </li>
           <li class="nav-item">
