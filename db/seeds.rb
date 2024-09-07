@@ -4,20 +4,20 @@
 require "open-uri"
 require "json"
 
-puts "Destroying all Explored points of interest..."
-ExploredPointOfInterest.destroy_all
-puts "Destroying all annotations..."
-Annotation.destroy_all
-puts "Destroying all points..."
-Point.destroy_all
-puts "Destroying all segments..."
-Segment.destroy_all
-puts "Destroying all maps..."
-Map.destroy_all
-puts "Destroying all POIs..."
-PointOfInterest.destroy_all
-puts "Destroying all users..."
-User.destroy_all
+# puts "Destroying all Explored points of interest..."
+# ExploredPointOfInterest.destroy_all
+# puts "Destroying all annotations..."
+# Annotation.destroy_all
+# puts "Destroying all points..."
+# Point.destroy_all
+# puts "Destroying all segments..."
+# Segment.destroy_all
+# puts "Destroying all maps..."
+# Map.destroy_all
+# puts "Destroying all POIs..."
+# PointOfInterest.destroy_all
+# puts "Destroying all users..."
+# User.destroy_all
 
 puts "Creating users..."
 User.create!(username: "Max Mustermann", email: "max.mustermann@example.com", password: "password", home_address: "Alexanderplatz 5, 10178 Berlin", home_lat: 52.521918, home_lon: 13.413215)
