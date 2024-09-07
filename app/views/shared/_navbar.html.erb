@@ -8,18 +8,11 @@
       <span data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <div class="menu-dropdown" >
-          <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown",
-            data:{bs_toggle: "dropdown"}, aria_haspopup: "true", aria_expanded: "false" if current_user.photo.attached?%>
-          <%# <%= image_tag "chevron.down.svg", alt: "Chevron pointing down", class: "menu-chevron" %>
+          <%= current_user.avatar_tag %>
         </div>
       </span>
-    <% else %>
-      <%= link_to "Login", new_user_session_path, class: "nav-link button_link" %>
-    <% end %>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto d-flex flex-row justify-content-around ">
-        <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto d-flex flex-row justify-content-around ">
           <li class="nav-item active">
             <%= link_to "My Profile", "#", class: "nav-link button_link" %>
           </li>
@@ -29,27 +22,10 @@
           <li class="nav-item">
             <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link button_link" %>
           </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link button_link" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+        </ul>
+      </div>
+    <% else %>
+      <%= link_to "Login", new_user_session_path, class: "nav-link button_link" %>
+    <% end %>
   </div>
 </div>
-
-<%# <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const chevronElement = document.querySelector('.menu-chevron');
-  const collapseElement = document.querySelector('#navbarSupportedContent');
-
-  collapseElement.addEventListener('shown.bs.collapse', function () {
-    chevronElement.src = '/assets/chevron.up.svg';
-  });
-
-  collapseElement.addEventListener('hidden.bs.collapse', function () {
-    chevronElement.src = '/assets/chevron.down.svg';
-  });
-});
-</script> %>
